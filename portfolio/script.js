@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initStickyNavbar();
     initTypewriter();
     initParticleCanvas();
-    initStatsCounter();
     initProjectFilters();
     initBackToTop();
     initMobileMenu();
@@ -237,42 +236,7 @@ function initParticleCanvas() {
 }
 
 /* ==========================================================================
-   5. STATS ANIMATED NUMBER COUNTERS (Intersection Observer)
-   ========================================================================== */
-function initStatsCounter() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    let hasAnimated = false;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasAnimated) {
-                hasAnimated = true;
-                statNumbers.forEach(stat => {
-                    const target = parseInt(stat.getAttribute('data-target'), 10);
-                    let current = 0;
-                    const increment = target / 50;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            stat.textContent = target;
-                            clearInterval(timer);
-                        } else {
-                            stat.textContent = Math.ceil(current);
-                        }
-                    }, 25);
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
-}
-
-/* ==========================================================================
-   6. PROJECT CATEGORY FILTERING
+   5. PROJECT CATEGORY FILTERING
    ========================================================================== */
 function initProjectFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -355,8 +319,8 @@ const projectDetailsData = {
     "arvr-research": {
         title: "Spatial 3D Reconstruction & GANs in Augmented Reality",
         company: "IIT Jodhpur (School of AI & Data Science)",
-        tagline: "Postgraduate Academic Research in Spatial AI & Computer Vision",
-        overview: "Research in Augmented Reality, 3D point cloud scanning, and Generative Adversarial Networks (GANs) for immersive spatial interaction quality.",
+        tagline: "Postgraduate M.Tech Project in Spatial AI & Computer Vision (Completed)",
+        overview: "M.Tech curriculum project in Augmented Reality, 3D point cloud scanning, and Generative Adversarial Networks (GANs) for immersive spatial interaction quality.",
         architecture: [
             "<strong>3D Scanning & Mesh Analysis:</strong> Evaluating point cloud fidelity and real-time spatial anchor tracking.",
             "<strong>Generative Models:</strong> Investigating GAN architectures for texture synthesis and lighting estimation.",
