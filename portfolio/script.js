@@ -106,18 +106,17 @@ function initTypewriter() {
     if (!typedElement) return;
 
     const phrases = [
-        "Senior SDET & Test Architect",
-        "GenAI & LLM Quality Engineer (DeepEval)",
-        "Playwright • Python • Pytest-BDD Lead",
-        "Ex-Boeing Aerospace Quality Engineer",
-        "IIT Jodhpur M.Tech (AR/VR & AI/DE)",
-        "Enterprise Quality Systems Architect"
+        "AI Quality Engineering & LLM Evaluation",
+        "Playwright • Python Test Automation",
+        "Enterprise Quality Systems & CI/CD",
+        "Aerospace & High-Reliability Testing",
+        "Spatial AI & AR/VR Research (IIT Jodhpur)"
     ];
 
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typingSpeed = 70;
+    let typingSpeed = 65;
 
     function type() {
         const currentPhrase = phrases[phraseIndex];
@@ -125,20 +124,20 @@ function initTypewriter() {
         if (isDeleting) {
             typedElement.textContent = currentPhrase.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 35;
+            typingSpeed = 30;
         } else {
             typedElement.textContent = currentPhrase.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 70;
+            typingSpeed = 65;
         }
 
         if (!isDeleting && charIndex === currentPhrase.length) {
-            typingSpeed = 2000; // Pause at end
+            typingSpeed = 2200; // Pause at end
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % phrases.length;
-            typingSpeed = 400; // Pause before new word
+            typingSpeed = 350; // Pause before new word
         }
 
         setTimeout(type, typingSpeed);
@@ -171,8 +170,8 @@ function initParticleCanvas() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
             this.size = Math.random() * 2 + 1;
-            this.speedX = (Math.random() - 0.5) * 0.6;
-            this.speedY = (Math.random() - 0.5) * 0.6;
+            this.speedX = (Math.random() - 0.5) * 0.5;
+            this.speedY = (Math.random() - 0.5) * 0.5;
             this.opacity = Math.random() * 0.5 + 0.2;
         }
 
@@ -189,8 +188,8 @@ function initParticleCanvas() {
         draw() {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             ctx.fillStyle = isDark 
-                ? `rgba(56, 189, 248, ${this.opacity * 0.6})`
-                : `rgba(37, 99, 235, ${this.opacity * 0.4})`;
+                ? `rgba(56, 189, 248, ${this.opacity * 0.5})`
+                : `rgba(37, 99, 235, ${this.opacity * 0.35})`;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -198,7 +197,7 @@ function initParticleCanvas() {
     }
 
     // Spawn particles based on screen width
-    const particleCount = Math.min(Math.floor(window.innerWidth / 20), 60);
+    const particleCount = Math.min(Math.floor(window.innerWidth / 22), 50);
     particles = [];
     for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
@@ -217,11 +216,11 @@ function initParticleCanvas() {
                 const dy = particles[i].y - particles[j].y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < 120) {
+                if (distance < 110) {
                     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
                     ctx.strokeStyle = isDark
-                        ? `rgba(56, 189, 248, ${0.15 * (1 - distance / 120)})`
-                        : `rgba(37, 99, 235, ${0.1 * (1 - distance / 120)})`;
+                        ? `rgba(56, 189, 248, ${0.12 * (1 - distance / 110)})`
+                        : `rgba(37, 99, 235, ${0.08 * (1 - distance / 110)})`;
                     ctx.lineWidth = 0.6;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
@@ -311,7 +310,7 @@ const projectDetailsData = {
         architecture: [
             "<strong>Hallucination & Faithfulness:</strong> Automated calculation of factual consistency between retrieved RAG context and model completions.",
             "<strong>Answer Relevancy & Semantic Distance:</strong> Vector-based semantic similarity scoring using embedding models and cosine distance.",
-            "<strong>LLM-as-a-Judge Automation:</strong> Programmatic scoring using Azure OpenAI GPT-4o evaluators with strict JSON schema criteria.",
+            "<strong>LLM-as-a-Judge Automation:</strong> Programmatic scoring using Azure OpenAI evaluators with strict JSON schema criteria.",
             "<strong>CI/CD Cloud Integration:</strong> Continuous evaluation gates integrated into Azure DevOps pipelines before model deployment."
         ],
         techStack: ["Python", "DeepEval", "Azure OpenAI", "LLM-as-a-Judge", "Pytest", "Azure DevOps", "NVIDIA NIM", "Poetry"]
@@ -320,7 +319,7 @@ const projectDetailsData = {
         title: "Enterprise Playwright-Python-BDD Automation Architecture",
         company: "Cognizant Technology Solutions",
         tagline: "Scalable Cross-Browser End-to-End Automation Platform",
-        overview: "Architected a next-generation Python automation framework with Playwright and Pytest-BDD, transitioning legacy UFT/Selenium test suites to a high-speed, Dockerized architecture.",
+        overview: "Architected a next-generation Python automation framework with Playwright and Pytest-BDD, transitioning legacy test suites to a high-speed, Dockerized architecture.",
         architecture: [
             "<strong>Page Object Model (POM):</strong> Decoupled UI element locators from business logic for zero maintenance overhead.",
             "<strong>Parallel Execution:</strong> Implemented pytest-xdist to run 50+ test workers concurrently across Chromium, Firefox, and WebKit.",
@@ -344,7 +343,7 @@ const projectDetailsData = {
     "oracle-ebs": {
         title: "Oracle EBS Multi-Module Automated Regression Engine",
         company: "Cognizant Technology Solutions",
-        tagline: "Automated Regression for Wyndham Destinations & American Express",
+        tagline: "Automated Regression for Global Enterprise Platforms",
         overview: "Designed scalable automation frameworks supporting multi-Operating Unit (multi-OU) Oracle EBS execution across AP, AR, PO, CE, and FA modules during CPU patch release cycles.",
         architecture: [
             "<strong>Resilient Execution:</strong> Created runtime persistence, resume-from-failure logic, and automated credential reset.",
@@ -492,7 +491,7 @@ function handleFormSubmit(event) {
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending...</span>';
     }
 
-    // Direct mailto trigger or simulated transmission
+    // Direct mailto trigger
     setTimeout(() => {
         if (submitBtn) {
             submitBtn.disabled = false;
