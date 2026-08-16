@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Wisdom — 120 Printable Daily Slips (A4 Colored Paper Edition)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-title: 'Cinzel', Georgia, serif;
+            --font-sanskrit: 'Crimson Pro', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --gold: #b45309;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            font-family: var(--font-body);
+            padding: 20px;
+        }
+
+        .controls-header {
+            max-width: 210mm;
+            margin: 0 auto 20px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .controls-title {
+            font-family: var(--font-title);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .controls-desc {
+            font-size: 0.85rem;
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .filter-chip {
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            color: #334155;
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .filter-chip.active {
+            background: var(--gold);
+            color: #ffffff;
+            border-color: var(--gold);
+        }
+
+        .print-btn {
+            background: #0f172a;
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .print-container {
+            width: 210mm;
+            margin: 0 auto;
+        }
+
+        .slips-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5mm;
+        }
+
+        .wisdom-slip {
+            height: 87mm;
+            background: #ffffff;
+            border: 1px dashed #cbd5e1;
+            border-radius: 6px;
+            padding: 3.5mm 4.5mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 2mm;
+        }
+
+        .slip-badge {
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .slip-verse-ref {
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: #64748b;
+        }
+
+        .slip-sanskrit {
+            font-family: var(--font-sanskrit);
+            font-size: 0.86rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #881337;
+            line-height: 1.35;
+            margin: 1.5mm 0;
+        }
+
+        .slip-explanation {
+            font-size: 0.74rem;
+            color: #334155;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .slip-rule-box {
+            background: #fffbeb;
+            border-left: 3px solid var(--gold);
+            border-radius: 4px;
+            padding: 2mm 2.5mm;
+            font-size: 0.72rem;
+            color: #1e293b;
+            line-height: 1.35;
+            margin-top: 1.5mm;
+        }
+
+        .scissor-guide {
+            font-size: 0.58rem;
+            color: #94a3b8;
+            text-align: right;
+            margin-top: 1mm;
+        }
+
+        @media print {
+            body { background: transparent; padding: 0; }
+            .controls-header { display: none !important; }
+            .print-container { width: 100% !important; margin: 0 !important; }
+            .slips-grid {
+                grid-template-columns: calc(50% - 3mm) calc(50% - 3mm) !important;
+                gap: 5mm !important;
+            }
+            .wisdom-slip {
+                height: 87mm !important;
+                border: 1px dashed #94a3b8 !important;
+                box-shadow: none !important;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 8mm 6mm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="controls-header">
+        <h1 class="controls-title">🌱 Universal Wisdom for Daily Living — 120 Daily Reflection Slips</h1>
+        <p class="controls-desc">
+            Universal wisdom for everyday people (students, parents, working professionals, elders). Select a category below to view and print onto corresponding colored A4 sheets (6 slips per A4 page, calibrated for reflection jars).
+        </p>
+        <div class="filter-group">
+            <button class="filter-chip active" onclick="filterCategory('all')">🌈 View All (120 Slips)</button>
+            <button class="filter-chip" onclick="filterCategory('anxious')">🔵 Calming Worry (15)</button>
+            <button class="filter-chip" onclick="filterCategory('peace')">🟢 Finding Peace (15)</button>
+            <button class="filter-chip" onclick="filterCategory('laziness')">🟡 Beating Procrastination (15)</button>
+            <button class="filter-chip" onclick="filterCategory('anger')">🔴 Cooling Anger (15)</button>
+            <button class="filter-chip" onclick="filterCategory('sadness')">🟣 Healing from Setbacks (15)</button>
+            <button class="filter-chip" onclick="filterCategory('lonely')">🟪 Kind Self-Talk (15)</button>
+            <button class="filter-chip" onclick="filterCategory('compare')">🟠 Overcoming Comparison (15)</button>
+            <button class="filter-chip" onclick="filterCategory('happy')">🌸 Gratitude & Joy (15)</button>
+        </div>
+        <button class="print-btn" onclick="window.print()">🖨️ Print Slips (Ctrl + P)</button>
+    </header>
+
+    <main class="print-container">
+        <div class="slips-grid" id="slipsGrid">
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 6.35</span>
+                </div>
+                <div class="slip-sanskrit">"Abhyāsena tu kaunteya vairāgyeṇa ca gṛhyate"</div>
+                <p class="slip-explanation">A worrying thought is just a temporary mental cloud, not a factual forecast of your life. You do not have to believe every anxious story your brain invents.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> When your mind asks: 'What if everything goes wrong?', answer: 'What if things turn out fine?'
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #1</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 2.14</span>
+                </div>
+                <div class="slip-sanskrit">"Mātrā-sparśās tu kaunteya śītoṣṇa-sukha-duḥkha-dāḥ"</div>
+                <p class="slip-explanation">Feelings of unease arrive and leave just like changing weather seasons. Learn to let uncomfortable feelings pass through without panicking.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Give yourself 90 seconds of slow breathing before reacting to an anxious thought.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #2</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 6.26</span>
+                </div>
+                <div class="slip-sanskrit">"Yato yato niścalati manaś cañcalam asthiram"</div>
+                <p class="slip-explanation">Whenever your attention wanders into worry or rumination, gently bring it back to what is right in front of you. The return is the practice.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Do not scold yourself for losing focus. Notice it kindly, and return.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #3</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 2.62</span>
+                </div>
+                <div class="slip-sanskrit">"Dhyāyato viṣayān puṁsaḥ saṅgas teṣūpajāyate"</div>
+                <p class="slip-explanation">Replaying worst-case scenarios over and over makes problems look huge. Interrupt the loop by stepping outside or washing your hands.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> When stuck in a mental loop, change your physical environment for 5 minutes.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #4</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 2.41</span>
+                </div>
+                <div class="slip-sanskrit">"Vyavasāyātmikā buddhir ekeha kuru-nandana"</div>
+                <p class="slip-explanation">Trying to think through every possible outcome exhausts your energy. Settle on the one next good decision and let the rest unfold.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Pick one simple priority for this morning; ignore the rest until afternoon.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #5</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 6.19</span>
+                </div>
+                <div class="slip-sanskrit">"Yathā dīpo nivāta-stho neṅgate sopamā smṛtā"</div>
+                <p class="slip-explanation">Keep your inner peace like a steady candle flame in a windless room. Protect yourself from chaotic group chats and distressing news feeds.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Turn off non-essential notifications when you need to feel peaceful.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #6</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 18.35</span>
+                </div>
+                <div class="slip-sanskrit">"Yayā svapnaṁ bhayaṁ śokaṁ viṣādaṁ madam eva ca"</div>
+                <p class="slip-explanation">Holding onto habitual dread and worry is an old habit, not a law of life. You can choose to replace dread with gentle patience.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Ask: 'Is this problem happening right now in this room, or only in my thoughts?'
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #7</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">Marcus</span>
+                </div>
+                <div class="slip-sanskrit">"You have power over your mind, not outside events"</div>
+                <p class="slip-explanation">Realize this, and you will find immense strength. Focus your love and care on what you can touch today.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Release what you cannot control; take care of what is in your hands.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #8</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 2.53</span>
+                </div>
+                <div class="slip-sanskrit">"Śruti-vipratipannā te yadā sthāsyati niścalā"</div>
+                <p class="slip-explanation">When bombarded by contradictory advice and opinions from others, return to your own quiet common sense and stillness.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Silence outside noise for an hour. Your own wisdom will speak clearly.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #9</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">Seneca</span>
+                </div>
+                <div class="slip-sanskrit">"We suffer more often in imagination than in reality"</div>
+                <p class="slip-explanation">Most of the terrible catastrophes we lose sleep over never actually happen in real life.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Treat worry as imagination, not fact. Save your energy for real life.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #10</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 6.25</span>
+                </div>
+                <div class="slip-sanskrit">"Śanaiḥ śanaiḥ uparamed buddhyā dhṛti-gṛhītayā"</div>
+                <p class="slip-explanation">Calmness does not happen with a violent snap. It happens step by step, breath by breath, with steady gentleness.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Slow your breathing: 4 seconds inhale, 6 seconds exhale. Repeat 4 times.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #11</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">Clear</span>
+                </div>
+                <div class="slip-sanskrit">"Reduce the surface area of decision fatigue"</div>
+                <p class="slip-explanation">Make routine decisions automatic so your mind remains clear and calm for what truly matters.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Decide your breakfast or outfit the night before to start with ease.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #12</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">Frankl</span>
+                </div>
+                <div class="slip-sanskrit">"Between stimulus and response there is a space"</div>
+                <p class="slip-explanation">In that brief space lies your freedom to choose peace rather than knee-jerk anxiety.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Take 3 deep breaths before responding to any stressful message.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #13</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">BG 2.65</span>
+                </div>
+                <div class="slip-sanskrit">"Prasāde sarva-duḥkhānāṁ hānir asyopajāyate"</div>
+                <p class="slip-explanation">In a state of inner serenity, all sorrow naturally dissolves. Settle your mind and clarity will follow.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Spend 5 quiet minutes sipping water and looking out the window.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #14</div>
+            </article>
+            <article class="wisdom-slip category-anxious" style="border-color: #38bdf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #e0f2fe; color: #0369a1;">🌱 Calming an Overactive Mind</span>
+                    <span class="slip-verse-ref">Epictetus</span>
+                </div>
+                <div class="slip-sanskrit">"Men are disturbed not by things, but by the view they take"</div>
+                <p class="slip-explanation">The event itself is neutral; the peacefulness or stress comes from the meaning you attach to it.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Reframe: 'This is not a catastrophe; it is just an unexpected detour.'
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #15</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 2.70</span>
+                </div>
+                <div class="slip-sanskrit">"Āpūryamāṇam acala-pratiṣṭhaṁ samudram āpaḥ praviśanti"</div>
+                <p class="slip-explanation">Like the vast ocean remains deep and calm while rivers enter it, let daily tasks flow into awareness without upsetting your peace.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Become the ocean, not the river. Let noise pass through you.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #16</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 2.47</span>
+                </div>
+                <div class="slip-sanskrit">"Karmaṇy evādhikāras te mā phaleṣu kadācana"</div>
+                <p class="slip-explanation">You have a right to your sincere effort, never to demanding immediate outcomes. Work with love and release the scoreboard.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Give your best to the task in front of you; let the outcome take care of itself.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #17</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 2.48</span>
+                </div>
+                <div class="slip-sanskrit">"Yoga-sthaḥ kuru karmāṇi saṅgaṁ tyaktvā dhanañjaya"</div>
+                <p class="slip-explanation">Perform your daily duties with an even mind, treating success and temporary delays with identical calm grace.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Equanimity is true mastery. Greet today's small wins and hiccups with a smile.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #18</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 6.17</span>
+                </div>
+                <div class="slip-sanskrit">"Yuktāhāra-vihārasya yukta-ceṣṭasya karmasu"</div>
+                <p class="slip-explanation">Balance in healthy eating, restful sleep, recreation, and work removes sorrow. Rest is a necessity, not an indulgence.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Protect 7 to 8 hours of sleep as your sacred foundation for patience.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #19</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 4.18</span>
+                </div>
+                <div class="slip-sanskrit">"Karmaṇy akarma yaḥ paśyed akarmaṇi ca karma yaḥ"</div>
+                <p class="slip-explanation">True wisdom is keeping inner stillness while active, and staying quietly alert while resting.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Do not rush. Steady, unhurried work gets done twice as fast.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #20</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 5.10</span>
+                </div>
+                <div class="slip-sanskrit">"Brahmaṇy ādhāya karmāṇi padma-patram ivāmbhasā"</div>
+                <p class="slip-explanation">Live in the world like a lotus leaf in water—fully alive and present, yet untouched by muddy stress.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Let harsh words roll off you like clean water droplets on a lotus leaf.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #21</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 12.18</span>
+                </div>
+                <div class="slip-sanskrit">"Samaḥ śatrau ca mitre ca tathā mānāpamānayoḥ"</div>
+                <p class="slip-explanation">Remaining steady whether praised or criticized brings a durable, quiet self-respect that no one can steal.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Do not base your self-worth on the fluctuating opinions of others.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #22</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 5.24</span>
+                </div>
+                <div class="slip-sanskrit">"Yo 'ntaḥ-sukho 'ntar-ārāmas tathāntar-jyotir eva yaḥ"</div>
+                <p class="slip-explanation">One whose happiness and peace reside within their own heart is free and radiant everywhere.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Your peace lives inside your chest; nobody can take it without your permission.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #23</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 6.18</span>
+                </div>
+                <div class="slip-sanskrit">"Yadā viniyataṁ cittam ātmany evāvatiṣṭhate"</div>
+                <p class="slip-explanation">When the mind rests quietly in its own natural contentment, all restless yearning settles.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Take 10 minutes of complete stillness after lunch today.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #24</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">Lao Tzu</span>
+                </div>
+                <div class="slip-sanskrit">"To the mind that is still, the whole universe surrenders"</div>
+                <p class="slip-explanation">When you stop fighting reality, peace naturally fills every corner of your daily life.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Accept this moment exactly as it is; then choose your next kind action.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #25</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 18.36</span>
+                </div>
+                <div class="slip-sanskrit">"Sukhaṁ tv idānīṁ tri-vidhaṁ śṛṇu me bharatarṣabha"</div>
+                <p class="slip-explanation">True joy comes from harmony and clarity of spirit, not from endless material chasing.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Cherish simple blessings: good food, clean water, warm shelter, family.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #26</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">Thich Nhat Hanh</span>
+                </div>
+                <div class="slip-sanskrit">"Smile, breathe, and go slowly"</div>
+                <p class="slip-explanation">There is no need to hurry. Life is happening right here, right now in this breath.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Walk with a relaxed pace; feel each step connecting you with the earth.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #27</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 2.56</span>
+                </div>
+                <div class="slip-sanskrit">"Duḥkheṣv anudvigna-manāḥ sukheṣu vigata-spṛhaḥ"</div>
+                <p class="slip-explanation">One who is not shaken by hardship nor intoxicated by praise walks with true inner dignity.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Meet today with calm poise. You are bigger than today's little troubles.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #28</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 5.26</span>
+                </div>
+                <div class="slip-sanskrit">"Kāma-krodha-vimuktānāṁ yatīnāṁ yata-cetasām"</div>
+                <p class="slip-explanation">Freedom from sudden anger and craving brings immediate peace of heart right here in this body.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Drop grudges quickly. Peace of mind is worth much more than being right.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #29</div>
+            </article>
+            <article class="wisdom-slip category-peace" style="border-color: #34d399;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #d1fae5; color: #047857;">🌱 Finding Peace & Inner Balance</span>
+                    <span class="slip-verse-ref">BG 6.27</span>
+                </div>
+                <div class="slip-sanskrit">"Praśānta-manasaṁ hy enaṁ yoginaṁ sukham uttamam"</div>
+                <p class="slip-explanation">Supreme joy belongs to one whose mind is serene, whose passions are quieted, and whose heart is pure.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Close your eyes, breathe in peace, breathe out tension. Savor the quiet.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #30</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 3.8</span>
+                </div>
+                <div class="slip-sanskrit">"Niyataṁ kuru karma tvaṁ karma jyāyo hy akarmaṇaḥ"</div>
+                <p class="slip-explanation">Always choose action over sitting idle; even physical health and life require movement. Doing something small beats doing nothing.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> When feeling stuck, do just one tiny 2-minute chore immediately.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #31</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 18.37</span>
+                </div>
+                <div class="slip-sanskrit">"Yat tad agre viṣam iva pariṇāme 'mṛtopamam"</div>
+                <p class="slip-explanation">Good habits often feel uncomfortable in the first 5 minutes (like bitter medicine), but taste sweet like nectar once done.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Expect the first 5 minutes to feel hard. Push through; flow is coming.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #32</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 3.5</span>
+                </div>
+                <div class="slip-sanskrit">"Na hi kaścit kṣaṇam api jātu tiṣṭhaty akarmakṛt"</div>
+                <p class="slip-explanation">We are always taking action—even resting or avoiding is a choice. Make your choices conscious and gentle.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Avoidance is active practice of fear. Break it with one small action.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #33</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 3.7</span>
+                </div>
+                <div class="slip-sanskrit">"Yas tv indriyāṇi manasā niyamyārabhate 'rjuna"</div>
+                <p class="slip-explanation">One who curbs hesitation and begins honest daily work with enthusiasm is truly admirable.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Stand up, stretch your arms, and sit down to start your task.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #34</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 18.26</span>
+                </div>
+                <div class="slip-sanskrit">"Mukta-saṅgo 'nahaṁ-vādī dhṛty-utsāha-samanvitaḥ"</div>
+                <p class="slip-explanation">A joyful doer acts with steady resolve and cheerfulness, unaffected by temporary success or delay.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Bring cheerful energy to your ordinary chores today.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #35</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">Clear</span>
+                </div>
+                <div class="slip-sanskrit">"The 2-Minute Rule for building habits"</div>
+                <p class="slip-explanation">When you start a new habit, it should take less than two minutes to do. Read 1 page, do 5 squats, write 1 sentence.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Shrink the starting line until it requires zero willpower.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #36</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 18.39</span>
+                </div>
+                <div class="slip-sanskrit">"Yad agre cānubandhe ca sukhaṁ mohanam ātmanaḥ"</div>
+                <p class="slip-explanation">Mindless scrolling brings instant comfort but leaves lingering regret. Choose meaningful action.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Put your phone in another room for 45 minutes of focused work.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #37</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">Marcus</span>
+                </div>
+                <div class="slip-sanskrit">"At dawn, when you have trouble getting out of bed..."</div>
+                <p class="slip-explanation">Tell yourself: 'I am rising to do the work of a human being.' Embrace your day with gratitude.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Say good morning to life and step out of bed with purpose.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #38</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 18.28</span>
+                </div>
+                <div class="slip-sanskrit">"Ayuktaḥ prākṛtaḥ stabdhaḥ śaṭho naiṣkṛtiko 'lasaḥ"</div>
+                <p class="slip-explanation">Chronic postponement (procrastination) robs your future self of peace. Start today while it is light.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Do the task you have been putting off for 3 days. Get it done in 15 mins.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #39</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">Clear</span>
+                </div>
+                <div class="slip-sanskrit">"Never miss twice in a row"</div>
+                <p class="slip-explanation">Missing one day is normal life; missing two consecutive days starts a new habit of avoidance.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> If you broke a habit yesterday, do your tiny baseline version today.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #40</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 3.4</span>
+                </div>
+                <div class="slip-sanskrit">"Na karmaṇām anārambhān naiṣkarmyaṁ puruṣo 'śnute"</div>
+                <p class="slip-explanation">True peace does not come from avoiding responsibility; it comes from doing honest work with a clear heart.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Honest work cleanses the mind. Take care of your duties with joy.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #41</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">James Clear</span>
+                </div>
+                <div class="slip-sanskrit">"You do not rise to the level of your goals; you fall to your systems"</div>
+                <p class="slip-explanation">Focus on making daily routines smooth and friction-free rather than relying on bursts of willpower.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Prepare your desk and water bottle the night before.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #42</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 3.20</span>
+                </div>
+                <div class="slip-sanskrit">"Karmaṇaiva hi saṁsiddhim āsthitā janakādayaḥ"</div>
+                <p class="slip-explanation">Great people attained inner peace and fulfillment through dedicated daily action and service to community.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Your daily work is meaningful. Do it with care and love.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #43</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">Nike Principle</span>
+                </div>
+                <div class="slip-sanskrit">"Just Start (Motion generates Emotion)"</div>
+                <p class="slip-explanation">You don't need to feel ready before you begin. Taking action creates the energy you were waiting for.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Take the first step; the motivation will meet you on the way.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #44</div>
+            </article>
+            <article class="wisdom-slip category-laziness" style="border-color: #fbbf24;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fef3c7; color: #b45309;">🌱 Beating Procrastination & Starting</span>
+                    <span class="slip-verse-ref">BG 18.30</span>
+                </div>
+                <div class="slip-sanskrit">"Pravṛttiṁ ca nivṛttiṁ ca kāryākārye bhayābhaye"</div>
+                <p class="slip-explanation">Wisdom knows when to step forward and when to rest, what is truly helpful and what is a distraction.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Prune away one useless daily distraction to make room for your dreams.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #45</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 2.63</span>
+                </div>
+                <div class="slip-sanskrit">"Krodhād bhavati sammohaḥ sammohāt smṛti-vibhramaḥ"</div>
+                <p class="slip-explanation">From anger comes confusion, loss of perspective, and regret. Do not let momentary fury destroy years of goodwill.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Take a 3-breath pause before answering any irritating question.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #46</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 5.23</span>
+                </div>
+                <div class="slip-sanskrit">"Śaknotīhaiva yaḥ soḍhuṁ prāk śarīra-vimokṣaṇāt"</div>
+                <p class="slip-explanation">One who learns to endure and cool down the surge of anger right here in this body is truly wise and happy.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> When anger rises, keep silent for 60 seconds. Let the physical heat cool.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #47</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 12.15</span>
+                </div>
+                <div class="slip-sanskrit">"Yasmān nodvijate loko lokān nodvijate ca yaḥ"</div>
+                <p class="slip-explanation">He who does not agitate others and is not easily agitated by others is dear to peace and wisdom.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Refuse to be provoked by others' bad moods. Keep your own weather sunny.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #48</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 17.15</span>
+                </div>
+                <div class="slip-sanskrit">"Anudvega-karaṁ vākyaṁ satyaṁ priya-hitaṁ ca yat"</div>
+                <p class="slip-explanation">Speak words that do not agitate, that are truthful, gentle, kind, and helpful to the listener.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> The 3 Filters: Is what I am about to say true, necessary, and kind?
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #49</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 16.21</span>
+                </div>
+                <div class="slip-sanskrit">"Tri-vidhaṁ narakasyedaṁ dvāraṁ nāśanam ātmanaḥ"</div>
+                <p class="slip-explanation">Unchecked anger, craving, and greed harm your own peace first. Let go of grudges for your own sake.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Forgive not to excuse the other person, but to free yourself from carrying poison.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #50</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">Seneca</span>
+                </div>
+                <div class="slip-sanskrit">"Anger: temporary madness"</div>
+                <p class="slip-explanation">Anger always lasts longer than the slight that provoked it. Delay is the best remedy for anger.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> If an email or message upsets you, wait 24 hours before sending a reply.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #51</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 3.37</span>
+                </div>
+                <div class="slip-sanskrit">"Kāma eṣa krodha eṣa rajo-guṇa-samudbhavaḥ"</div>
+                <p class="slip-explanation">Anger is an insatiable fire born of uncontrolled expectation. Recognize it as an unwanted visitor in your home.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Say privately: 'I notice frustration is rising.' That awareness cools the flame.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #52</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">Marcus</span>
+                </div>
+                <div class="slip-sanskrit">"How much more grievous are the consequences of anger than the cause"</div>
+                <p class="slip-explanation">The damage caused by shouting is almost always worse than the spilled milk that triggered it.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Ask: 'Will this matter in 12 months?' If not, let it go with a smile.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #53</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 16.3</span>
+                </div>
+                <div class="slip-sanskrit">"Tejaḥ kṣamā dhṛtiḥ śaucam adroho nāti-mānitā"</div>
+                <p class="slip-explanation">True strength shines in forgiveness, patience, clean thoughts, and freedom from arrogance.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Gentleness is not weakness; it is strength held under perfect control.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #54</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">Buddha</span>
+                </div>
+                <div class="slip-sanskrit">"Holding anger is like grasping a hot coal..."</div>
+                <p class="slip-explanation">You grasp it with the intent of throwing it at someone else, but you are the one who gets burned.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Drop the hot coal. Breathe in peace and step away from the argument.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #55</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 2.56</span>
+                </div>
+                <div class="slip-sanskrit">"Vīta-rāga-bhaya-krodhaḥ sthita-dhīr munir ucyate"</div>
+                <p class="slip-explanation">One who is free from feverish attachment, fear, and anger is called a person of steady, grounded wisdom.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Walk away from petty arguments. Your peace of mind is priceless.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #56</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">Epictetus</span>
+                </div>
+                <div class="slip-sanskrit">"If someone irritates you, remember that it is your own judgment..."</div>
+                <p class="slip-explanation">No one can make you angry without your consent. You choose how to respond.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> You are the master of your reactions. Choose calm over drama.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #57</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 17.16</span>
+                </div>
+                <div class="slip-sanskrit">"Manaḥ-prasādaḥ saumyatvaṁ maunaṁ vyāpta-saṁyamaḥ"</div>
+                <p class="slip-explanation">Cultivate a cheerful mind, kindness, gentle speech, and self-control. This is the highest inner beauty.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Give a sincere compliment or kind smile to someone today.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #58</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">Frankl</span>
+                </div>
+                <div class="slip-sanskrit">"In our response lies our growth and our freedom"</div>
+                <p class="slip-explanation">You cannot control what others do or say, but you own your response with total sovereignty.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Respond with dignity, even when the other person is acting poorly.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #59</div>
+            </article>
+            <article class="wisdom-slip category-anger" style="border-color: #f87171;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fee2e2; color: #b91c1c;">🌱 Handling Anger & Frustration</span>
+                    <span class="slip-verse-ref">BG 5.26</span>
+                </div>
+                <div class="slip-sanskrit">"Kāma-krodha-vimuktānāṁ yatīnāṁ yata-cetasām"</div>
+                <p class="slip-explanation">Peace envelops those who are free from wrath and desire, who have gentle mastery over their minds.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> End today with zero grudges. Go to sleep with a light, forgiven heart.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #60</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 2.20</span>
+                </div>
+                <div class="slip-sanskrit">"Na jāyate mriyate vā kadācin... na hanyate hanyamāne śarīre"</div>
+                <p class="slip-explanation">The true core of your spirit is untouched by temporary setbacks, failures, or heartbreaks. You are unbreakable inside.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> What failed today was a method or plan, never your human dignity.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #61</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 18.48</span>
+                </div>
+                <div class="slip-sanskrit">"Saha-jaṁ karma kaunteya sa-doṣam api na tyajet"</div>
+                <p class="slip-explanation">All human endeavors have imperfections, just as fire is accompanied by smoke. Accept small flaws and keep going.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Forgive yourself for being human. Expect some smoke and enjoy the warm fire.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #62</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 6.40</span>
+                </div>
+                <div class="slip-sanskrit">"Pārtha naiveha nāmutra vināśas tasya vidyate"</div>
+                <p class="slip-explanation">No sincere effort made with a good heart is ever truly lost. Goodness compounds quietly across your life.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Trust that the love and care you poured out will return to you in time.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #63</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 2.13</span>
+                </div>
+                <div class="slip-sanskrit">"Dehino 'smin yathā dehe kaumāraṁ yauvanaṁ jarā"</div>
+                <p class="slip-explanation">Life moves through continuous seasons—childhood, youth, age, joy, and grief. Meet each season with patient courage.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Winter never stays forever. Spring always returns to the garden.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #64</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 2.22</span>
+                </div>
+                <div class="slip-sanskrit">"Vāsāṁsi jīrṇāni yathā vihāya navāni gṛhṇāti"</div>
+                <p class="slip-explanation">Just as you cast off worn clothes for fresh ones, let go of outgrown worries, past regrets, and expired dreams.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Let yesterday go; it did its job. Today is a fresh, clean page.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #65</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">Frankl</span>
+                </div>
+                <div class="slip-sanskrit">"When we are no longer able to change a situation..."</div>
+                <p class="slip-explanation">We are challenged to change ourselves and discover deep meaning even in hardship.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Ask: 'What kindness or strength can this hardship teach me?'
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #66</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 2.11</span>
+                </div>
+                <div class="slip-sanskrit">"Aśocyān anvaśocas tvaṁ prajñā-vādāṁś ca bhāṣase"</div>
+                <p class="slip-explanation">Stop grieving over things that cannot be changed. Turn your gentle care toward what is alive today.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Spend today's love on the living, the present, and the possible.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #67</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">Rumi</span>
+                </div>
+                <div class="slip-sanskrit">"The wound is the place where the Light enters you"</div>
+                <p class="slip-explanation">Pain softens our hearts, teaches us empathy for others, and deepens our wisdom.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Be gentle with your hurting heart. It is expanding to hold more love.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #68</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 18.54</span>
+                </div>
+                <div class="slip-sanskrit">"Brahma-bhūtaḥ prasannātmā na śocati na kāṅkṣati"</div>
+                <p class="slip-explanation">A serene spirit does not mourn the past nor anxiously crave the future. It lives fully in the present.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Right now, in this breath, you are safe, alive, and cared for.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #69</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">Marcus</span>
+                </div>
+                <div class="slip-sanskrit">"The impediment to action advances action. What stands in the way becomes the way."</div>
+                <p class="slip-explanation">Every obstacle is an invitation to practice patience, creativity, or courage.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Turn this hurdle into an opportunity to practice quiet strength.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #70</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 9.31</span>
+                </div>
+                <div class="slip-sanskrit">"Kṣipraṁ bhavati dharmātmā śaśvac-chāntiṁ nigacchati"</div>
+                <p class="slip-explanation">Whoever turns toward truth and goodness quickly finds lasting peace. You can always start over fresh.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> You are never too late, too old, or too broken to begin again.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #71</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">C.S. Lewis</span>
+                </div>
+                <div class="slip-sanskrit">"There are far better things ahead than any we leave behind"</div>
+                <p class="slip-explanation">Trust that tomorrow holds unseen joys, new friendships, and quiet blessings.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Hold onto hope. Good things are quietly heading your way.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #72</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 2.38</span>
+                </div>
+                <div class="slip-sanskrit">"Sukha-duḥkhe same kṛtvā lābhālābhau jayājayau"</div>
+                <p class="slip-explanation">Treat joy and sorrow, gain and loss with equal poise. Stand steady like a mountain through all winds.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> You are the mountain; life's events are passing weather. Stand tall.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #73</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">Desmond Tutu</span>
+                </div>
+                <div class="slip-sanskrit">"Hope is being able to see that there is light despite all the darkness"</div>
+                <p class="slip-explanation">Even in the darkest night, stars shine quietly. Look up and take heart.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Focus on the small glimmers of light available to you today.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #74</div>
+            </article>
+            <article class="wisdom-slip category-sadness" style="border-color: #818cf8;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ede9fe; color: #4338ca;">🌱 Healing from Sadness & Bad Days</span>
+                    <span class="slip-verse-ref">BG 18.73</span>
+                </div>
+                <div class="slip-sanskrit">"Naṣṭo mohaḥ smṛtir labdhā tvat-prasādān mayācyuta"</div>
+                <p class="slip-explanation">My confusion is gone; my memory and inner strength are restored. I am ready to walk forward.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Take a deep breath, stand up straight, and take your next step with faith.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #75</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 6.5</span>
+                </div>
+                <div class="slip-sanskrit">"Uddhared ātmanātmānaṁ nātmānam avasādayet"</div>
+                <p class="slip-explanation">Elevate yourself through your own mind; never put yourself down. You must become your own loyal, lifelong friend.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Speak to yourself with the same warmth you would offer a tired friend.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #76</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 6.6</span>
+                </div>
+                <div class="slip-sanskrit">"Bandhur ātmātmanas tasya yenātmaivātmanā jitaḥ"</div>
+                <p class="slip-explanation">For one who guides their own thoughts with love, the self is the greatest friend. Make peace with your inner voice.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Notice negative self-talk and replace it with: 'I am doing my best.'
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #77</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 6.10</span>
+                </div>
+                <div class="slip-sanskrit">"Yogī yuñjīta satatam ātmānaṁ rahasi sthitaḥ"</div>
+                <p class="slip-explanation">Enjoy quiet solitude with a peaceful heart, free from greed and noisy distractions.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Solitude is not emptiness; it is the quiet room where your soul rests.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #78</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 13.28</span>
+                </div>
+                <div class="slip-sanskrit">"Samaṁ sarveṣu bhūteṣu tiṣṭhantaṁ parameśvaram"</div>
+                <p class="slip-explanation">The same divine awareness that is in you is present in every human being. You are deeply connected to all life.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Look at strangers with silent goodwill: 'May you be happy and safe.'
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #79</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 18.52</span>
+                </div>
+                <div class="slip-sanskrit">"Vivikta-sevī laghv-āśī yata-vāk-kāya-mānasaḥ"</div>
+                <p class="slip-explanation">Cherishing quiet places, eating with moderation, and speaking with care brings immense peace and depth.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Spend 20 quiet minutes walking in nature without headphones.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #80</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">Marcus</span>
+                </div>
+                <div class="slip-sanskrit">"Nowhere can man find a quieter retreat than in his own soul"</div>
+                <p class="slip-explanation">Make your own mind a clean, dignified, and peaceful place to live.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Clean up your thoughts like you would tidy your living room.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #81</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 13.10</span>
+                </div>
+                <div class="slip-sanskrit">"Mayi cānanya-yogena bhaktir avyabhicāriṇī"</div>
+                <p class="slip-explanation">Cherish simple solitude over shallow crowds. True depth is nurtured in quiet reflection.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> You don't need to attend every gathering to be happy. Value your quiet evenings.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #82</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">Henri Nouwen</span>
+                </div>
+                <div class="slip-sanskrit">"Solitude is the furnace of transformation"</div>
+                <p class="slip-explanation">In solitude we discover who we truly are beneath titles, possessions, and praise.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Spend time getting to know and love the person you are alone.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #83</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 6.32</span>
+                </div>
+                <div class="slip-sanskrit">"Ātmaupamyena sarvatra samaṁ paśyati yo 'rjuna"</div>
+                <p class="slip-explanation">One who sees others' joys and pains as their own, with genuine empathy, is the highest soul.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Treat everyone with kindness; everyone is carrying a heavy unseen bag.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #84</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">Kahlil Gibran</span>
+                </div>
+                <div class="slip-sanskrit">"In the sweetness of friendship let there be laughter and sharing of pleasures"</div>
+                <p class="slip-explanation">Nurture genuine, warm bonds with a few good people who love you for who you are.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Call an old friend or family member just to tell them you appreciate them.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #85</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 10.20</span>
+                </div>
+                <div class="slip-sanskrit">"Aham ātmā guḍākeśa sarva-bhūtāśaya-sthitaḥ"</div>
+                <p class="slip-explanation">I am the inner spark dwelling in the heart of all beings. You are never abandoned or alone.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Place your hand on your heart: feel that steady beat. You are held by life.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #86</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">Eleanor Roosevelt</span>
+                </div>
+                <div class="slip-sanskrit">"Friendship with oneself is all-important..."</div>
+                <p class="slip-explanation">Because without it one cannot be friends with anyone else in the world.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Be proud of who you are and how far you have come.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #87</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 18.61</span>
+                </div>
+                <div class="slip-sanskrit">"Īśvaraḥ sarva-bhūtānāṁ hṛd-deśe 'rjuna tiṣṭhati"</div>
+                <p class="slip-explanation">The supreme presence dwells quietly within the heart of every being. Listen to your inner voice of peace.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Listen to your quiet conscience; it will always guide you home.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #88</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">Rainer Maria Rilke</span>
+                </div>
+                <div class="slip-sanskrit">"Love your solitude and bear the pain it causes you with sweet sounding lamentation"</div>
+                <p class="slip-explanation">Quiet moments allow you to create, reflect, and grow deep roots.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Use quiet evenings to read a good book, draw, or write your thoughts.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #89</div>
+            </article>
+            <article class="wisdom-slip category-lonely" style="border-color: #c084fc;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #f3e8ff; color: #7e22ce;">🌱 Embracing Solitude & Kind Self-Talk</span>
+                    <span class="slip-verse-ref">BG 18.66</span>
+                </div>
+                <div class="slip-sanskrit">"Sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja"</div>
+                <p class="slip-explanation">Surrender all excessive burdens and anxieties; you are safe, protected, and loved. Do not grieve.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Let go of trying to control everything. Rest in trust and peace tonight.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #90</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 3.35</span>
+                </div>
+                <div class="slip-sanskrit">"Śreyān sva-dharmo viguṇaḥ para-dharmāt sv-anuṣṭhitāt"</div>
+                <p class="slip-explanation">It is far better to live your own authentic life imperfectly than to live a borrowed imitation of someone else's life.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Live your own life. You were not born to be an imitation of someone else.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #91</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 18.47</span>
+                </div>
+                <div class="slip-sanskrit">"Śreyān sva-dharmo viguṇaḥ para-dharmāt sv-anuṣṭhitāt"</div>
+                <p class="slip-explanation">Working in alignment with your own natural talents and temperament brings peace and no regret.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Focus on what feels natural and joyful for you, not what is trendy.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #92</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 4.22</span>
+                </div>
+                <div class="slip-sanskrit">"Yadṛcchā-lābha-santuṣṭo dvandvātīto vimatsaraḥ"</div>
+                <p class="slip-explanation">One who is content with what arrives naturally, free from jealousy, and balanced in all seasons is truly free.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Rejoice when others succeed. Their success does not diminish your gifts.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #93</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 16.13</span>
+                </div>
+                <div class="slip-sanskrit">"Idam adya mayā labdham imaṁ prāpsye manoratham"</div>
+                <p class="slip-explanation">The trap of bragging ('I have this, I will conquer that') brings constant anxiety. True peace is quiet contentment.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> You don't need to prove anything to anyone on social media.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #94</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 18.45</span>
+                </div>
+                <div class="slip-sanskrit">"Sve sve karmaṇy abhirataḥ saṁsiddhiṁ labhate naraḥ"</div>
+                <p class="slip-explanation">By wholehearted dedication to your own daily craft and responsibilities, you attain supreme fulfillment.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Do your own daily work with pride, whether cooking, teaching, or coding.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #95</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">Theodore Roosevelt</span>
+                </div>
+                <div class="slip-sanskrit">"Comparison is the thief of joy"</div>
+                <p class="slip-explanation">Looking sideways at what others have robs you of the beauty sitting right in your own hands.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Put down the comparison glass. Look around and appreciate your own life.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #96</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 3.27</span>
+                </div>
+                <div class="slip-sanskrit">"Prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ"</div>
+                <p class="slip-explanation">Nature drives the world through its seasons; the foolish ego claims 'I alone did everything.' Stay humble.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Stay humble in success, and patient in hardship. Everything moves in cycles.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #97</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">Epictetus</span>
+                </div>
+                <div class="slip-sanskrit">"Wealth consists not in having great possessions, but in having few wants"</div>
+                <p class="slip-explanation">When you are content with what you have, you are richer than a billionaire who always wants more.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Count your blessings today: family, health, clean food, fresh air.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #98</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 16.15</span>
+                </div>
+                <div class="slip-sanskrit">"Āḍhyo 'bhijanavān asmi ko 'nyo 'sti sadṛśo mayā"</div>
+                <p class="slip-explanation">Status games are exhausting and fragile. True greatness is gentle kindness and quiet capability.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Seek respect, not applause. Seek depth, not popularity.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #99</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">Lao Tzu</span>
+                </div>
+                <div class="slip-sanskrit">"When you are content to be simply yourself and don't compare, everyone will respect you"</div>
+                <p class="slip-explanation">Authentic simplicity is the most attractive quality in human nature.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Be genuine. People love honesty and warmth far more than flashiness.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #100</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 18.46</span>
+                </div>
+                <div class="slip-sanskrit">"Yataḥ pravṛttir bhūtānāṁ yena sarvam idaṁ tatam"</div>
+                <p class="slip-explanation">By offering your daily work with love and honesty, you sanctify every hour of your life.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Turn your daily work into an act of love for your family and community.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #101</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">Marcus</span>
+                </div>
+                <div class="slip-sanskrit">"How much time he saves who does not look to see what his neighbor says or does"</div>
+                <p class="slip-explanation">Mind your own garden. Tending to your own life brings immense peace and fruitfulness.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Close competitor tabs and focus on your own creative work.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #102</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 17.18</span>
+                </div>
+                <div class="slip-sanskrit">"Satkāra-māna-pūjārthaṁ tapo dambhena caiva yat"</div>
+                <p class="slip-explanation">Actions done merely for show, praise, or prestige are fleeting. Act from genuine love and principle.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Do good deeds in secret. The joy of helping is its own complete reward.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #103</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">Zen Proverb</span>
+                </div>
+                <div class="slip-sanskrit">"The flower does not think of competing with the next flower. It just blooms."</div>
+                <p class="slip-explanation">You have your own unique season, beauty, and timing. Trust your rhythm.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Bloom at your own pace. There is no rush; you are right on time.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #104</div>
+            </article>
+            <article class="wisdom-slip category-compare" style="border-color: #fb923c;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #ffedd5; color: #c2410c;">🌱 Overcoming Comparison & Finding Your Path</span>
+                    <span class="slip-verse-ref">BG 18.78</span>
+                </div>
+                <div class="slip-sanskrit">"Yatra yogeśvaraḥ kṛṣṇo yatra pārtho dhanur-dharaḥ"</div>
+                <p class="slip-explanation">Where clear vision and honest daily effort are united, victory and lasting peace are guaranteed.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Combine wise principles with one honest step today. You are building something real.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #105</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 2.55</span>
+                </div>
+                <div class="slip-sanskrit">"Ātmany evātmanā tuṣṭaḥ sthita-prajñas tadocyate"</div>
+                <p class="slip-explanation">When you find joy and contentment within your own heart, needing no outside applause to feel whole, you are free.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Happiness is an inside job. Savor the quiet contentment of being alive.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #106</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 7.8</span>
+                </div>
+                <div class="slip-sanskrit">"Raso 'ham apsu kaunteya prabhāsmi śaśi-sūryayoḥ"</div>
+                <p class="slip-explanation">I am the fresh taste in cool water, the gentle glow of the moon, and the radiance of the morning sun.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Notice everyday miracles: cool water on a hot day, warm sunlight, gentle wind.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #107</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 10.20</span>
+                </div>
+                <div class="slip-sanskrit">"Aham ātmā guḍākeśa sarva-bhūtāśaya-sthitaḥ"</div>
+                <p class="slip-explanation">I live in the heart of all beings. Life itself is sacred and humming with beauty all around you.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Pause and feel the wonder of being alive on this earth today.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #108</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 9.22</span>
+                </div>
+                <div class="slip-sanskrit">"Ananyāś cintayanto māṁ ye janāḥ paryupāsate"</div>
+                <p class="slip-explanation">For those who walk with love, trust, and sincerity, life provides what is needed and protects what they have.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Trust life. Do your part with sincerity and know you are supported.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #109</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 17.16</span>
+                </div>
+                <div class="slip-sanskrit">"Manaḥ-prasādaḥ saumyatvaṁ maunaṁ vyāpta-saṁyamaḥ"</div>
+                <p class="slip-explanation">Cultivate a cheerful, peaceful mind, gentle behavior, and a kind heart. This makes every room brighter.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Bring a gentle smile and positive warmth into your home today.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #110</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">Albert Schweitzer</span>
+                </div>
+                <div class="slip-sanskrit">"At times our own light goes out and is rekindled by a spark from another person"</div>
+                <p class="slip-explanation">Express deep gratitude to those who have brought light into your journey.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Send a text or write a note of gratitude to someone who helped you.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #111</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 10.41</span>
+                </div>
+                <div class="slip-sanskrit">"Yad yad vibhūtimat sattvaṁ śrīmad ūrjitam eva vā"</div>
+                <p class="slip-explanation">Wherever you see beauty, courage, love, or excellence, recognize it as a reflection of the divine.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Admire beauty wherever you find it—in music, art, nature, or a kind act.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #112</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">Mary Oliver</span>
+                </div>
+                <div class="slip-sanskrit">"Pay attention. Be astonished. Tell about it."</div>
+                <p class="slip-explanation">Live with your eyes open to wonder. Don't rush through this precious day.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Look at the sky for 2 minutes today. Notice the clouds and colors.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #113</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 18.73</span>
+                </div>
+                <div class="slip-sanskrit">"Sthito 'smi gata-sandehaḥ kariṣye vacanaṁ tava"</div>
+                <p class="slip-explanation">I stand firm, my doubts have vanished, and I am ready to live with clarity, joy, and purpose.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Stand up with confidence. You are ready to live today with an open heart.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #114</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">Brother David Steindl-Rast</span>
+                </div>
+                <div class="slip-sanskrit">"It is not joy that makes us grateful; it is gratitude that makes us joyful"</div>
+                <p class="slip-explanation">Start every morning by counting 3 simple blessings and watch your day light up.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Say: 'Thank you for this day, thank you for this life.'
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #115</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 18.63</span>
+                </div>
+                <div class="slip-sanskrit">"Vimṛśyaitad aśeṣeṇa yathecchasi tathā kuru"</div>
+                <p class="slip-explanation">Reflect deeply on these timeless truths, and then live your life freely with dignity and love.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> You have wisdom within you. Trust your heart to choose the good path.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #116</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">Helen Keller</span>
+                </div>
+                <div class="slip-sanskrit">"The best and most beautiful things in the world cannot be seen or touched..."</div>
+                <p class="slip-explanation">They must be felt with the heart—love, kindness, gratitude, and peace.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Cherish the unseen treasures of love, kindness, and quiet moments.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #117</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 2.65</span>
+                </div>
+                <div class="slip-sanskrit">"Prasāde sarva-duḥkhānāṁ hānir asyopajāyate"</div>
+                <p class="slip-explanation">In serene contentment, all sorrows dissolve. A peaceful heart is the greatest wealth on earth.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Guard your inner peace like precious treasure; let nothing disturb it.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #118</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">Rumi</span>
+                </div>
+                <div class="slip-sanskrit">"Wear gratitude like a cloak and it will feed every corner of your life"</div>
+                <p class="slip-explanation">Let gratitude be your daily attitude. It sweetens every meal and lightens every chore.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Thank the people who cook, clean, build, and support your daily life.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #119</div>
+            </article>
+            <article class="wisdom-slip category-happy" style="border-color: #f472b6;">
+                <div class="slip-header">
+                    <span class="slip-badge" style="background: #fce7f3; color: #be185d;">🌱 Gratitude, Joy & Everyday Contentment</span>
+                    <span class="slip-verse-ref">BG 18.78</span>
+                </div>
+                <div class="slip-sanskrit">"Yatra yogeśvaraḥ kṛṣṇo yatra pārtho dhanur-dharaḥ... Om Tat Sat"</div>
+                <p class="slip-explanation">Where wise principles and sincere daily action walk together, peace, victory, and joy reside forever. Om Tat Sat.</p>
+                <div class="slip-rule-box">
+                    <strong>DAILY REMINDER:</strong> Walk forward with a kind heart and a calm mind. All is well. Om Tat Sat.
+                </div>
+                <div class="scissor-guide">✂ CUT & KEEP IN JAR • #120</div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        function filterCategory(catId) {
+            document.querySelectorAll('.filter-chip').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const slips = document.querySelectorAll('.wisdom-slip');
+            slips.forEach(slip => {
+                if (catId === 'all' || slip.classList.contains(`category-${catId}`)) {
+                    slip.style.display = 'flex';
+                } else {
+                    slip.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

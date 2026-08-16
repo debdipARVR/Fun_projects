@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Wisdom for Daily Living — Live Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --gold: #b45309;
+            --gold-light: #fffbeb;
+            --sanskrit-burgundy: #881337;
+            --green: #047857;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-dark);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Top Navigation Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .brand span {
+            color: var(--text-muted);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .top-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .top-btn {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.5rem 1.1rem;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
+        }
+
+        .top-btn:hover {
+            background: var(--gold);
+            color: #ffffff;
+            border-color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1100px;
+            margin: 3rem auto 2.5rem;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        .hero-tag {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 780px;
+            margin: 0 auto 2rem;
+        }
+
+        /* 3 Main Action Feature Cards */
+        .feature-grid {
+            max-width: 1150px;
+            margin: 0 auto 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            padding: 0 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+            border-color: var(--gold);
+        }
+
+        .card-icon {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.6rem;
+        }
+
+        .card-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            background: var(--gold);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0.8rem 1.4rem;
+            border-radius: 8px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background 0.2s ease;
+        }
+
+        .card-btn:hover {
+            background: #92400e;
+        }
+
+        .card-btn.secondary {
+            background: #0f172a;
+        }
+        .card-btn.secondary:hover {
+            background: #334155;
+        }
+
+        /* 8 Pillars Preview Matrix */
+        .matrix-section {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .pillar-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .pillar-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .pillar-quote {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            ☸ UNIVERSAL WISDOM PROTOCOL <span>| Live Portal</span>
+        </div>
+        <nav class="top-links">
+            <a href="presentation.html" class="top-btn">🎬 Presentation Deck</a>
+            <a href="printable-slips.html" class="top-btn">✂️ 120 Printable Slips</a>
+            <a href="Universal_Wisdom_Masterclass.pptx" class="top-btn">📊 Download PPTX</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-tag">🌱 Ancient Truths for Everyday People</div>
+            <h1 class="hero-title">Universal Wisdom for Daily Living</h1>
+            <p class="hero-subtitle">
+                A grounded, accessible guide to calming an overactive mind, finding peace, beating procrastination, cooling anger, and living with gratitude. Ready to view, present, or print for reflection jars.
+            </p>
+        </section>
+
+        <section class="feature-grid">
+            <!-- Card 1: Interactive Presentation -->
+            <div class="feature-card">
+                <div>
+                    <div class="card-icon">🔊</div>
+                    <h2 class="card-title">Interactive Keynote & Chanting Deck</h2>
+                    <p class="card-desc">
+                        Full-screen presentation deck featuring embedded human Sanskrit chanting audio for all 18 universal verses, an instant 432Hz bell test, and continuous meditation drone.
+                    </p>
+                </div>
+                <a href="presentation.html" class="card-btn">
+                    Launch Keynote Deck →
+                </a>
+            </div>
+
+            <!-- Card 2: 120 Printable Slips -->
+            <div class="feature-card">
+                <div>
+                    <div class="card-icon">✂️</div>
+                    <h2 class="card-title">120 Printable Reflection Slips (A4)</h2>
+                    <p class="card-desc">
+                        Calibrated for standard A4 paper printing (6 uniform cards per sheet). Filter by color/mood, print on colored sheets, cut along guides, and build daily reflection jars.
+                    </p>
+                </div>
+                <a href="printable-slips.html" class="card-btn secondary">
+                    Open Printable Slips →
+                </a>
+            </div>
+
+            <!-- Card 3: PowerPoint Deck -->
+            <div class="feature-card">
+                <div>
+                    <div class="card-icon">📊</div>
+                    <h2 class="card-title">Master PowerPoint Deck (.pptx)</h2>
+                    <p class="card-desc">
+                        16:9 Widescreen slide deck in high-legibility light theme, featuring plain-language translations, practical daily reminders, and dual-column layouts for workshops.
+                    </p>
+                </div>
+                <a href="Universal_Wisdom_Masterclass.pptx" class="card-btn" style="background:#047857;">
+                    Download .pptx Deck ↓
+                </a>
+            </div>
+        </section>
+
+        <!-- 8 Pillars Matrix -->
+        <section class="matrix-section">
+            <div class="section-header">
+                <h2 class="section-title">The 8 Pillars of Everyday Peace</h2>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#e0f2fe; color:#0369a1;">🔵 Sky Blue</span>
+                    <h3 class="pillar-title">Calming Worry</h3>
+                    <p class="pillar-quote">"What if things turn out fine? Let passing thoughts pass."</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#d1fae5; color:#047857;">🟢 Green</span>
+                    <h3 class="pillar-title">Finding Peace</h3>
+                    <p class="pillar-quote">"Do your best today; let go of what you cannot control."</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#fef3c7; color:#b45309;">🟡 Yellow</span>
+                    <h3 class="pillar-title">Beating Laziness</h3>
+                    <p class="pillar-quote">"You don't need to finish today. Just start for 2 minutes."</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#fee2e2; color:#b91c1c;">🔴 Red</span>
+                    <h3 class="pillar-title">Cooling Anger</h3>
+                    <p class="pillar-quote">"Pause for 3 breaths. Quiet patience is supreme strength."</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#ede9fe; color:#4338ca;">🟣 Indigo</span>
+                    <h3 class="pillar-title">Healing Setbacks</h3>
+                    <p class="pillar-quote">"A bad season is not a bad life. Winter always turns to spring."</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#f3e8ff; color:#7e22ce;">🟪 Purple</span>
+                    <h3 class="pillar-title">Kind Self-Talk</h3>
+                    <p class="pillar-quote">"Speak to yourself with the warmth you'd offer a friend."</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#ffedd5; color:#c2410c;">🟠 Orange</span>
+                    <h3 class="pillar-title">Authentic Path</h3>
+                    <p class="pillar-quote">"Flowers don't compete; they just bloom in their own season."</p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-tag" style="background:#fce7f3; color:#be185d;">🌸 Pink</span>
+                    <h3 class="pillar-title">Everyday Joy</h3>
+                    <p class="pillar-quote">"Being alive and breathing is a miracle. Live with gratitude."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Universal Wisdom Protocol • Crafted with Love & Reverence for All People everywhere.</p>
+    </footer>
+
+</body>
+</html>
