@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://debdiparvr.github.io/Fun_projects/portfolio/sitemap.xml
