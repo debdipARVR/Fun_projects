@@ -54,6 +54,7 @@
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Architecture</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
                     <li><a href="#education" class="nav-link">Education</a></li>
                     <li><a href="#certifications" class="nav-link">Credentials</a></li>
                 </ul>
@@ -642,7 +643,43 @@ evaluation = evaluate(test_cases, quality_metrics)
                 <!-- Project Cards Grid -->
                 <div class="projects-grid" id="projects-grid">
 
-                    <!-- Project 1: GenAI & RAG Evaluation Pipeline -->
+                    <!-- Project 1: ClozeCongruence AI Text Detection Research -->
+                    <div class="project-card featured-project-card" data-category="genai" data-aos="fade-up" data-aos-delay="50">
+                        <div class="project-card-banner banner-research">
+                            <span class="project-tag"><i class="fa-solid fa-atom"></i> Zenodo CERN • Research Paper</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-microscope"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">ClozeCongruence: Multi-Pass Cloze Infilling with Sigmoidal Gating for AI Text Detection</h3>
+                            <p class="project-description">
+                                Original machine learning framework detecting generative LLM text via multi-passage sentence predictability, Continuous Sigmoidal Dynamic Gating (k=15, c0=0.70), and Max-Weight Bipartite Hungarian Permutation Matching.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Empirical Benchmark:</strong> 99.58% Accuracy, 99.17% Precision, and strictly bounded 0.83% FPR across 240 academic essays in 6 disciplines.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>DeepEval</span>
+                                <span>NLP</span>
+                                <span>Sigmoidal Gating</span>
+                                <span>Hungarian Matching</span>
+                                <span>Zenodo CERN</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="https://zenodo.org/records/21969610" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Paper (Zenodo)
+                                </a>
+                                <a href="https://github.com/debdipARVR/AI_Text_Detector-" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('cloze-congruence')">
+                                    <i class="fa-solid fa-circle-info"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: GenAI & RAG Evaluation Pipeline -->
                     <div class="project-card" data-category="genai" data-aos="fade-up" data-aos-delay="100">
                         <div class="project-card-banner banner-genai">
                             <span class="project-tag"><i class="fa-solid fa-robot"></i> GenAI CoE</span>
@@ -837,7 +874,89 @@ evaluation = evaluate(test_cases, quality_metrics)
         </section>
 
 
-        <!-- 6. EDUCATION & ACADEMIC BACKGROUND -->
+        <!-- 6. PUBLICATIONS & RESEARCH SECTION -->
+        <section id="publications" class="section publications-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Scientific Research</span>
+                    <h2 class="section-title">Publications & Scientific Preprints</h2>
+                    <p class="section-subtitle">Original machine learning research on robust AI text detection, semantic congruency, and LLM evaluation.</p>
+                </div>
+
+                <div class="publication-featured-card" data-aos="fade-up">
+                    <div class="pub-top-strip">
+                        <div class="pub-badges">
+                            <span class="pub-badge preprint"><i class="fa-solid fa-file-lines"></i> Scientific Preprint</span>
+                            <span class="pub-badge venue"><i class="fa-solid fa-atom"></i> Zenodo (CERN Archive)</span>
+                            <span class="pub-badge date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            <span class="pub-badge doi"><i class="fa-solid fa-fingerprint"></i> Record: 21969610</span>
+                        </div>
+                        <div class="pub-benchmark-pill">
+                            <i class="fa-solid fa-bolt"></i> <strong>99.58%</strong> Accuracy &bull; <strong>0.83%</strong> FPR
+                        </div>
+                    </div>
+
+                    <h3 class="pub-card-title">
+                        Multi-Pass Sentence Cloze Infilling with Sigmoidal Semantic Congruence for Robust AI Text Detection
+                    </h3>
+
+                    <p class="pub-author-line">
+                        <i class="fa-solid fa-user-pen"></i> <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Introduced <strong>ClozeCongruence</strong>, a robust black-box AI text detection framework based on bidirectional contextual sentence predictability across multi-passage discourse. Features a dual-pass cloze protocol (alternate-sentence cloze & centroid 3-sentence argument extraction), Max-Weight Bipartite Hungarian Permutation Matching to eliminate arbitrary sentence-ordering penalties, and Continuous Sigmoidal Dynamic Gating (<em>k=15, c<sub>0</sub>=0.70</em>) seamlessly interpolating between DeepEval propositional meaning overlap and semantic cosine embeddings.
+                    </p>
+
+                    <div class="pub-metrics-grid">
+                        <div class="pub-metric-box">
+                            <div class="metric-val">99.58%</div>
+                            <div class="metric-lbl">Overall Accuracy</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">99.17%</div>
+                            <div class="metric-lbl">Precision</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">0.83%</div>
+                            <div class="metric-lbl">False Positive Rate (FPR)</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">240</div>
+                            <div class="metric-lbl">Multi-Domain Essays (6 Disciplines)</div>
+                        </div>
+                    </div>
+
+                    <div class="pub-keywords-row">
+                        <span>AI Text Detection</span>
+                        <span>Cloze Congruence</span>
+                        <span>DeepEval</span>
+                        <span>Continuous Sigmoidal Dynamic Gating</span>
+                        <span>Bipartite Hungarian Matching</span>
+                        <span>LLM Evaluation</span>
+                        <span>NLP</span>
+                    </div>
+
+                    <div class="pub-actions-row">
+                        <a href="https://zenodo.org/records/21969610" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <span>Read Paper on Zenodo (CERN)</span>
+                        </a>
+                        <a href="https://github.com/debdipARVR/AI_Text_Detector-" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fa-brands fa-github"></i>
+                            <span>Open-Source Implementation</span>
+                        </a>
+                        <button class="btn btn-outline" onclick="openProjectModal('cloze-congruence')">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Architecture Deep Dive</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 7. EDUCATION & ACADEMIC BACKGROUND -->
         <section id="education" class="section education-section">
             <div class="container">
                 <div class="section-heading" data-aos="fade-up">
@@ -996,6 +1115,7 @@ evaluation = evaluate(test_cases, quality_metrics)
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Architecture</a>
+                <a href="#publications">Publications</a>
                 <a href="#education">Education</a>
                 <a href="#certifications">Credentials</a>
             </div>

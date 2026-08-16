@@ -266,6 +266,19 @@ function initProjectFilters() {
    7. PROJECT MODAL POPUP (Interactive Deep Dive)
    ========================================================================== */
 const projectDetailsData = {
+    "cloze-congruence": {
+        title: "Multi-Pass Sentence Cloze Infilling with Sigmoidal Semantic Congruence for Robust AI Text Detection",
+        company: "Zenodo (CERN Archive) &bull; Preprint (2026)",
+        tagline: "Original Scientific Research & Open-Source AI Text Detection Architecture",
+        overview: "Introduced 'ClozeCongruence', a domain-general black-box AI text detection framework based on bidirectional contextual sentence predictability across multi-passage discourse. Evaluated across 240 academic essays in 6 disciplines, achieving 99.58% Accuracy and a strictly bounded 0.83% False Positive Rate on authentic human writing.",
+        architecture: [
+            "<strong>Dual-Pass Cloze Masking Protocol:</strong> Evaluates structural continuity via alternate sentence masking (Pass 2) and centroid 3-sentence argument extraction (Pass 3).",
+            "<strong>Continuous Sigmoidal Dynamic Gating (k=15, c0=0.70):</strong> Smoothly interpolates between DeepEval propositional meaning overlap and semantic cosine embeddings (80/20 to 60/40 blend) without step discontinuities.",
+            "<strong>Max-Weight Bipartite Hungarian Permutation Matching:</strong> Eliminates arbitrary false penalties caused by sentence order inversion or factual compression.",
+            "<strong>Empirical Benchmark (240 Essays):</strong> Tested across Cognitive Neuroscience, Quantitative Economics, Distributed Systems, Philosophy of Mind, Molecular Genetics, and Modern History."
+        ],
+        techStack: ["Python", "DeepEval", "NLP", "Sigmoidal Gating", "Hungarian Matching", "Pytest", "Streamlit", "Zenodo CERN", "Git"]
+    },
     "genai-pipeline": {
         title: "Enterprise RAG & Conversational LLM Evaluation Pipeline",
         company: "Cognizant GenAI Center of Excellence (CoE)",
