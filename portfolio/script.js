@@ -267,17 +267,18 @@ function initProjectFilters() {
    ========================================================================== */
 const projectDetailsData = {
     "cloze-congruence": {
-        title: "Multi-Pass Sentence Cloze Infilling with Sigmoidal Semantic Congruence for Robust AI Text Detection",
-        company: "Zenodo (CERN Archive) &bull; Preprint (2026)",
-        tagline: "Original Scientific Research & Open-Source AI Text Detection Architecture",
-        overview: "Introduced 'ClozeCongruence', a domain-general black-box AI text detection framework based on bidirectional contextual sentence predictability across multi-passage discourse. Evaluated across 240 academic essays in 6 disciplines, achieving 99.58% Accuracy and a strictly bounded 0.83% False Positive Rate on authentic human writing.",
+        title: "ClozeCongruence 3.0: Multilingual AI Text Forensics & ScribeMark Engine",
+        company: "TMLR Submission • CERN Zenodo • SSRN Elsevier (2026)",
+        tagline: "Cross-Lingual Zero-Shot AI Text Forensics & Cryptographic Watermark Verification",
+        overview: "Architected ClozeCongruence 3.0, the first typologically invariant, zero-shot multilingual AI text forensics framework. Evaluated across 10 global languages (English, German, Spanish, French, Russian, Chinese, Japanese, Arabic, Hindi, Bengali) across Latin, Cyrillic, CJK, Devanagari, and Arabic scripts. Achieved a 98.92% cross-lingual AUROC, 99.71% Top-1 LLM provenance attribution, and strictly 0.00% False Positive Rate on authentic human multi-script literature.",
         architecture: [
-            "<strong>Dual-Pass Cloze Masking Protocol:</strong> Evaluates structural continuity via alternate sentence masking (Pass 2) and centroid 3-sentence argument extraction (Pass 3).",
-            "<strong>Continuous Sigmoidal Dynamic Gating (k=15, c0=0.70):</strong> Smoothly interpolates between DeepEval propositional meaning overlap and semantic cosine embeddings (80/20 to 60/40 blend) without step discontinuities.",
-            "<strong>Max-Weight Bipartite Hungarian Permutation Matching:</strong> Eliminates arbitrary false penalties caused by sentence order inversion or factual compression.",
-            "<strong>Empirical Benchmark (240 Essays):</strong> Tested across Cognitive Neuroscience, Quantitative Economics, Distributed Systems, Philosophy of Mind, Molecular Genetics, and Modern History."
+            "<strong>Script-Invariant Unicode Normalization:</strong> Employs NFKC normalization with script-aware regex segmentation handling non-segmenting scripts (CJK) and right-to-left orthographies (Arabic).",
+            "<strong>Dual-Topology Cloze Infilling:</strong> Probes structural continuity via alternate sentence masking (Pass 2) and centroid 3-sentence argument extraction (Pass 3) with exact $S_3$ permutation alignment.",
+            "<strong>Continuous Sigmoidal Dynamic Gating ($k=15, c_0=0.70$):</strong> Smoothly fuses dense embedding cosine similarity and propositional token recovery without step discontinuities.",
+            "<strong>Dynamic Burstiness Modulation ($CV_{\text{burst}}$):</strong> Modulates detection sensitivity via sentence-length variation, robustly eliminating false accusations on complex human academic literature.",
+            "<strong>ISO/IEC 27037 Forensic Provenance:</strong> Integrates SHA-256 artifact hashing and Ed25519 digital signature generation for tamper-evident verification certificates."
         ],
-        techStack: ["Python", "DeepEval", "NLP", "Sigmoidal Gating", "Hungarian Matching", "Pytest", "Streamlit", "Zenodo CERN", "Git"]
+        techStack: ["Python", "PyTorch", "Multilingual NLP", "Sigmoidal Gating", "Burstiness Modeling", "BGE-M3 / XLM-R", "Ed25519", "TMLR", "CERN Zenodo"]
     },
     "genai-pipeline": {
         title: "Enterprise RAG & Conversational LLM Evaluation Pipeline",
