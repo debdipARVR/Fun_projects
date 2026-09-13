@@ -280,6 +280,7 @@ const projectDetailsData = {
         ],
         techStack: ["PyTorch", "StabilityAI VAE", "2D-FFT Azimuthal Integration", "CMOS PRNU Forensics", "Streamlit", "ReportLab PDF", "ISO/IEC 27037", "IEEE Research", "CERN Zenodo", "Hugging Face"],
         liveUrl: "https://scribemarkimage.streamlit.app/",
+        colabUrl: "https://colab.research.google.com/github/debdipARVR/AI_IMAGE_DETECTION/blob/main/colab/Multi_VAE_Latent_Resonance_Colab.ipynb",
         repoUrl: "https://github.com/debdipARVR/AI_IMAGE_DETECTION",
         datasetUrl: "https://huggingface.co/datasets/DebdipCS/Latent-Resonance-AI-Image-Forensics-Benchmark-N100"
     },
@@ -382,9 +383,10 @@ function openProjectModal(projectId) {
 
     if (!modal || !data) return;
 
-    const actionButtonsHtml = (data.liveUrl || data.repoUrl || data.datasetUrl) ? `
+    const actionButtonsHtml = (data.liveUrl || data.colabUrl || data.repoUrl || data.datasetUrl) ? `
         <div style="margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; flex-wrap: wrap; gap: 10px;">
             ${data.liveUrl ? `<a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 0.85rem;"><i class="fas fa-external-link-alt"></i> Launch Live Application</a>` : ''}
+            ${data.colabUrl ? `<a href="${data.colabUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 0.85rem; border: 1px solid #f59e0b; color: #fbbf24;"><i class="fas fa-bolt"></i> Google Colab (GPU)</a>` : ''}
             ${data.datasetUrl ? `<a href="${data.datasetUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-warning" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 0.85rem; background: rgba(255, 210, 30, 0.15); border: 1px solid rgba(255, 210, 30, 0.5); color: #ffd21e;"><i class="fas fa-database"></i> Hugging Face Dataset</a>` : ''}
             ${data.repoUrl ? `<a href="${data.repoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 0.85rem;"><i class="fab fa-github"></i> View GitHub Repository</a>` : ''}
         </div>
