@@ -266,6 +266,20 @@ function initProjectFilters() {
    7. PROJECT MODAL POPUP (Interactive Deep Dive)
    ========================================================================== */
 const projectDetailsData = {
+    "latent-resonance": {
+        title: "Latent Resonance: Generative Diffusion Image Forensics & Sensor PRNU Verification",
+        company: "IEEE Flagship Research • CERN Zenodo (DOI: 10.5281/zenodo.22158286)",
+        tagline: "Zero-Training VAE Latent Inversion & Silicon CMOS Sensor Photodiode Noise Verification",
+        overview: "Engineered Latent Resonance, an ultra-fast non-invasive AI image forensics platform designed to detect generative diffusion synthesis (SDXL, SD 1.5/2.1, Midjourney, DALL-E 3, FLUX) without training or fine-tuning. Analyzes spatial autoencoder reconstruction divergence and 2D-FFT azimuthal spectral lattice harmonics, combined with physical CMOS sensor Photo-Response Non-Uniformity (PRNU) cross-channel noise correlation.",
+        architecture: [
+            "<strong>Deterministic VAE Latent Inversion:</strong> Maps candidate images through a fixed generative autoencoder bottleneck (sd-vae-ft-mse, &sigma;=0). Generative synthetic images achieve near-zero reconstruction error (PSNR &ge; 35.0 dB) due to manifold congruence, while physical optical sensors exhibit natural high-entropy divergence (PSNR &lt; 34.5 dB).",
+            "<strong>Azimuthal 2D-FFT Lattice Harmonic Detection:</strong> Computes radial integration of Fourier power spectra to expose periodic 8x8 transposed convolution grid peaks (f = &plusmn;64, &plusmn;128), providing definitive mathematical proof of generative diffusion upsampling.",
+            "<strong>CMOS Sensor PRNU & Inter-Channel Shot Noise Correlation:</strong> Extracts Laplacian noise residuals across R, G, B channels in &lt;0.02s. Authentic optical capture exhibits independent Poisson photon arrivals (&rho;<sub>RGB</sub> ~ 0.000), whereas multi-channel synthetic AI generators synthesize joint multi-channel tensors (&rho;<sub>RGB</sub> &ge; 0.92, K &ge; 20.0).",
+            "<strong>Sub-Resolution & Studio Portrait Calibration:</strong> Ingestion validation and dynamic decision calibration distinguish uniform studio backdrops and JPEG 4:2:0 chroma subsampling from true synthetic tensors, guaranteeing 0.00% False Accusations on mobile camera portraits.",
+            "<strong>ISO/IEC 27037:2012 Evidentiary Package:</strong> Produces court-admissible forensic audit certificates with SHA-256 evidence integrity hashing and zero-retention ephemeral memory mode."
+        ],
+        techStack: ["PyTorch", "StabilityAI VAE", "2D-FFT Azimuthal Integration", "CMOS PRNU Forensics", "Streamlit", "ReportLab PDF", "ISO/IEC 27037", "IEEE Research", "CERN Zenodo"]
+    },
     "cloze-congruence": {
         title: "ClozeCongruence 3.0: Multilingual AI Text Forensics & ScribeMark Engine",
         company: "TMLR Submission • CERN Zenodo • SSRN Elsevier (2026)",
