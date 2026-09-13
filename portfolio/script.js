@@ -278,7 +278,9 @@ const projectDetailsData = {
             "<strong>Sub-Resolution & Studio Portrait Calibration:</strong> Ingestion validation and dynamic decision calibration distinguish uniform studio backdrops and JPEG 4:2:0 chroma subsampling from true synthetic tensors, guaranteeing 0.00% False Accusations on mobile camera portraits.",
             "<strong>ISO/IEC 27037:2012 Evidentiary Package:</strong> Produces court-admissible forensic audit certificates with SHA-256 evidence integrity hashing and zero-retention ephemeral memory mode."
         ],
-        techStack: ["PyTorch", "StabilityAI VAE", "2D-FFT Azimuthal Integration", "CMOS PRNU Forensics", "Streamlit", "ReportLab PDF", "ISO/IEC 27037", "IEEE Research", "CERN Zenodo"]
+        techStack: ["PyTorch", "StabilityAI VAE", "2D-FFT Azimuthal Integration", "CMOS PRNU Forensics", "Streamlit", "ReportLab PDF", "ISO/IEC 27037", "IEEE Research", "CERN Zenodo"],
+        liveUrl: "https://scribemarkimage.streamlit.app/",
+        repoUrl: "https://github.com/debdipARVR/AI_IMAGE_DETECTION"
     },
     "cloze-congruence": {
         title: "ClozeCongruence 3.0: Multilingual AI Text Forensics & ScribeMark Engine",
@@ -292,7 +294,9 @@ const projectDetailsData = {
             "<strong>Dynamic Burstiness Modulation ($CV_{\text{burst}}$):</strong> Modulates detection sensitivity via sentence-length variation, robustly eliminating false accusations on complex human academic literature.",
             "<strong>ISO/IEC 27037 Forensic Provenance:</strong> Integrates SHA-256 artifact hashing and Ed25519 digital signature generation for tamper-evident verification certificates."
         ],
-        techStack: ["Python", "PyTorch", "Multilingual NLP", "Sigmoidal Gating", "Burstiness Modeling", "BGE-M3 / XLM-R", "Ed25519", "TMLR", "CERN Zenodo"]
+        techStack: ["Python", "PyTorch", "Multilingual NLP", "Sigmoidal Gating", "Burstiness Modeling", "BGE-M3 / XLM-R", "Ed25519", "TMLR", "CERN Zenodo"],
+        liveUrl: "https://scribemark.streamlit.app/",
+        repoUrl: "https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit"
     },
     "genai-pipeline": {
         title: "Enterprise RAG & Conversational LLM Evaluation Pipeline",
@@ -377,6 +381,13 @@ function openProjectModal(projectId) {
 
     if (!modal || !data) return;
 
+    const actionButtonsHtml = (data.liveUrl || data.repoUrl) ? `
+        <div style="margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; flex-wrap: wrap; gap: 10px;">
+            ${data.liveUrl ? `<a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 0.85rem;"><i class="fas fa-external-link-alt"></i> Launch Live Application</a>` : ''}
+            ${data.repoUrl ? `<a href="${data.repoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 0.85rem;"><i class="fab fa-github"></i> View GitHub Repository</a>` : ''}
+        </div>
+    ` : '';
+
     modalContent.innerHTML = `
         <span class="project-tag" style="margin-bottom: 0.8rem; display: inline-block;">${data.company}</span>
         <h2 style="font-size: 1.4rem; margin-bottom: 4px;">${data.title}</h2>
@@ -400,6 +411,8 @@ function openProjectModal(projectId) {
                 ${data.techStack.map(t => `<span style="font-family: var(--font-mono); font-size: 0.75rem; background: rgba(56, 189, 248, 0.1); border: 1px solid var(--border-subtle); padding: 3px 8px; border-radius: 4px; color: var(--accent-cyan);">${t}</span>`).join('')}
             </div>
         </div>
+
+        ${actionButtonsHtml}
     `;
 
     modal.classList.add('active');
