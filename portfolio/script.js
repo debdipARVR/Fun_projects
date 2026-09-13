@@ -282,7 +282,7 @@ const projectDetailsData = {
         liveUrl: "https://scribemarkimage.streamlit.app/",
         colabUrl: "https://colab.research.google.com/github/debdipARVR/AI_IMAGE_DETECTION/blob/main/colab/Multi_VAE_Latent_Resonance_Colab.ipynb",
         repoUrl: "https://github.com/debdipARVR/AI_IMAGE_DETECTION",
-        datasetUrl: "https://huggingface.co/datasets/DebdipCS/Latent-Resonance-AI-Image-Forensics-Benchmark-N100"
+        datasetUrl: "https://huggingface.co/datasets/DebdipCS/Latent-Resonance-AI-Image-Forensics-Benchmark-N1000"
     },
     "cloze-congruence": {
         title: "ClozeCongruence 3.0: Multilingual AI Text Forensics & ScribeMark Engine",
