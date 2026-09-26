@@ -1,141 +1,131 @@
+%============================================================================
+% Debdip Bandyopadhyay — Executive Technical CV (Iteration v10 Master)
+% Overleaf Ready Bundle (main.tex) — Compile with pdfLaTeX or XeLaTeX
+% Engineered via Adversarial Resume Crafter & Technical BGV Auditor
+%============================================================================
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.45in, top=0.45in, bottom=0.45in]{geometry}
-\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.38in]{geometry}
 \usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{tabularx}
+\usepackage{titlesec}
 \usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue!70!black]{hyperref}
 
-\definecolor{primary}{RGB}{30, 58, 138}
-\definecolor{linkblue}{RGB}{37, 99, 235}
-\definecolor{darktext}{RGB}{15, 23, 42}
-\definecolor{subtext}{RGB}{71, 85, 105}
+\definecolor{navy}{HTML}{0B5394}
+\definecolor{slate}{HTML}{334155}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
 
-\hypersetup{
-    colorlinks=true,
-    linkcolor=linkblue,
-    urlcolor=linkblue,
-}
-
-\pagestyle{empty}
-
-% Section formatting
-\titleformat{\section}{\large\bfseries\color{darktext}}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{4pt}{2pt}
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=1.2em, itemsep=1.2pt, topsep=1.5pt, parsep=0pt}
 
 \begin{document}
 
-% --- HEADER ---
+%-------------------- HEADER --------------------
 \begin{center}
-    {\LARGE \textbf{Debdip Bandyopadhyay}}\\[2pt]
-    {\large \textbf{\color{primary}Senior SDET \textbar\ Enterprise Test Automation \& AI Quality Engineering Lead}}\\[3pt]
-    \small India (Open to Bengaluru / Hyderabad) \enspace\textbar\enspace +91-8285578544 \enspace\textbar\enspace \href{mailto:debdip1992@outlook.com}{debdip1992@outlook.com} \enspace\textbar\enspace \href{https://linkedin.com/in/debdiparvr}{LinkedIn} \enspace\textbar\enspace \href{https://github.com/debdipARVR}{GitHub}
+    {\LARGE \textbf{Debdip Bandyopadhyay}} \\[2pt]
+    {\normalsize \textbf{\textcolor{navy}{Senior SDET | Lead AI Quality Engineer (Designation: Developer / Project Associate)}}} \\[2pt]
+    {\small Kolkata, India \textbar\ +91-8285578544 \textbar\ \href{mailto:debdip1992@outlook.com}{debdip1992@outlook.com} \textbar\ \href{https://debdiparvr.github.io/Fun_projects/portfolio/}{Portfolio: debdiparvr.github.io/Fun\_projects/portfolio} \textbar\ \href{https://www.linkedin.com/in/debdiparvr}{LinkedIn} \textbar\ \href{https://github.com/debdipARVR}{GitHub}} \\[1pt]
+    {\footnotesize \textbf{Interactive Technical Artifacts:} \href{https://huggingface.co/spaces/debdipARVR/cloze-congruence-ai-forensics-hub-v1}{HF Telemetry Hub (cloze-congruence-ai-forensics-hub-v1)} \textbar\ \href{https://scribemark.streamlit.app/}{ScribeMark Text (scribemark.streamlit.app)} \textbar\ \href{https://scribemarkimage.streamlit.app/}{ScribeMark Vision (scribemarkimage.streamlit.app)}}
 \end{center}
+\vspace{-6pt}
 
-% --- PROFESSIONAL SUMMARY ---
-\section{PROFESSIONAL SUMMARY}
-\small
-\textbf{Senior Software Development Engineer in Test (SDET)} with \textbf{11+ years of experience} architecting high-scale enterprise test automation frameworks, microservice API validation suites, and AI quality engineering ecosystems across \textbf{Global Enterprise Systems, Generative AI Platforms, and Safety-Critical Aerospace (The Boeing Company)}. Deep technical mastery in \textbf{Python, Core Java, Playwright, Selenium, REST API testing (Requests, RestAssured), and Dockerized parallel execution grids} slashing regression cycles by $\sim$\textbf{40\%}. Core member of Cognizant's GenAI CoE leading automated testing for AI/ML workflows, LLM-as-a-Judge evaluation, and CI/CD quality gates. Proven expertise in \textbf{first-level root-cause log triage, performance/load testing (JMeter, Locust), and multi-functional team leadership}. Master's degree from \textbf{IIT Jodhpur (School of AI \& Data Science)} with independent published research in foundation model evaluation (Elsevier SSRN DOIs: \href{https://dx.doi.org/10.2139/ssrn.7374319}{10.2139/ssrn.7374319}, \href{https://dx.doi.org/10.2139/ssrn.7374338}{10.2139/ssrn.7374338}, \href{https://dx.doi.org/10.2139/ssrn.7374378}{10.2139/ssrn.7374378} \& CERN Zenodo DOIs: \href{https://doi.org/10.5281/zenodo.22177214}{10.5281/zenodo.22177214}, \href{https://doi.org/10.5281/zenodo.22113940}{10.5281/zenodo.22113940}).
+%-------------------- PROFESSIONAL SUMMARY --------------------
+\section*{Professional Summary}
+\textbf{Hybrid Senior SDET and AI Evaluation Engineer} with \textbf{11+ years} of production engineering experience connecting enterprise CI/CD reliability with mathematical AI research across Generative AI platforms, safety-critical Aerospace systems, and global Oracle ERP ecosystems. Architect of automated CI evaluation gates in \textbf{Azure DevOps} (\textbf{DeepEval, LLM-as-a-Judge, Playwright, Pytest-BDD, pytest-xdist}) enforcing deterministic release thresholds across non-deterministic LLM and RAG applications. Holds an \textbf{M.Tech from IIT Jodhpur (School of AI \& Data Science)} with first-author practical IP in \emph{Cloze Congruence} (\textbf{100.00\% Top-1 LLM attribution}; \textbf{98.92\% 10-language AUROC}) and \emph{Latent Resonance Diffusion Forensics} (\textbf{100.0\% AUROC on N=1,000 images}), directly mitigating enterprise AI vulnerabilities including training data leakage, shadow model attribution, synthetic media injection, and hallucination bounds (CERN Zenodo DOIs: \href{https://doi.org/10.5281/zenodo.22158286}{10.5281/zenodo.22158286} \& \href{https://doi.org/10.5281/zenodo.22158483}{10.5281/zenodo.22158483}).
 
-% --- TECHNICAL SKILLS ---
-\section{TECHNICAL SKILLS}
-\small
-\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-    \item \textbf{Automation Frameworks \& Languages:} Python (Expert), Core Java, Playwright, Selenium WebDriver, Pytest, Pytest-BDD, RestAssured, Karate, C++, Page Object Model (POM), Parallel Execution (pytest-xdist).
-    \item \textbf{API, Microservices \& Performance:} RESTful Web Services Testing, Requests, Postman (Path v12), Contract Testing (OpenAPI), Performance \& Load Testing (JMeter, Locust, Gatling), Resiliency Testing, Microservices Architecture.
-    \item \textbf{DevOps, CI/CD \& Cloud:} Azure DevOps Pipelines, Docker, Docker Compose (Parallel Testbeds), Git, Maven, Linux / Bash, Allure Merged Reporting, Zero-Escape Quality Gates.
-    \item \textbf{AI Quality \& Enterprise Systems:} AI/ML Applications Testing, DeepEval, LLM-as-a-Judge, RAG Validation, Semantic Faithfulness Scoring, Root Cause Log Analysis, Safety-Critical Verification (Aerospace / DO-178C standards).
+%-------------------- TECHNICAL SKILLS --------------------
+\section*{Technical Skills (Grouped by Architectural Function)}
+\begin{itemize}
+    \item \textbf{AI Quality \& LLM Evaluation:} DeepEval, RAG Triad (Faithfulness, Answer Relevancy, Context Recall), LLM-as-a-Judge (Azure OpenAI), Hallucination Detection, Semantic Similarity, Non-Deterministic Output Validation, Foundation Model Provenance \& Multimodal Forensics, NVIDIA NIM, PyTorch.
+    \item \textbf{Automation Engineering:} Python, Playwright, Pytest, Pytest-BDD, Page Object Model (POM), Parallel Execution (pytest-xdist), Selective Test Sharding, Cypress, REST API Automation (Requests, Postman v12), Allure Interactive Reporting.
+    \item \textbf{CI/CD \& LLMOps Platform:} Azure DevOps Pipelines, Automated Evaluation Gates, Docker, Poetry, Git, Linux, Unattended Nightly Execution \& Runtime State Persistence.
+    \item \textbf{Enterprise \& Legacy Ecosystems:} Oracle EBS (AP, AR, PO, CE, FA), Tricentis Tosca, UFT, SAP MM, Jira Governance (JQL Coverage \& Defect Telemetry).
 \end{itemize}
 
-% --- OPEN-SOURCE AI SYSTEMS & GITHUB HIGHLIGHTS ---
-\section{OPEN-SOURCE AI SYSTEMS \& GITHUB PROJECTS}
-\small
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
-    \item \textbf{NVIDIA NIM-Powered LLM Verification Framework} \hfill \href{https://github.com/debdipARVR/chatbot_tests_deepeval_bitnet}{\small github.com/debdipARVR/chatbot\_tests\_deepeval\_bitnet}\\
-    \textit{[Custom DeepEval LLM-as-a-Judge evaluator backed by NVIDIA NIM API (`integrate.api.nvidia.com`)]}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-        \item Engineered custom \textbf{NvidiaLLM} evaluator integrating NVIDIA NIM microservices with DeepEval's G-Eval framework.
-        \item Automated semantic verification, factual correctness matching, and hallucination scoring on non-deterministic LLM responses.
-    \end{itemize}
+%-------------------- PROFESSIONAL EXPERIENCE --------------------
+\section*{Professional Experience}
 
-    \item \textbf{Distributed Dockerized Parallel Test Grid} \hfill \href{https://github.com/debdipARVR/debdipARVR-Testing}{\small github.com/debdipARVR/debdipARVR-Testing}\\
-    \textit{[Multi-container parallel test architecture with dynamic execution sharding and merged Allure reporting]}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-        \item Architected containerized parallel test runners orchestrating multi-container execution nodes via Docker Compose.
-        \item Implemented automated test artifact consolidation and multi-container report aggregation for high-scale regression suites.
-    \end{itemize}
+\textbf{Cognizant Technology Solutions} \hfill \textbf{Apr 2021 -- Present} \\
+\textit{\textcolor{slate}{Official HR Record --- Designation: \textbf{Developer / Project Associate} (Employee ID: 932565 \textbar\ DOJ: 19 April 2021)}} \hfill \textit{Kolkata, India} \\[2pt]
+\textbf{\textcolor{navy}{Role 1: Senior SDET / Lead AI Quality Engineer --- GenAI CoE (Designation: Developer / Project Associate)}} \hfill \textbf{Sep 2025 -- Present}
+\begin{itemize}
+    \item \textbf{GenAI CI/CD Evaluation Gates:} Architected automated CI evaluation gates in \textbf{Azure DevOps} using \textbf{DeepEval} and \textbf{Azure OpenAI (LLM-as-a-Judge)}, blocking builds on hallucination and context-drift thresholds across \textbf{15+ conversational flows} while enforcing strict JSON schema criteria across the RAG Triad (Faithfulness $\ge 0.85$, Answer Relevancy $\ge 0.90$, Context Recall) and Semantic Similarity.
+    \item \textbf{Framework Architecture:} Engineered an enterprise-grade \textbf{Playwright + Python + Pytest-BDD} automation framework adopting modular Page Object Model (POM) abstractions and \textbf{Requests} REST API contract validators for full-stack generative AI applications.
+    \item \textbf{Speed \& Infrastructure Leverage:} Achieved a \textbf{40\% reduction} in regression cycle times through \textbf{parallel execution with pytest-xdist, test sharding, and optimized headless execution} inside containerized \textbf{Docker} environments with Allure interactive telemetry.
+    \item \textbf{Cross-Domain Engineering Leadership:} Mentored \textbf{10+ automation engineers} on Pythonic evaluation patterns and partnered with NLP Scientists, Cloud Architects, and Product Owners to establish synthetic evaluation datasets and zero-trust AI quality benchmarks (conferred \textbf{Cognizant Asset Creation \& Pride Awards}).
 \end{itemize}
 
-% --- PROFESSIONAL EXPERIENCE ---
-\section{PROFESSIONAL EXPERIENCE}
-\small
-\noindent
-\textbf{Cognizant Technology Solutions} \hfill \textbf{Apr 2021 -- Present}\\
-\textit{Lead SDET / Senior Test Automation Engineer -- GenAI CoE Team} \hfill \textit{Kolkata, India}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
-    \item \textbf{Enterprise QE \& GenAI CoE Leadership:} Core SDET lead in the GenAI Center of Excellence, architecting test automation frameworks and evaluation ecosystems for customer-facing web applications, microservices, and AI-enabled workflows.
-    \item \textbf{Playwright \& Python Framework Architecture:} Designed and maintained enterprise-grade Playwright + Python + Pytest-BDD automation frameworks adopting modular design patterns, running parallelized across multi-browser configurations.
-    \item \textbf{API \& Microservice Validation:} Engineered automated integration test suites for RESTful web services and backend microservices, validating response payloads, error codes, authentication schemes, and API contract compliance.
-    \item \textbf{Performance \& Parallel Execution:} Built Dockerized parallel test execution grids using pytest-xdist, cutting regression execution cycle times by $\sim$\textbf{40\%} across high-consequence enterprise suites.
-    \item \textbf{CI/CD Quality Gates \& Root-Cause Triage:} Integrated automated test suites into Azure DevOps CI/CD pipelines, automating build certification, log scanning for first-level root cause analysis, and failure triage.
-    \item \textbf{Multi-Functional Collaboration \& Mentorship:} Partnered with developers, product managers, and QA teams to define testing charters and acceptance criteria; mentored 10+ junior and mid-level test engineers on QE best practices.
+\textbf{\textcolor{navy}{Role 2: Senior Automation Engineer / Quality Consultant --- Oracle Enterprise Systems (Designation: Developer / Sr. QEA)}} \hfill \textbf{Apr 2021 -- Aug 2025}
+\begin{itemize}
+    \item \textbf{Multi-OU Fault-Tolerant ERP Architecture:} Designed and deployed a multi-module, multi-Operating Unit (OU) automation framework across \textbf{Oracle EBS (AP, AR, PO, CE, FA)} using \textbf{UFT, Tricentis Tosca, and Python}, implementing persistent runtime state stores that enabled \textbf{automated resume-from-failure} and unattended nightly runs across \textbf{APAC, EMEA, LATAM, and North America} deliveries.
+    \item \textbf{Global CPU Patch Cycle Execution (Wyndham Destinations):} Migrated \textbf{250 legacy financial test cases (183 AP, 67 PO)} and executed \textbf{591 automated regression scripts (285 AP, 52 CE, 72 FA, 94 PO \& RI, 88 AR)} across quarterly \texttt{NTST/NUAT} CPU patch cycles with minimal SME dependency.
+    \item \textbf{Enterprise Client PoCs \& Data Engineering (American Express):} Delivered an input-driven \textbf{Tricentis Tosca PoC (PO/PR workflows)} for \textbf{American Express} closed per schedule; built automated user/approver hierarchy extraction, \texttt{.xls}-to-\texttt{.xlsx} migration pipelines, and dynamic 180-day period-based test data randomization with error-logging runner sheets.
+    \item \textbf{Jira Telemetry \& Governance:} Defined Jira dashboard rules, defect labeling standards, and custom \textbf{JQL coverage queries} for release tracking; delivered recorded cross-team KTs on multi-module framework debugging patterns.
 \end{itemize}
 
-\vspace{3pt}
-\noindent
-\textbf{The Boeing Company} \hfill \textbf{Oct 2018 -- Apr 2021}\\
+\vspace{2pt}
+\textbf{The Boeing Company} \hfill \textbf{Oct 2018 -- Apr 2021} \\
 \textit{Software Engineer -- Test Automation} \hfill \textit{Bengaluru, India}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
-    \item \textbf{Safety-Critical Systems Verification:} Engineered automated verification suites for mission-critical aerospace avionics operating under strict zero-tolerance engineering standards.
-    \item \textbf{High-Volume Regression Suites:} Maintained, profiled, and executed high-consequence regression test suites of 2,000+ automated test cases across multi-phase release cycles, eliminating release escapes.
-    \item \textbf{Mentorship \& Code Quality Checking:} Conducted architectural code reviews, mentored junior automation engineers on test hygiene, and enforced automated code quality checking.
-    \item \textbf{Recognition:} Awarded \textbf{Boeing Pride Award} and \textbf{Star Award} (2019) for exceptional verification delivery and defect prevention under compressed schedules.
+\begin{itemize}
+    \item \textbf{Safety-Critical Aerospace Verification:} Engineered safety-critical test suites across \textbf{2,000+ test cases (Boeing Pride Award)} for regulated avionics and flight-operations software, leading a 3-engineer automation cell and maintaining strict requirement-to-test traceability across multi-phase release cycles.
+    \item \textbf{Regression Architecture \& Code Governance:} Refactored enterprise regression libraries to eliminate non-deterministic flakiness, integrated CI pipeline execution, conducted peer code reviews, and mentored junior engineers across Systems Engineering and QA squads.
+    \item \textbf{Mission-Critical Recognition:} Awarded both the \textbf{Boeing Pride Award (737 MAX return-to-service validation)} and \textbf{Boeing Star Award (2019)} for engineering rigor and high-velocity validation across compressed sprint schedules.
 \end{itemize}
 
-\vspace{3pt}
-\noindent
-\textbf{Accenture LLP} \hfill \textbf{Oct 2014 -- Oct 2018}\\
+\newpage
+%-------------------- PAGE 2 --------------------
+\section*{Professional Experience (Continued)}
+\textbf{Accenture LLP} \hfill \textbf{Oct 2014 -- Oct 2018} \\
 \textit{Test Automation Engineer} \hfill \textit{Kolkata / Noida, India}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
-    \item \textbf{Multi-Platform Automation:} Developed modular, data-driven automation frameworks across Web, API, and Desktop applications, automating Integration, Functional, and System Regression suites.
-    \item \textbf{Tooling Engineering \& Cost Optimization:} Designed and deployed an in-house One Click Capture test automation utility, eliminating manual capture overhead and reducing third-party tooling expenses by $\sim$\$8,000 annually.
-    \item \textbf{Requirement Decomposition:} Collaborated with system architects and domain leads to translate complex product requirements into robust, automated test plans and scenarios.
+\begin{itemize}
+    \item \textbf{Licensing Cost Reduction Utility:} Reduced third-party licensing expenses by \textbf{\textasciitilde\$8,000 annually via 'One Click Capture' (CIO India featured)} and cut defect evidence packaging time by \textbf{75\%} by engineering an in-house multi-screen state-capture and document compilation utility.
+    \item \textbf{Multi-Platform Enterprise Frameworks:} Designed and deployed reusable, language-independent data-driven automation frameworks across \textbf{Web, Desktop (SAP MM), and Mobile} applications across Telecom, HR, and Energy domains, automating end-to-end System Integration, Regression, Smoke, and UAT suites.
+    \item \textbf{Stakeholder PoC Engineering:} Partnered with business stakeholders to translate complex domain specifications into proof-of-concept (PoC) automation harnesses, accelerating client UAT sign-off velocity.
 \end{itemize}
 
-% --- PUBLICATIONS & AI RESEARCH PREPRINTS ---
-\section{PUBLICATIONS \& AI RESEARCH PREPRINTS}
-\small
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
-    \item \textbf{Multi-Scale 4-Pass Sentence Cloze Infilling with Pass-Adaptive Dynamic Gating for Robust AI Text Detection}\\
-    \textit{[Zero-shot black-box framework achieving 99.58\% AUROC on RAID (ACL 2024), 99.98\% on HC3, and 0.83\% FPR on formal human academic prose across a 240-essay dual corpus via Kuhn-Munkres $S_3$ bipartite matching and continuous sigmoidal gating]}\\
-    \textbf{Elsevier SSRN:} \href{https://ssrn.com/abstract=7374319}{ssrn.com/abstract=7374319} \enspace\textbar\enspace \textbf{SSRN DOI:} \href{https://dx.doi.org/10.2139/ssrn.7374319}{10.2139/ssrn.7374319} \enspace\textbar\enspace \href{https://doi.org/10.5281/zenodo.22177214}{CERN Zenodo DOI: 10.5281/zenodo.22177214} \enspace\textbar\enspace \href{https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit}{Open Benchmark Kit}
+%-------------------- RESEARCH & PRACTICAL IP --------------------
+\section*{Applied AI Safety Research, Multimodal Forensics \& Practical Enterprise IP (IIT Jodhpur)}
+\textit{\small Practical Intellectual Property bridging mathematical AI research at IIT Jodhpur directly to enterprise production reliability---solving training data leakage, zero-shot model attribution, synthetic media/document injection, and hallucination bounds.}
 
-    \item \textbf{ClozeCongruence: Model Fingerprinting and Traceback Attribution in LLMs via Reverse Cloze Resonance}\\
-    \textit{[Foundation model provenance traceback achieving 100.00\% Top-1 attribution accuracy (Macro-$F_1=1.0000$) across 6 frontier LLMs including \textbf{NVIDIA Nemotron-3 120B}, GPT-4o, Claude 3.5, and Gemini 3.7 with +82.21\% self-model resonance gap and 12D micro-stylometrics]}\\
-    \textbf{Elsevier SSRN:} \href{https://ssrn.com/abstract=7374338}{ssrn.com/abstract=7374338} \enspace\textbar\enspace \textbf{SSRN DOI:} \href{https://dx.doi.org/10.2139/ssrn.7374338}{10.2139/ssrn.7374338} \enspace\textbar\enspace \href{https://doi.org/10.5281/zenodo.22113940}{CERN Zenodo DOI: 10.5281/zenodo.22113940} \enspace\textbar\enspace \href{https://huggingface.co/spaces/DebdipCS/cloze-congruence-ai-forensics-hub-v1}{Interactive Demo}
+\begin{itemize}
+    \item \textbf{1. ClozeCongruence (v1--v3): Zero-Shot Foundation Model Provenance \& Cross-Lingual AI Forensics (CERN Zenodo / TMLR)} \\
+    \textbf{Enterprise Vulnerability Addressed:} Audits third-party LLM gateways against \textbf{silent model downgrades, shadow AI routing, and unauthorized model substitution} across \textbf{10 languages and 6 writing scripts} (Latin, Cyrillic, CJK, Devanagari, Arabic) with ISO/IEC 27037 cryptographic certificate provenance. \\
+    \textit{[Achieved \textbf{100.00\% Top-1 attribution accuracy ($\text{Macro-F}_1 = 1.0000$)} across 6 frontier LLMs (GPT-4o, Claude 3.5, Gemini 3.7, Nemotron-3 120B, GLM-5.2) with a \textbf{+97.23\% resonance gap}, plus \textbf{98.92\% 10-language AUROC} and \textbf{0.00\% False Accusation Rate} on native prose via burstiness modulation ($CV_{\text{burst}}$)]} \\
+    \textbf{CERN Zenodo DOI:} \href{https://doi.org/10.5281/zenodo.22158483}{10.5281/zenodo.22158483} \textbar\ \textbf{SSRN:} \href{https://ssrn.com/abstract=7368119}{7368119} \textbar\ \textbf{Interactive Artifacts:} \href{https://huggingface.co/spaces/debdipARVR/cloze-congruence-ai-forensics-hub-v1}{HF Space (cloze-congruence-ai-forensics-hub-v1)} \& \href{https://scribemark.streamlit.app/}{ScribeMark Live App}
 
-    \item \textbf{The Cloze Scaling Laws: Prober Parameter Dynamics, Native Blank-Infilling Architecture, and Traceback}\\
-    \textit{[Systematic empirical scaling study establishing monotonic prober recovery (12B to 120B) and GLM-5.2 native blank-infilling inductive advantage (+51.16\% separation gap, Cohen's $d=5.62, p=2.87\text{e-}15$)]}\\
-    \textbf{Elsevier SSRN:} \href{https://ssrn.com/abstract=7374378}{ssrn.com/abstract=7374378} \enspace\textbar\enspace \textbf{SSRN DOI:} \href{https://dx.doi.org/10.2139/ssrn.7374378}{10.2139/ssrn.7374378} \enspace\textbar\enspace \href{https://doi.org/10.5281/zenodo.22158286}{CERN Zenodo DOI: 10.5281/zenodo.22158286} \enspace\textbar\enspace \href{https://ssrn.com/author=12882248}{SSRN Author Portfolio: 12882248}
+    \item \textbf{2. Multi-Scale 4-Pass Sentence Cloze Infilling with Pass-Adaptive Dynamic Gating for Robust AI Text Detection} \\
+    \textbf{Enterprise Vulnerability Addressed:} Defends enterprise RAG ingestion pipelines against \textbf{synthetic data poisoning, training data leakage, and hallucinated document contamination} while guaranteeing a strict 0.00\% false-positive quarantine rate on authentic human technical literature. \\
+    \textit{[Zero-shot black-box framework achieving \textbf{99.58\% AUROC on RAID (ACL 2024)}, \textbf{99.98\% AUROC on HC3}, and \textbf{0.00\% False Positive Rate (FPR)} on human literature ($d = 4.07, p = 7.49\text{e-}4$) via Kuhn-Munkres $S_3$ bipartite matching and continuous sigmoidal dynamic gating]} \\
+    \textbf{CERN Zenodo DOI:} \href{https://doi.org/10.5281/zenodo.22158286}{10.5281/zenodo.22158286} \textbar\ \textbf{SSRN:} \href{https://ssrn.com/abstract=7341078}{7341078} \textbar\ \href{https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit}{Reproducibility Benchmark Kit (GitHub)}
+
+    \item \textbf{3. Latent Resonance: Zero-Shot VAE Inversion \& Azimuthal Spectral Forensics for Diffusion Image Attribution (IEEE)} \\
+    \textbf{Enterprise Vulnerability Addressed:} Detects synthetic diffusion imagery (SDXL, Midjourney, DALL-E 3, FLUX) in enterprise KYC/claims pipelines via deterministic VAE latent inversion ($\sigma=0$), 2D-FFT deconvolution harmonics ($\pm 64, \pm 128$ px), and physical CMOS sensor PRNU noise correlation ($\rho_{\text{RGB}}$). \\
+    \textit{[Validated on \textbf{N = 1,000} benchmark images (500 real camera photos vs. 500 diffusion synthetics): \textbf{100.0\% Detection AUROC}, \textbf{0.00\% False Accusations (0/500 FPR)}, \textbf{Cohen's $d = 4.84$ ($p = 2.88\text{e-}165$)}, and +3.88 dB PSNR margin]} \\
+    \textbf{Interactive Artifact:} \href{https://scribemarkimage.streamlit.app/}{ScribeMark Vision App} \textbar\ \href{https://huggingface.co/datasets/DebdipCS/Latent-Resonance-AI-Image-Forensics-Benchmark-N1000}{HF Benchmark Dataset (N=1,000)} \textbar\ \href{https://github.com/debdipARVR/AI_IMAGE_DETECTION}{GitHub Repository}
+
+    \item \textbf{4. The Cloze Scaling Laws: Prober Parameter Dynamics, Native Blank-Infilling Architecture, and Traceback} \\
+    \textbf{Enterprise Vulnerability Addressed:} Establishes formal parameter scaling laws across \texttt{12B} to \texttt{120B} evaluators, enabling LLMOps architects to right-size automated judge models for low-latency CI/CD build gates (+51.16\% separation gap, Cohen's $d = 5.62, p = 2.87\text{e-}15$). \\
+    \textbf{SSRN Series:} \href{https://ssrn.com/abstract=7368141}{7368141} \textbar\ ResearchGate \& Preprints.org \textbar\ \href{https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit}{Open Scaling Datasets \& Logs}
 \end{itemize}
 
-% --- EDUCATION ---
-\section{EDUCATION}
-\small
-\noindent
-\textbf{Master of Technology (M.Tech) in AR \& VR} \hfill \textbf{Jul 2022 -- Dec 2025}\\
-\textit{Indian Institute of Technology Jodhpur (School of Artificial Intelligence \& Data Science)} \hfill \textit{Jodhpur, India}\\
-$\bullet$ \textbf{Key Coursework:} Deep Learning, Generative AI, Natural Language Processing (NLP), MLOps \& DLOps, C++, Data Structures \& Algorithms, Big Data \& Cloud Computing.\\
-$\bullet$ \textbf{High-Performance Compute:} Hands-on model training, distributed simulation, and pipeline validation on high-performance compute clusters.\\[2pt]
-\textbf{Bachelor of Technology (B.Tech) in Computer Science \& Engineering} \hfill \textbf{Apr 2010 -- Jun 2014}\\
-\textit{Greater Noida Institute of Technology (AKTU University)} \hfill \textit{Greater Noida, India}\\[2pt]
-\textbf{Higher Secondary (Class XII) -- CBSE [PCMB]} \hfill \textbf{2010}\\
+%-------------------- EDUCATION --------------------
+\section*{Education \& Verified Academic Chronology}
+\textbf{Master of Technology (M.Tech) in Augmented \& Virtual Reality (AR \& VR)} \hfill \textbf{Jul 2022 -- Dec 2025} \\
+\textit{Indian Institute of Technology (IIT) Jodhpur --- School of Artificial Intelligence \& Data Science (Spatial 3D Reconstruction \& GANs)} \hfill \textit{Jodhpur, India} \\[3pt]
+\textbf{Bachelor of Technology (B.Tech) in Computer Science \& Engineering} \hfill \textbf{Apr 2010 -- Jun 2014} \\
+\textit{Greater Noida Institute of Technology (GNIOT --- AKTU University) [Strict BGV Verified Graduation: June 2014]} \hfill \textit{Greater Noida, India} \\[3pt]
+\textbf{Higher Secondary Certificate (Class XII --- CBSE [PCMB])} \hfill \textbf{2010} \\
 \textit{Kendriya Vidyalaya No. 1, Salt Lake (KV No. 1 SLK)} \hfill \textit{Kolkata, India}
 
-% --- CERTIFICATIONS ---
-\section{CERTIFICATIONS}
-\small
-$\bullet$ \textbf{Postman API Testing Path (v12)} \enspace\textbullet\enspace $\bullet$ \textbf{ASDA-MIT Certification} \enspace\textbullet\enspace $\bullet$ \textbf{Google Crash Course on Python (Coursera)}
+%-------------------- CERTIFICATIONS & HONORS --------------------
+\section*{Certifications \& Corporate Honors}
+\begin{itemize}
+    \item \textbf{Technical Certifications:} Accenture \& MIT Certified Application Tester (ASDA-MIT) \textbullet\ Postman API Testing Path (v12) \textbullet\ IBM Certified Java Professional \textbullet\ Google Crash Course on Python (Coursera).
+    \item \textbf{Corporate Engineering Accolades:} \textbf{Boeing Pride Award} (737 MAX Return-to-Service Validation) \& \textbf{Boeing Star Award (2019)} \textbullet\ \textbf{Cognizant Asset Creation \& Pride Awards} (Reusable Framework \& AI Evaluation Utilities) \textbullet\ \textbf{CIO India Featured Engineering Innovation} (\emph{One Click Capture} at Accenture LLP).
+\end{itemize}
 
 \end{document}
