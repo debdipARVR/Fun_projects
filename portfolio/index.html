@@ -1,493 +1,1565 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Debdip Bandyopadhyay — Lead SDET &amp; AI Quality Engineering Lead</title>
-  <meta name="description" content="Lead Software Development Engineer in Test (SDET) and AI Quality Engineer with 11+ years of experience across Generative AI platforms, Aerospace, and Enterprise Systems. M.Tech from IIT Jodhpur.">
-  <link rel="canonical" href="https://debdiparvr.github.io/Fun_projects/portfolio/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Debdip Bandyopadhyay | Quality Engineering Lead — SDET & AI/LLM Evaluation</title>
+    <meta name="title" content="Debdip Bandyopadhyay | Quality Engineering Lead — SDET & AI/LLM Evaluation">
+    <meta name="description" content="Quality Engineering Lead & SDET with 11+ years at Cognizant, The Boeing Company, and Accenture, owning quality end-to-end from requirement analysis and test strategy to automation and release sign-off. Builds Playwright/Pytest automation and DeepEval LLM/RAG evaluation in Azure DevOps at Cognizant's GenAI CoE; M.Tech, IIT Jodhpur.">
+    <meta name="keywords" content="Debdip Bandyopadhyay, Quality Engineering Lead, SDET, AI LLM Evaluation, DeepEval, Playwright Python, Pytest BDD, RAG Validation, FAISS, GPT-6 Luna, Cognizant GenAI CoE, Boeing, IIT Jodhpur, ACM ICAIF 2026">
+    <meta name="author" content="Debdip Bandyopadhyay">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://debdiparvr.github.io/Fun_projects/portfolio/">
 
-  <!-- Clean SVG Geometric Monogram Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%23111111'/><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' fill='%23F7F6F3' font-family='monospace' font-size='26' font-weight='600'>DB</text></svg>">
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://debdiparvr.github.io/Fun_projects/portfolio/">
+    <meta property="og:title" content="Debdip Bandyopadhyay | Quality Engineering Lead — SDET & AI/LLM Evaluation">
+    <meta property="og:description" content="11+ Years of Quality Engineering Leadership | SDET | GenAI & LLM Evaluation (DeepEval, Playwright, Pytest, RAG) | Cognizant GenAI CoE, Ex-Boeing, Ex-Accenture | IIT Jodhpur M.Tech.">
 
-  <!-- Editorial Serif (Newsreader), Geometric Sans (Switzer), & Monospace (JetBrains Mono) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
-  <!-- Phosphor Icons (Bold & Fill Weights Only) -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Clean Single-Line Sticky Top Navigation -->
-  <header class="top-nav">
-    <div class="top-nav-inner">
-      <a href="#top" class="brand-identity">
-        <span class="brand-monogram">DB</span>
-        <span>Debdip Bandyopadhyay</span>
-      </a>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
 
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="#summary">Summary</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="../research/index.html" style="color: var(--pastel-purple-fg); font-weight: 600;">Research ↗</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-        </ul>
-      </nav>
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
 
-      <div class="nav-actions">
-        <a href="../research/index.html" class="btn btn-secondary" title="View Dedicated Independent Research Portfolio" style="border-color: var(--pastel-purple-fg); color: var(--pastel-purple-fg);">
-          <i class="ph-bold ph-atom"></i>
-          <span>Research</span>
-        </a>
-        <a href="assets/resume/Debdip_Bandyopadhyay_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <i class="ph-bold ph-file-pdf"></i>
-          <span>Resume PDF</span>
-        </a>
-        <a href="mailto:debdip1992@outlook.com" class="btn btn-secondary">
-          <i class="ph-bold ph-envelope-simple"></i>
-          <span>Contact</span>
-        </a>
-      </div>
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Debdip Bandyopadhyay">
+                <span class="brand-badge">DB</span>
+                <span class="brand-name">Debdip<span>.dev</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Architecture</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="research.html" class="nav-link" style="color: #fbbf24; font-weight: 700;"><i class="fa-solid fa-atom"></i> Research <span style="background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.6); color: #fbbf24; font-size: 0.65rem; padding: 2px 6px; border-radius: 9999px; margin-left: 2px;">ICAIF '26</span></a></li>
+                    <li><a href="assets/resume/Debdip_Bandyopadhyay_Resume.pdf" target="_blank" class="nav-link"><i class="fa-solid fa-file-pdf"></i> Resume</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certifications" class="nav-link">Credentials</a></li>
+                </ul>
+            </nav>
+
+            <!-- Actions: Theme Toggle & Social Links -->
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle Theme (T)">
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <i class="fa-solid fa-sun light-icon"></i>
+                </button>
+
+                <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" class="social-icon header-social" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/debdiparvr" target="_blank" rel="noopener noreferrer" class="social-icon header-social" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-glow-blob blob-1"></div>
+            <div class="hero-glow-blob blob-2"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-pill" data-aos="fade-down" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.5); margin-bottom: 0.75rem;">
+                        <span class="status-indicator" style="background: #fbbf24;"></span>
+                        <span style="color: #fbbf24; font-weight: 700;">🎉 Paper Accepted at ACM ICAIF 2026 (FinSec Workshop)</span>
+                        <a href="research.html" style="color: #38bdf8; text-decoration: underline; margin-left: 6px; font-weight: 600;">Explore Research &rarr;</a>
+                    </div>
+
+                    <div class="status-pill" data-aos="fade-down">
+                        <span class="status-indicator"></span>
+                        <span>Quality Engineering Lead • SDET • AI/LLM Evaluation</span>
+                    </div>
+
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        <span class="gradient-text">Debdip Bandyopadhyay</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        <span class="typed-text-prefix">Specializing in </span>
+                        <span id="typed-text" class="typed-text"></span>
+                        <span class="typed-cursor">|</span>
+                    </h2>
+
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                        SDET and quality engineer with 11+ years at <strong>Cognizant, The Boeing Company, and Accenture</strong>, owning quality end to end from requirement analysis and test strategy to automation and release sign-off. Builds <strong>Playwright/Pytest automation</strong> and <strong>DeepEval LLM/RAG evaluation</strong> in Azure DevOps at Cognizant’s GenAI CoE; M.Tech, <strong>IIT Jodhpur</strong>.
+                    </p>
+
+                    <!-- Hero Key Pillars Row -->
+                    <div class="hero-stats-row" data-aos="fade-up" data-aos-delay="350">
+                        <div class="stat-pill">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span><strong>11+ Years</strong> Quality Leadership</span>
+                        </div>
+                        <div class="stat-pill">
+                            <i class="fa-solid fa-robot"></i>
+                            <span><strong>DeepEval & RAG</strong> Evaluation</span>
+                        </div>
+                        <div class="stat-pill">
+                            <i class="fa-solid fa-vial-circle-check"></i>
+                            <span><strong>Playwright & Pytest</strong> SDET</span>
+                        </div>
+                        <div class="stat-pill">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span><strong>IIT Jodhpur</strong> M.Tech</span>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="400">
+                        <a href="research.html" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); border-color: #f59e0b;">
+                            <i class="fa-solid fa-award"></i>
+                            <span>Research Lab & ICAIF '26</span>
+                        </a>
+                        <a href="assets/resume/Debdip_Bandyopadhyay_Resume.pdf" target="_blank" class="btn btn-secondary btn-lg">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>View Resume (PDF)</span>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary btn-lg">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Technical Showcase</span>
+                        </a>
+                        <a href="#experience" class="btn btn-outline btn-lg">
+                            <i class="fa-solid fa-timeline"></i>
+                            <span>Career Experience</span>
+                        </a>
+                    </div>
+
+                    <!-- Live AI Forensic Apps Strip -->
+                    <div class="hero-live-apps" data-aos="fade-up" data-aos-delay="450" style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+                        <a href="https://scribemark.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 0.8rem; padding: 6px 12px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-feather-pointed"></i> <strong>ScribeMark Text:</strong> scribemark.streamlit.app
+                        </a>
+                        <a href="https://scribemarkimage.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: rgba(234, 88, 12, 0.1); border: 1px solid rgba(234, 88, 12, 0.4); color: #fb923c; font-size: 0.8rem; padding: 6px 12px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-camera-retro"></i> <strong>ScribeMark Image:</strong> scribemarkimage.streamlit.app
+                        </a>
+                    </div>
+
+                    <!-- Social Icons Strip -->
+                    <div class="hero-social-links" data-aos="fade-up" data-aos-delay="500">
+                        <span class="social-label">Profiles:</span>
+                        <a href="https://linkedin.com/in/debdiparvr" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub Repositories">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:debdip1992@outlook.com" class="social-icon" aria-label="Email" title="Direct Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Tech Code Architecture Card -->
+                <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="avatar-card-wrapper">
+                        <div class="avatar-card">
+                            <div class="avatar-header">
+                                <div class="avatar-circle">
+                                    <span class="avatar-initials">DB</span>
+                                </div>
+                                <div class="avatar-info">
+                                    <h3 class="avatar-name">Debdip Bandyopadhyay</h3>
+                                    <p class="avatar-role">Quality Engineering Lead | SDET | AI/LLM Evaluation</p>
+                                    <span class="avatar-loc"><i class="fa-solid fa-location-dot"></i> Kolkata, India</span>
+                                </div>
+                            </div>
+
+                            <!-- Live Code Terminal Snippet -->
+                            <div class="terminal-box">
+                                <div class="terminal-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="terminal-title">ai_quality_pipeline.py</span>
+                                </div>
+                                <pre class="terminal-code"><code><span class="c-kw">from</span> deepeval <span class="c-kw">import</span> evaluate
+<span class="c-kw">from</span> deepeval.metrics <span class="c-kw">import</span> (
+    FaithfulnessMetric,
+    AnswerRelevancyMetric
+)
+
+<span class="c-comment"># Enterprise RAG & LLM Quality Gate</span>
+quality_metrics = [
+    FaithfulnessMetric(threshold=0.85),
+    AnswerRelevancyMetric(threshold=0.90)
+]
+evaluation = evaluate(test_cases, quality_metrics)
+<span class="c-func">assert</span> evaluation.passed == <span class="c-bool">True</span></code></pre>
+                            </div>
+
+                            <!-- Floating Badges -->
+                            <div class="floating-badge badge-top-left">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Boeing Pride Award</span>
+                            </div>
+                            <div class="floating-badge badge-bottom-right">
+                                <i class="fa-solid fa-brain"></i>
+                                <span>GenAI CoE Architect</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+                <span>Explore</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+
+        <!-- 2. ABOUT ME SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Engineering Profile</span>
+                    <h2 class="section-title">Technical Leadership & Quality Architecture</h2>
+                    <p class="section-subtitle">A decade of engineering discipline spanning aerospace safety systems, enterprise ERP, and generative AI pipelines.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left: Philosophy & Summary -->
+                    <div class="about-text-card" data-aos="fade-right">
+                        <h3 class="about-card-title">
+                            <i class="fa-solid fa-microchip"></i>
+                            Engineering Perspective
+                        </h3>
+                        <p>
+                            As a <strong>Quality Engineering Lead and Senior SDET</strong>, my work centers on owning quality end to end from requirement analysis and test strategy to automation and release sign-off. Over the past 11+ years, I have architected resilient test automation frameworks and defined quality assurance methodologies for generative AI applications within the <strong>Cognizant GenAI Center of Excellence</strong>, multi-module enterprise systems at <strong>Cognizant & Accenture</strong>, and safety-critical aerospace platforms at <strong>The Boeing Company</strong>.
+                        </p>
+                        <p>
+                            Having completed my <strong>M.Tech in Augmented Reality & Virtual Reality at IIT Jodhpur (School of Artificial Intelligence & Data Science)</strong>, my technical focus spans Playwright/Pytest automation, DeepEval LLM/RAG evaluation (G-Eval, faithfulness, answer relevancy, hallucination) with GPT-6 Luna, NLI entailment checks, FAISS dense embeddings, and continuous Azure DevOps quality gates.
+                        </p>
+
+                        <!-- Key Pillars Grid -->
+                        <div class="about-pillars">
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-brain"></i></div>
+                                <div>
+                                    <h4>AI & LLM Quality Engineering</h4>
+                                    <p>DeepEval, LLM-as-a-judge (GPT-6 Luna), RAG evaluation, NLI entailment, and hallucination mitigation.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                                <div>
+                                    <h4>Automation Architecture</h4>
+                                    <p>Python, Playwright, Pytest-BDD, Page Object Model, and REST API testing (Requests, Postman).</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-microchip"></i></div>
+                                <div>
+                                    <h4>Enterprise Systems Quality</h4>
+                                    <p>Oracle EBS (AP, AR, PO, CE, FA), Tricentis Tosca, UFT, and safety-critical aerospace testing.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-trophy"></i></div>
+                                <div>
+                                    <h4>Engineering Honors</h4>
+                                    <p>Conferred Boeing Pride & Star Awards, and Accenture Asset Creation Award.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Quick Facts Card -->
+                    <div class="about-facts-card" data-aos="fade-left">
+                        <h3 class="about-card-title">
+                            <i class="fa-solid fa-id-card"></i>
+                            Professional Summary
+                        </h3>
+
+                        <ul class="facts-list">
+                            <li>
+                                <span class="fact-label">Specialization:</span>
+                                <span class="fact-value highlight">Quality Engineering Lead | SDET | AI/LLM Evaluation</span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Experience:</span>
+                                <span class="fact-value">11+ Years in Software Quality Engineering</span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Primary Organization:</span>
+                                <span class="fact-value">Cognizant Technology Solutions (Associate)</span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Previous Tenures:</span>
+                                <span class="fact-value">The Boeing Company, Accenture</span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Education:</span>
+                                <span class="fact-value">M.Tech (AR/VR) — IIT Jodhpur (2022–2025)</span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Undergraduate:</span>
+                                <span class="fact-value">B.Tech (CSE) — GNIOT / AKTU (2010–2014)</span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Location:</span>
+                                <span class="fact-value">Kolkata, India</span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Resume / CV:</span>
+                                <span class="fact-value"><a href="assets/resume/Debdip_Bandyopadhyay_Resume.pdf" target="_blank" style="color: var(--accent-cyan); font-weight: 600; text-decoration: underline;"><i class="fa-solid fa-file-pdf"></i> Download PDF</a></span>
+                            </li>
+                            <li>
+                                <span class="fact-label">Profiles:</span>
+                                <span class="fact-value">
+                                    <a href="https://linkedin.com/in/debdiparvr" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); margin-right: 8px;"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);"><i class="fa-brands fa-github"></i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. SKILLS SECTION -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Core Capabilities</span>
+                    <h2 class="section-title">Technical Expertise & Tooling Ecosystem</h2>
+                    <p class="section-subtitle">Comprehensive capabilities across AI validation, Python automation frameworks, enterprise platforms, and cloud DevOps.</p>
+                </div>
+
+                <div class="skills-category-grid">
+
+                    <!-- Category 1: AI/LLM Quality -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="category-header">
+                            <div class="category-icon" style="color: #38bdf8;"><i class="fa-solid fa-robot"></i></div>
+                            <div>
+                                <h3 class="category-name">AI / LLM Quality Engineering</h3>
+                                <span class="category-subtitle">Evaluation, Guardrails & RAG</span>
+                            </div>
+                        </div>
+                        <div class="skills-badge-wrap">
+                            <span class="skill-badge featured"><i class="fa-solid fa-check"></i> LLM-as-a-Judge</span>
+                            <span class="skill-badge featured"><i class="fa-solid fa-check"></i> OpenAI GPT-6 Luna</span>
+                            <span class="skill-badge featured"><i class="fa-solid fa-check"></i> DeepEval (G-Eval)</span>
+                            <span class="skill-badge">Faithfulness & Answer Relevancy</span>
+                            <span class="skill-badge">Contextual Precision / Recall</span>
+                            <span class="skill-badge">Hallucination Mitigation</span>
+                            <span class="skill-badge">NLI Entailment Checks</span>
+                            <span class="skill-badge">FAISS RAG Validation</span>
+                            <span class="skill-badge">Sentence Transformers</span>
+                            <span class="skill-badge">PyTorch</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Test Automation -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="category-header">
+                            <div class="category-icon" style="color: #22c55e;"><i class="fa-solid fa-vial"></i></div>
+                            <div>
+                                <h3 class="category-name">Test Automation Architecture</h3>
+                                <span class="category-subtitle">Web, API & Tooling</span>
+                            </div>
+                        </div>
+                        <div class="skills-badge-wrap">
+                            <span class="skill-badge featured"><i class="fa-brands fa-python"></i> Playwright (Python)</span>
+                            <span class="skill-badge featured"><i class="fa-solid fa-bolt"></i> Playwright MCP</span>
+                            <span class="skill-badge featured"><i class="fa-solid fa-check"></i> Pytest & Pytest-BDD</span>
+                            <span class="skill-badge">Page Object Model (POM)</span>
+                            <span class="skill-badge">Cypress</span>
+                            <span class="skill-badge">REST API Testing (Requests)</span>
+                            <span class="skill-badge">Postman (v12 Certified)</span>
+                            <span class="skill-badge">Tricentis Tosca</span>
+                            <span class="skill-badge">HP UFT</span>
+                            <span class="skill-badge">Evidence Capture Tooling</span>
+                            <span class="skill-badge">Resume-from-Failure Engines</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Quality Practice & Enterprise Systems -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-header">
+                            <div class="category-icon" style="color: #ec4899;"><i class="fa-solid fa-clipboard-check"></i></div>
+                            <div>
+                                <h3 class="category-name">Quality Practice & Enterprise Systems</h3>
+                                <span class="category-subtitle">Strategy, Governance & ERP</span>
+                            </div>
+                        </div>
+                        <div class="skills-badge-wrap">
+                            <span class="skill-badge featured"><i class="fa-solid fa-shield-halved"></i> Test Strategy & Planning</span>
+                            <span class="skill-badge">Requirement Analysis</span>
+                            <span class="skill-badge">Test Case Design</span>
+                            <span class="skill-badge">Functional / Regression / UAT</span>
+                            <span class="skill-badge">Defect Triage & Lifecycle</span>
+                            <span class="skill-badge">Release Sign-off</span>
+                            <span class="skill-badge">Jira Governance (Dashboards, JQL)</span>
+                            <span class="skill-badge">Agile / Scrum Delivery</span>
+                            <span class="skill-badge">Oracle EBS (AP, AR, PO, CE, FA)</span>
+                            <span class="skill-badge">Aerospace Safety Verification</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: CI/CD & DevOps Tooling -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="category-header">
+                            <div class="category-icon" style="color: #6366f1;"><i class="fa-solid fa-cloud"></i></div>
+                            <div>
+                                <h3 class="category-name">CI/CD, DevOps & Languages</h3>
+                                <span class="category-subtitle">Pipelines, Containers & Shell</span>
+                            </div>
+                        </div>
+                        <div class="skills-badge-wrap">
+                            <span class="skill-badge featured"><i class="fa-brands fa-microsoft"></i> Azure DevOps Pipelines</span>
+                            <span class="skill-badge featured"><i class="fa-brands fa-docker"></i> Docker</span>
+                            <span class="skill-badge"><i class="fa-brands fa-python"></i> Python (Expert)</span>
+                            <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="skill-badge">Linux / Shell</span>
+                            <span class="skill-badge">Poetry</span>
+                            <span class="skill-badge">Post-Deploy Quality Gates</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. EXPERIENCE SECTION (TIMELINE) -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Career Milestones</span>
+                    <h2 class="section-title">Professional Experience & Impact</h2>
+                    <p class="section-subtitle">Over a decade of high-impact engineering across aerospace, enterprise ERP, and conversational AI.</p>
+                </div>
+
+                <div class="timeline">
+
+                    <!-- Role 1: Cognizant GenAI CoE -->
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot current"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <span class="timeline-role">AI Quality Engineer / SDET — GenAI CoE (assignment)</span>
+                                    <h3 class="timeline-company">Cognizant Technology Solutions <small style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">(Official: Associate)</small></h3>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-badge current"><i class="fa-solid fa-circle-dot"></i> Present</span>
+                                    <span class="timeline-duration">Sep 2025 – Present</span>
+                                    <span class="timeline-loc"><i class="fa-solid fa-location-dot"></i> Kolkata, India</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-desc">
+                                    Owning end-to-end quality for enterprise web and conversational GenAI applications: test strategy, automation, and release validation.
+                                </p>
+                                <ul class="timeline-bullets">
+                                    <li><strong>LLM & RAG Evaluation Pipelines:</strong> Built LLM/RAG and chatbot evaluation using DeepEval LLM-as-a-judge (G-Eval, faithfulness, answer relevancy, contextual precision/recall, hallucination) with GPT-6 Luna as the low-latency decision model, plus NLI entailment checks.</li>
+                                    <li><strong>FAISS Dense Retrieval Validation:</strong> Built retrieval checks on FAISS with Sentence Transformers dense embeddings and cosine similarity; integrated the evaluation suite into Azure DevOps post-deploy pipelines.</li>
+                                    <li><strong>Playwright & Pytest-BDD Frameworks:</strong> Built Python Playwright/Pytest-BDD frameworks (Page Object Model, API fixtures) for cross-browser UI and backend microservice tests.</li>
+                                    <li><strong>Quality Gates & Defect Triage:</strong> Defined test scope and quality criteria with development, QA, and data science; drove defect triage and hotfix verification.</li>
+                                </ul>
+                                <div class="timeline-tech-stack">
+                                    <span>Python</span>
+                                    <span>Playwright</span>
+                                    <span>Playwright MCP</span>
+                                    <span>Pytest-BDD</span>
+                                    <span>DeepEval (G-Eval)</span>
+                                    <span>GPT-6 Luna</span>
+                                    <span>NLI Entailment</span>
+                                    <span>FAISS RAG</span>
+                                    <span>Azure DevOps</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Cognizant Oracle QEA -->
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <span class="timeline-role">Senior QEA — Oracle QEA / Enterprise Systems (assignment)</span>
+                                    <h3 class="timeline-company">Cognizant Technology Solutions</h3>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-badge">Apr 2021 – Aug 2025</span>
+                                    <span class="timeline-duration">4 years 5 months</span>
+                                    <span class="timeline-loc"><i class="fa-solid fa-location-dot"></i> Kolkata, India</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-desc">
+                                    Module owner and functional SME for Wyndham Destinations' global Oracle EBS test scope across APAC, EMEA, LATAM, and North America.
+                                </p>
+                                <ul class="timeline-bullets">
+                                    <li><strong>Scope & Regression Leadership:</strong> Owned about half of Wyndham Destinations' Oracle EBS test scope (AP, AR, PO, CE, FA); owned and maintained 1,000+ test cases across recurring Oracle CPU patch cycles through requirement analysis and test design.</li>
+                                    <li><strong>Script Execution & Migration:</strong> Executed 591 regression scripts (AP, CE, FA, PO, AR) in NTST/NUAT environments; migrated 250 AP/PO test cases.</li>
+                                    <li><strong>Multi-Module Multi-OU Architecture:</strong> Designed a multi-module, multi-OU UFT and Tricentis Tosca framework with persistent runtime data, resume-from-failure logic, and nightly unassisted runs; built an American Express Tosca POC (PO/PR) and ran client demos.</li>
+                                    <li><strong>Stakeholder Governance & JQL:</strong> Drove defects to resolution with stakeholders and managed client communication and verification points; defined Jira dashboard rules, labelling standards, and JQL queries for coverage and defect tracking.</li>
+                                    <li><strong>Mentorship & Knowledge Transfers:</strong> Delivered recorded cross knowledge-transfers on owned modules, framework usage, and debugging; supported teammates.</li>
+                                </ul>
+                                <div class="timeline-tech-stack">
+                                    <span>Oracle EBS (AP, AR, PO, CE, FA)</span>
+                                    <span>Tricentis Tosca</span>
+                                    <span>HP UFT</span>
+                                    <span>Python</span>
+                                    <span>Jira JQL</span>
+                                    <span>AmEx Tosca POC</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: The Boeing Company -->
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot award"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <span class="timeline-role">Software Engineer — Test Automation</span>
+                                    <h3 class="timeline-company">The Boeing Company</h3>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-badge award-badge"><i class="fa-solid fa-award"></i> Pride & Star Awards</span>
+                                    <span class="timeline-duration">Oct 2018 – Apr 2021 (2 yrs 7 mos)</span>
+                                    <span class="timeline-loc"><i class="fa-solid fa-location-dot"></i> Bengaluru, India</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-desc">
+                                    Engineered test automation for safety-critical aerospace software systems adhering to stringent aviation specifications.
+                                </p>
+                                <ul class="timeline-bullets">
+                                    <li><strong>Safety-Critical Aerospace Verification:</strong> Owned the quality cycle for safety-critical aerospace software through regression across releases; mapped requirements with Boeing inspectors (end users) and onshore/offshore teams.</li>
+                                    <li><strong>Test Automation & Code Standards:</strong> Built test automation; supported coding standards, CI checks, and reviews for junior engineers.</li>
+                                    <li><strong>Honors:</strong> Conferred Boeing Pride Award and Star Award for regression reliability and aerospace software verification excellence.</li>
+                                </ul>
+                                <div class="timeline-tech-stack">
+                                    <span>Aerospace Testing</span>
+                                    <span>Safety-Critical Systems</span>
+                                    <span>Boeing Inspectors Liaison</span>
+                                    <span>CI Checks</span>
+                                    <span>Regression Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Accenture -->
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <span class="timeline-role">Test Automation Engineer</span>
+                                    <h3 class="timeline-company">Accenture LLP</h3>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-badge award-badge"><i class="fa-solid fa-award"></i> Asset Creation Award</span>
+                                    <span class="timeline-duration">Oct 2014 – Oct 2018 (4 yrs 1 mo)</span>
+                                    <span class="timeline-loc"><i class="fa-solid fa-location-dot"></i> Kolkata / Noida / Bengaluru</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-desc">
+                                    Delivered mobile and enterprise automation solutions for banking, telecom, and energy clients across multiple delivery centers.
+                                </p>
+                                <ul class="timeline-bullets">
+                                    <li><strong>American Banking Client Mobile Testing:</strong> Mobile testing team member for an American banking client; delivered a large number of releases with zero escape defects.</li>
+                                    <li><strong>Data-Driven Multi-Tier Automation:</strong> Built data-driven automation for web, client-server, SAP MM, and mobile (telecom and energy clients) across integration, regression, smoke, and UAT.</li>
+                                    <li><strong>Tooling Innovation & Cost Savings:</strong> Built a test-capture utility cutting third-party tool costs; conferred the Accenture Asset Creation Award.</li>
+                                </ul>
+                                <div class="timeline-tech-stack">
+                                    <span>Mobile Testing</span>
+                                    <span>American Banking Client</span>
+                                    <span>SAP MM</span>
+                                    <span>Web & Client-Server</span>
+                                    <span>Test Capture Utility</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5. FEATURED PROJECTS / ARCHITECTURES -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Technical Showcase</span>
+                    <h2 class="section-title">Key Frameworks & AI Architectures</h2>
+                    <p class="section-subtitle">Real-world automation platforms, LLM evaluation pipelines, and research systems built for production scale.</p>
+                </div>
+
+                <!-- Project Filter Buttons -->
+                <div class="project-filter-tabs" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All Systems</button>
+                    <button class="filter-btn" data-filter="genai">GenAI & LLM Testing</button>
+                    <button class="filter-btn" data-filter="automation">Test Automation</button>
+                    <button class="filter-btn" data-filter="enterprise">Enterprise Systems</button>
+                    <button class="filter-btn" data-filter="arvr">AR/VR & Vision</button>
+                </div>
+
+                <!-- Project Cards Grid -->
+                <div class="projects-grid" id="projects-grid">
+
+                    <!-- Project 1: ClozeCongruence 3.0 AI Text Forensics & ScribeMark Engine -->
+                    <div class="project-card featured-project-card" data-category="genai" data-aos="fade-up" data-aos-delay="50">
+                        <div class="project-card-banner banner-research">
+                            <span class="project-tag"><i class="fa-solid fa-atom"></i> TMLR • CERN Zenodo • SSRN</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-microscope"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">ClozeCongruence 3.0: Multilingual AI Text Forensics & ScribeMark Engine</h3>
+                            <p class="project-description">
+                                Groundbreaking zero-shot AI text forensics architecture operating across 10 global languages and 6 writing scripts. Integrates script-aware Unicode normalizers, dual-topology masking, continuous sigmoidal gating, dynamic burstiness modulation, and ISO/IEC 27037 cryptographic certificate provenance.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Empirical Benchmark:</strong> 98.92% 10-Language AUROC, 0.00% False Accusations on native human prose, and 99.71% Top-1 LLM Attribution accuracy across frontier models.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>Multilingual Forensics</span>
+                                <span>Cross-Lingual NLP</span>
+                                <span>Sigmoidal Gating</span>
+                                <span>Burstiness ($CV_{\text{burst}}$)</span>
+                                <span>TMLR Submission</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="https://scribemark.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fa-solid fa-laptop-code"></i> Live App
+                                </a>
+                                <a href="https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> Benchmark Kit
+                                </a>
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('cloze-congruence')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Latent Resonance Non-Invasive Generative Diffusion Image Forensics -->
+                    <div class="project-card featured-project-card" data-category="genai arvr" data-aos="fade-up" data-aos-delay="75">
+                        <div class="project-card-banner banner-research" style="background: linear-gradient(135deg, rgba(234, 88, 12, 0.25) 0%, rgba(56, 189, 248, 0.25) 100%);">
+                            <span class="project-tag"><i class="fa-solid fa-atom"></i> IEEE Research • CERN Zenodo • Live App</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-camera-retro"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">Latent Resonance: Non-Invasive Generative Diffusion Image Forensics & Physical CMOS PRNU Verification</h3>
+                            <p class="project-description">
+                                Zero-training, non-invasive computer vision forensic engine detecting generative AI image synthesis (SDXL, SD 1.5/2.1, Midjourney, DALL-E 3, FLUX). Employs deterministic VAE latent reconstruction inversion (&sigma;=0), 2D-FFT azimuthal harmonic lattice detection (&plusmn;64, &plusmn;128 px), physical CMOS silicon sensor PRNU cross-channel noise correlation (&rho;<sub>RGB</sub>), and court-admissible ISO/IEC 27037 PDF audit certificates.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Empirical Benchmark:</strong> 99.8% Diffusion Detection AUROC, &lt;0.02s standalone PRNU extraction, and 0.00% False Accusations on mobile camera portraits.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>PyTorch</span>
+                                <span>StabilityAI VAE</span>
+                                <span>2D-FFT Spectral Harmonics</span>
+                                <span>CMOS PRNU Noise</span>
+                                <span>Streamlit</span>
+                                <span>ISO/IEC 27037</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="https://scribemarkimage.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fa-solid fa-camera-retro"></i> Live App
+                                </a>
+                                <a href="https://github.com/debdipARVR/AI_IMAGE_DETECTION" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('latent-resonance')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: GenAI & RAG Evaluation Pipeline -->
+                    <div class="project-card" data-category="genai" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card-banner banner-genai">
+                            <span class="project-tag"><i class="fa-solid fa-robot"></i> GenAI CoE</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-brain"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">Enterprise RAG & Conversational LLM Evaluation Pipeline</h3>
+                            <p class="project-description">
+                                Automated validation engine for non-deterministic AI chatbot responses using DeepEval, evaluating hallucination rates, context faithfulness, answer relevancy, and semantic similarity against curated ground truth.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Technical Core:</strong> LLM-as-a-Judge automated scoring using Azure OpenAI with strict JSON schema criteria and automated CI/CD quality gates.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>DeepEval</span>
+                                <span>Azure OpenAI</span>
+                                <span>LLM-as-a-Judge</span>
+                                <span>Pytest</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('genai-pipeline')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture Details
+                                </button>
+                                <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Enterprise Playwright-Python Framework -->
+                    <div class="project-card" data-category="automation" data-aos="fade-up" data-aos-delay="150">
+                        <div class="project-card-banner banner-auto">
+                            <span class="project-tag"><i class="fa-solid fa-bolt"></i> Automation</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-vial-virus"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">Playwright + Python + Pytest-BDD Enterprise Architecture</h3>
+                            <p class="project-description">
+                                Production-grade end-to-end testing platform with reusable Page Object Model (POM), parallel cross-browser execution (pytest-xdist), Dockerized runtimes, and Allure interactive reporting.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Outcome:</strong> 40% execution speedup with auto-waiting for complex asynchronous single-page applications.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Playwright</span>
+                                <span>Python</span>
+                                <span>Pytest-BDD</span>
+                                <span>Docker</span>
+                                <span>Allure</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('playwright-framework')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture Details
+                                </button>
+                                <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Aerospace Safety-Critical Automation Suite -->
+                    <div class="project-card" data-category="enterprise" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-card-banner banner-boeing">
+                            <span class="project-tag"><i class="fa-solid fa-plane"></i> Aerospace</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-shield-halved"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">Aerospace Safety-Critical Automation Suite (Boeing)</h3>
+                            <p class="project-description">
+                                High-reliability test automation framework managing 2,000+ regression test cases for aerospace engineering systems, ensuring compliance with strict safety specifications and seamless CI pipeline verification.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Honor:</strong> Received Boeing Pride Award (2019) for exceptional regression reliability and integration stability.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Aerospace Testing</span>
+                                <span>CI/CD</span>
+                                <span>Regression Engine</span>
+                                <span>Quality Gates</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('boeing-suite')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture Details
+                                </button>
+                                <a href="#experience" class="btn btn-secondary btn-sm">
+                                    <i class="fa-solid fa-award"></i> View Impact
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Oracle EBS Multi-Module Automated Test Suite -->
+                    <div class="project-card" data-category="enterprise" data-aos="fade-up" data-aos-delay="250">
+                        <div class="project-card-banner banner-oracle">
+                            <span class="project-tag"><i class="fa-solid fa-database"></i> Enterprise ERP</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-server"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">Oracle EBS Multi-Module Automated Regression Engine</h3>
+                            <p class="project-description">
+                                Resilient automation framework supporting multi-OU Oracle EBS execution across AP, AR, PO, CE, and FA modules with resume-from-failure execution and automated credential reset.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Scale:</strong> Automated multi-tier regression execution across global patch cycles with zero unassisted failures.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Oracle EBS</span>
+                                <span>Tricentis Tosca</span>
+                                <span>UFT</span>
+                                <span>Python</span>
+                                <span>Jira JQL</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('oracle-ebs')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture Details
+                                </button>
+                                <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Spatial 3D Scanning & GANs in AR/VR (IIT Jodhpur) -->
+                    <div class="project-card" data-category="arvr" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-card-banner banner-arvr">
+                            <span class="project-tag"><i class="fa-solid fa-vr-cardboard"></i> IIT Jodhpur M.Tech</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-cube"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">Spatial 3D Reconstruction & GANs in Augmented Reality</h3>
+                            <p class="project-description">
+                                M.Tech project at IIT Jodhpur (School of AI & Data Science) investigating Generative Adversarial Networks (GANs), 3D point cloud scanning, and real-time spatial interaction validation in immersive environments.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Domain:</strong> Computer Vision, Generative Models, and Interactive Spatial Computing quality testing.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>PyTorch</span>
+                                <span>GANs</span>
+                                <span>3D Scanning</span>
+                                <span>AR/VR</span>
+                                <span>Computer Vision</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('arvr-research')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture Details
+                                </button>
+                                <a href="#education" class="btn btn-secondary btn-sm">
+                                    <i class="fa-solid fa-graduation-cap"></i> Academic Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: One Click Capture Automation Tooling Utility -->
+                    <div class="project-card" data-category="automation" data-aos="fade-up" data-aos-delay="350">
+                        <div class="project-card-banner banner-tooling">
+                            <span class="project-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Tooling Innovation</span>
+                            <div class="project-icon-art"><i class="fa-solid fa-camera"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-title">One Click Capture Automation & Evidence Logger</h3>
+                            <p class="project-description">
+                                Enterprise automation utility engineered at Accenture to automate multi-screen test evidence capture, document compilation, and defect reporting.
+                            </p>
+                            <div class="project-highlights">
+                                <strong>Impact:</strong> Saved ~$8,000 annually in commercial tool licensing costs and reduced defect packaging time by 75%.
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Automation Utility</span>
+                                <span>VBScript</span>
+                                <span>Process Optimization</span>
+                                <span>Accenture Award</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn btn-outline btn-sm" onclick="openProjectModal('one-click-capture')">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture Details
+                                </button>
+                                <a href="#experience" class="btn btn-secondary btn-sm">
+                                    <i class="fa-solid fa-award"></i> View Impact
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+                <!-- 6. PUBLICATIONS & RESEARCH SECTION -->
+        <section id="publications" class="section publications-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Scientific Research Series</span>
+                    <h2 class="section-title">Publications & Scientific Preprints</h2>
+                    <p class="section-subtitle">Original machine learning & multimodal AI forensics research on VAE latent resonance, CMOS PRNU noise, macro-discourse cloze infilling, and model DNA attribution.</p>
+                </div>
+
+                <!-- RESEARCH PORTFOLIO DEDICATED BRIDGE BANNER -->
+                <div class="research-bridge-banner" data-aos="fade-up" style="background: linear-gradient(135deg, rgba(30, 27, 75, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%); border: 2px solid rgba(245, 158, 11, 0.55); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin-bottom: 2.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.25);">
+                    <div style="flex: 1; min-width: 280px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+                            <span style="background: linear-gradient(135deg, #b45309 0%, #d97706 100%); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 9999px; text-transform: uppercase;"><i class="fa-solid fa-trophy"></i> Latest Milestone</span>
+                            <span style="color: #fbbf24; font-weight: 700; font-size: 0.88rem;">Accepted at ACM ICAIF 2026 (FinSec Workshop)</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px; font-weight: 700;">Explore the Dedicated Multimodal AI Forensics Research Portfolio</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0; line-height: 1.5;">Dive into complete research manuscripts across text, vision, and audio forensics, mathematical foundations, 1-click BibTeX citations, and Hugging Face benchmarks.</p>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="research.html" class="btn btn-primary" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); border-color: #f59e0b; box-shadow: 0 0 15px rgba(217, 119, 6, 0.35);">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Open Dedicated Research Portfolio &rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAPER: ACM ICAIF 2026 ACCEPTED -->
+                <div class="publication-featured-card" data-aos="fade-up" style="margin-bottom: 2.5rem; border-color: rgba(245, 158, 11, 0.6); box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.25); background: linear-gradient(135deg, rgba(30, 27, 75, 0.4) 0%, rgba(19, 29, 54, 0.8) 100%);">
+                    <div class="pub-top-strip">
+                        <div class="pub-badges">
+                            <span class="pub-badge preprint" style="background: linear-gradient(135deg, #b45309 0%, #d97706 100%); color: #fff; font-weight: 700;"><i class="fa-solid fa-trophy"></i> ACCEPTED FOR PRESENTATION &bull; ACM ICAIF 2026</span>
+                            <span class="pub-badge venue" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.45); color: #fbbf24;"><i class="fa-solid fa-building-columns"></i> FinSec Workshop (Financial Security, Safety, and Privacy)</span>
+                            <span class="pub-badge date"><i class="fa-regular fa-calendar"></i> October 2026</span>
+                            <span class="pub-badge doi" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);"><i class="fa-solid fa-shield-halved"></i> Zero-Logit Auditing</span>
+                        </div>
+                        <div class="pub-benchmark-pill" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.45); color: #fbbf24;">
+                            <i class="fa-solid fa-bolt"></i> <strong>80.68%</strong> AUROC DeepSeek/Qwen &bull; <strong>93.21%</strong> Peak AUPRC
+                        </div>
+                    </div>
+
+                    <h3 class="pub-card-title">
+                        Zero-Logit Model Provenance Auditing in Mission-Critical Financial AI: Privacy-Preserving Black-Box Attribution via Prober-Generator Resonance Spectroscopy
+                    </h3>
+
+                    <p class="pub-author-line">
+                        <i class="fa-solid fa-user-pen"></i> <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em> &bull; <i class="fa-solid fa-envelope"></i> <code>debdip1992@outlook.com</code>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Addresses the mission-critical trade-off between <strong>inference privacy</strong> and <strong>forensic auditability</strong> across banking APIs, AML report synthesis, and automated loan underwriting. When financial institutions withhold token log-probabilities (logits) to prevent model theft and data leakage, conventional white-box detectors collapse. We introduce <strong>Prober-Generator Resonance Spectroscopy</strong>, a zero-logit privacy-preserving audit framework operating purely via text-only multi-sentence cloze infilling ($k \in \{2, 3, 4\}$) and Kuhn-Munkres bipartite matching on permutation groups. Resolves domain calibration drift in specialized financial and regulatory prose while enforcing air-gapped on-premises VPC compliance.
+                    </p>
+
+                    <div class="pub-metrics-grid">
+                        <div class="pub-metric-box">
+                            <div class="metric-val" style="color: #fbbf24;">80.68%</div>
+                            <div class="metric-lbl">DeepSeek / Qwen AUROC</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val" style="color: #fbbf24;">77.00%</div>
+                            <div class="metric-lbl">Meta LLaMA-3.3 AUROC</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val" style="color: #34d399;">0 Logits</div>
+                            <div class="metric-lbl">Zero Privacy Leakage</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val" style="color: #38bdf8;">Air-Gapped</div>
+                            <div class="metric-lbl">VPC Compliance Standard</div>
+                        </div>
+                    </div>
+
+                    <div class="pub-keywords-row">
+                        <span>ACM ICAIF 2026</span>
+                        <span>Financial AI Security</span>
+                        <span>Zero-Logit Model Provenance</span>
+                        <span>Inference Privacy</span>
+                        <span>Prober-Generator Resonance</span>
+                        <span>Kuhn-Munkres Bipartite Matching</span>
+                    </div>
+
+                    <div class="pub-actions-row">
+                        <a href="assets/papers/Debdip_ICAIF_2026_FinAI_Security.pdf" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); border-color: #f59e0b;">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Download Manuscript PDF</span>
+                        </a>
+                        <a href="research.html#accepted-paper" class="btn btn-secondary">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>View Research Spotlight</span>
+                        </a>
+                        <a href="https://scribemark.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-solid fa-flask"></i>
+                            <span>Live ScribeMark App</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAPER 5: LATENT RESONANCE IMAGE FORENSICS (IEEE 2026) -->
+                <div class="publication-featured-card" data-aos="fade-up" style="margin-bottom: 2.5rem; border-color: rgba(234, 88, 12, 0.45); box-shadow: 0 10px 30px -10px rgba(234, 88, 12, 0.15);">
+                    <div class="pub-top-strip">
+                        <div class="pub-badges">
+                            <span class="pub-badge preprint" style="background: rgba(234, 88, 12, 0.15); color: #fb923c;"><i class="fa-solid fa-file-lines"></i> Flagship Vision Forensics • IEEE Submission</span>
+                            <span class="pub-badge venue" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.35); color: #38bdf8;"><i class="fa-solid fa-atom"></i> IEEE / CERN Zenodo Archive</span>
+                            <span class="pub-badge date"><i class="fa-regular fa-calendar"></i> September 2026</span>
+                            <span class="pub-badge doi"><i class="fa-solid fa-fingerprint"></i> DOI: 10.5281/zenodo.22158286</span>
+                        </div>
+                        <div class="pub-benchmark-pill" style="background: rgba(234, 88, 12, 0.12); border-color: rgba(234, 88, 12, 0.35); color: #fb923c;">
+                            <i class="fa-solid fa-shield-halved"></i> <strong>99.8%</strong> Diffusion AUROC &bull; <strong>0.00%</strong> Camera Portrait FPR
+                        </div>
+                    </div>
+
+                    <h3 class="pub-card-title">
+                        Latent Resonance: Non-Invasive Image Forensics via Deterministic Variational Autoencoder Manifold Inversion, Azimuthal Deconvolution Harmonics, and Silicon Photodiode PRNU Verification
+                    </h3>
+
+                    <p class="pub-author-line">
+                        <i class="fa-solid fa-user-pen"></i> <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em> &bull; <i class="fa-solid fa-envelope"></i> <code>debdip1992@outlook.com</code>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Pioneered <strong>Latent Resonance</strong>, a zero-training, non-invasive computer vision forensic framework for detecting generative diffusion synthesis across consumer and enterprise generative models (Stable Diffusion, SDXL, Midjourney, DALL-E 3, FLUX). Maps candidate images through deterministic VAE latent inversion (&sigma;=0) to exploit the near-zero reconstruction error of generative manifold congruence (PSNR &ge; 35.0 dB) against the natural high-entropy divergence of physical optical sensors (PSNR &lt; 34.5 dB). Uncovers periodic 8&times;8 transposed convolution deconvolution lattice harmonics via 2D-FFT azimuthal integration (f=&plusmn;64, &plusmn;128) and extracts physical CMOS Photo-Response Non-Uniformity (PRNU) cross-channel Laplacian noise correlation (&rho;<sub>RGB</sub>). Fully integrated with ISO/IEC 27037:2012 chain of custody and court-admissible PDF certificate generation.
+                    </p>
+
+                    <div class="pub-metrics-grid">
+                        <div class="pub-metric-box">
+                            <div class="metric-val">99.8%</div>
+                            <div class="metric-lbl">Diffusion Detection AUROC</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">0.00%</div>
+                            <div class="metric-lbl">False Accusations on Real Photos</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">&lt;0.02s</div>
+                            <div class="metric-lbl">Sensor PRNU Extraction Runtime</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">ISO 27037</div>
+                            <div class="metric-lbl">Court-Admissible Evidence Sealing</div>
+                        </div>
+                    </div>
+
+                    <div class="pub-keywords-row">
+                        <span>Latent Resonance</span>
+                        <span>Generative Diffusion Forensics</span>
+                        <span>Deterministic VAE Inversion</span>
+                        <span>Azimuthal 2D-FFT Harmonics</span>
+                        <span>CMOS Sensor PRNU</span>
+                        <span>DALL-E 3 & Midjourney Forensics</span>
+                        <span>ISO/IEC 27037</span>
+                    </div>
+
+                    <div class="pub-actions-row">
+                        <a href="https://scribemarkimage.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-solid fa-camera-retro"></i>
+                            <span>Live ScribeMark Image App</span>
+                        </a>
+                        <a href="https://github.com/debdipARVR/AI_IMAGE_DETECTION" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub Source Repository</span>
+                        </a>
+                        <a href="https://doi.org/10.5281/zenodo.22158286" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>CERN Zenodo DOI: 10.5281/zenodo.22158286</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAPER 4: MULTILINGUAL AI FORENSICS (TMLR 2027) -->
+                <div class="publication-featured-card" data-aos="fade-up" style="margin-bottom: 2.5rem; border-color: rgba(56, 189, 248, 0.45); box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);">
+                    <div class="pub-top-strip">
+                        <div class="pub-badges">
+                            <span class="pub-badge preprint"><i class="fa-solid fa-file-lines"></i> Paper 4 • Flagship Multilingual</span>
+                            <span class="pub-badge venue" style="background: rgba(234, 88, 12, 0.12); border-color: rgba(234, 88, 12, 0.35); color: #fb923c;"><i class="fa-solid fa-feather-pointed"></i> TMLR (Transactions on Machine Learning Research)</span>
+                            <span class="pub-badge date"><i class="fa-regular fa-calendar"></i> September 2026</span>
+                            <span class="pub-badge doi"><i class="fa-solid fa-globe"></i> 10 Global Languages • 6 Scripts</span>
+                        </div>
+                        <div class="pub-benchmark-pill" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.35); color: var(--accent-cyan);">
+                            <i class="fa-solid fa-shield-halved"></i> <strong>0.00%</strong> Cross-Lingual FPR &bull; <strong>98.92%</strong> Multilingual AUROC
+                        </div>
+                    </div>
+
+                    <h3 class="pub-card-title">
+                        ClozeCongruence 3.0: Cross-Lingual Macro-Discourse Reconstruction and Dynamic Burstiness Gating for Zero-Shot AI Text Forensics across 10 Typologically Diverse Languages
+                    </h3>
+
+                    <p class="pub-author-line">
+                        <i class="fa-solid fa-user-pen"></i> <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em> &bull; <i class="fa-solid fa-envelope"></i> <code>debdip1992@outlook.com</code>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Pioneered the first typologically invariant, zero-shot multilingual AI text forensics architecture. Combines script-aware Unicode NFKC tokenization, dual-topology masking (Pass 2 alternating + Pass 3 centroid 3-sentence extraction), continuous sigmoidal gating, and dynamic coefficient-of-variation burstiness modulation ($CV_{\text{burst}}$). Evaluated across 10 global languages (English, German, Spanish, French, Russian, Chinese, Japanese, Arabic, Hindi, Bengali) spanning Latin, Cyrillic, CJK, Devanagari, and Arabic scripts. Completely eliminates the non-English false-positive catastrophe of prior perplexity baselines while providing ISO/IEC 27037 forensic certificate provenance.
+                    </p>
+
+                    <div class="pub-metrics-grid">
+                        <div class="pub-metric-box">
+                            <div class="metric-val">98.92%</div>
+                            <div class="metric-lbl">Mean 10-Language AUROC</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">0.00%</div>
+                            <div class="metric-lbl">False Accusation Rate on Native Texts</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">99.71%</div>
+                            <div class="metric-lbl">Top-1 Model Provenance Accuracy</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">10 Lgs / 6 Scripts</div>
+                            <div class="metric-lbl">Latin, Cyrillic, CJK, Devanagari, Arabic</div>
+                        </div>
+                    </div>
+
+                    <div class="pub-keywords-row">
+                        <span>Multilingual AI Forensics</span>
+                        <span>ClozeCongruence 3.0</span>
+                        <span>Cross-Lingual Zero-Shot NLP</span>
+                        <span>Burstiness Gating ($CV_{\text{burst}}$)</span>
+                        <span>Script-Invariant Forensics</span>
+                        <span>ISO/IEC 27037 Provenance</span>
+                    </div>
+
+                    <div class="pub-actions-row">
+                        <a href="https://scribemark.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Live ScribeMark App</span>
+                        </a>
+                        <a href="https://huggingface.co/datasets/DebdipCS/cloze-congruence-multilingual-benchmark" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fa-solid fa-database"></i>
+                            <span>Hugging Face Dataset</span>
+                        </a>
+                        <a href="https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-brands fa-github"></i>
+                            <span>Benchmark Suite</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAPER 1: AI TEXT DETECTION -->
+                <div class="publication-featured-card" data-aos="fade-up" style="margin-bottom: 2.5rem;">
+                    <div class="pub-top-strip">
+                        <div class="pub-badges">
+                            <span class="pub-badge preprint"><i class="fa-solid fa-file-lines"></i> Paper 1 • Scientific Preprint</span>
+                            <span class="pub-badge venue"><i class="fa-solid fa-atom"></i> CERN Zenodo Archive</span>
+                            <span class="pub-badge date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            <span class="pub-badge doi"><i class="fa-solid fa-fingerprint"></i> DOI: 10.5281/zenodo.22158286</span>
+                        </div>
+                        <div class="pub-benchmark-pill">
+                            <i class="fa-solid fa-bolt"></i> <strong>99.58%</strong> RAID AUROC &bull; <strong>0.00%</strong> Human FPR
+                        </div>
+                    </div>
+
+                    <h3 class="pub-card-title">
+                        Multi-Scale 4-Pass Sentence Cloze Infilling with Pass-Adaptive Dynamic Gating for Robust AI Text Detection
+                    </h3>
+
+                    <p class="pub-author-line">
+                        <i class="fa-solid fa-user-pen"></i> <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em> &bull; <i class="fa-solid fa-envelope"></i> <code>debdip1992@outlook.com</code>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Introduced <strong>ClozeCongruence 2.0</strong>, a zero-shot AI text forensics framework based on macro-discourse bidirectional reconstructibility across multi-scale structural voids. Overcomes the catastrophic false positive rate of token-level perplexity detectors (DetectGPT, Binoculars) on complex human literature via: (1) Multi-scale 4-pass sentence masking; (2) Max-Weight Kuhn-Munkres Bipartite Hungarian matching on permutation group S₃; and (3) Pass-adaptive continuous sigmoidal dynamic gating (k=15.0, c₀=0.70).
+                    </p>
+
+                    <div class="pub-metrics-grid">
+                        <div class="pub-metric-box">
+                            <div class="metric-val">99.58%</div>
+                            <div class="metric-lbl">RAID Benchmark (ACL 2024)</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">99.98%</div>
+                            <div class="metric-lbl">HC3 Benchmark (EMNLP 2023)</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">0.00%</div>
+                            <div class="metric-lbl">Human Literature False Alarms</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">d = 4.07</div>
+                            <div class="metric-lbl">Effect Size (Welch's p = 7.49e-4)</div>
+                        </div>
+                    </div>
+
+                    <div class="pub-keywords-row">
+                        <span>AI Text Detection</span>
+                        <span>Cloze Congruence</span>
+                        <span>Hungarian Bipartite Matching (S₃)</span>
+                        <span>Sigmoidal Dynamic Gating</span>
+                        <span>Platt Calibration</span>
+                        <span>Zero-Shot NLP Forensics</span>
+                    </div>
+
+                    <div class="pub-actions-row">
+                        <a href="https://scribemark.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Live ScribeMark App</span>
+                        </a>
+                        <a href="https://doi.org/10.5281/zenodo.22158286" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <span>CERN Zenodo</span>
+                        </a>
+                        <a href="https://hq.ssrn.com/login/pubSelfDownload.cfm?abstract_id=7341078" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>SSRN Elsevier</span>
+                        </a>
+                        <a href="https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-brands fa-github"></i>
+                            <span>Benchmark Suite</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAPER 2: MODEL DNA FINGERPRINTING -->
+                <div class="publication-featured-card" data-aos="fade-up" style="margin-bottom: 2.5rem;">
+                    <div class="pub-top-strip">
+                        <div class="pub-badges">
+                            <span class="pub-badge preprint"><i class="fa-solid fa-file-lines"></i> Paper 2 • Scientific Preprint</span>
+                            <span class="pub-badge venue"><i class="fa-solid fa-atom"></i> CERN Zenodo Archive</span>
+                            <span class="pub-badge date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            <span class="pub-badge doi"><i class="fa-solid fa-fingerprint"></i> DOI: 10.5281/zenodo.22158483</span>
+                        </div>
+                        <div class="pub-benchmark-pill">
+                            <i class="fa-solid fa-dna"></i> <strong>100.00%</strong> Top-1 Attribution &bull; <strong>+97.23%</strong> Resonance Gap
+                        </div>
+                    </div>
+
+                    <h3 class="pub-card-title">
+                        ClozeCongruence: Model Fingerprinting and Traceback Attribution in Large Language Models via Multi-Density Reverse Cloze Resonance and Micro-Stylometric DNA
+                    </h3>
+
+                    <p class="pub-author-line">
+                        <i class="fa-solid fa-user-pen"></i> <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em> &bull; <i class="fa-solid fa-envelope"></i> <code>debdip1992@outlook.com</code>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Formulated the first zero-shot training-free <strong>LLM Provenance Traceback</strong> framework to identify the exact foundation model generator (e.g. GPT-4o vs Claude 3.5 Sonnet vs Gemini 3.7 Flash vs Nemotron-3 120B). Combines a 12-Dimensional Micro-Stylometric DNA vector with Multi-Density Reverse Cloze Resonance (R_m*) and Softmax posterior probability calibration (τ = 8.0).
+                    </p>
+
+                    <div class="pub-metrics-grid">
+                        <div class="pub-metric-box">
+                            <div class="metric-val">100.00%</div>
+                            <div class="metric-lbl">6-Model Tournament Accuracy</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">1.0000</div>
+                            <div class="metric-lbl">Macro-F1 (6x6 Diagonal)</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">+97.23%</div>
+                            <div class="metric-lbl">Mean Self-Model Resonance Gap</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">12D</div>
+                            <div class="metric-lbl">Micro-Stylometric Vector Space</div>
+                        </div>
+                    </div>
+
+                    <div class="pub-keywords-row">
+                        <span>LLM Provenance Traceback</span>
+                        <span>Model DNA Fingerprinting</span>
+                        <span>Reverse Cloze Resonance</span>
+                        <span>Stylometrics</span>
+                        <span>AI Copyright Forensics</span>
+                    </div>
+
+                    <div class="pub-actions-row">
+                        <a href="https://doi.org/10.5281/zenodo.22158483" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <span>Read Paper on CERN Zenodo</span>
+                        </a>
+                        <a href="https://hq.ssrn.com/login/pubSelfDownload.cfm?abstract_id=7368119" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>SSRN Elsevier (7368119)</span>
+                        </a>
+                        <a href="https://huggingface.co/spaces/DebdipCS/cloze-congruence-ai-forensics-hub-v1" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-solid fa-table-cells"></i>
+                            <span>Confusion Matrix Explorer</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAPER 3: SCALING LAWS & GLM DYNAMICS -->
+                <div class="publication-featured-card" data-aos="fade-up">
+                    <div class="pub-top-strip">
+                        <div class="pub-badges">
+                            <span class="pub-badge preprint"><i class="fa-solid fa-file-lines"></i> Paper 3 • Scientific Preprint</span>
+                            <span class="pub-badge venue"><i class="fa-solid fa-server"></i> SSRN / ResearchGate</span>
+                            <span class="pub-badge date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            <span class="pub-badge doi"><i class="fa-solid fa-chart-line"></i> SSRN-id7368141</span>
+                        </div>
+                        <div class="pub-benchmark-pill">
+                            <i class="fa-solid fa-chart-line"></i> <strong>+51.16%</strong> GLM Gap &bull; <strong>d = 5.62</strong>
+                        </div>
+                    </div>
+
+                    <h3 class="pub-card-title">
+                        The Cloze Scaling Laws: Prober Parameter Dynamics, Native Blank-Infilling Architecture, and Multi-Model Provenance Traceback in Large Language Models
+                    </h3>
+
+                    <p class="pub-author-line">
+                        <i class="fa-solid fa-user-pen"></i> <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em> &bull; <i class="fa-solid fa-envelope"></i> <code>debdip1992@outlook.com</code>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Conducted the first systematic empirical study of <strong>The Cloze Scaling Laws</strong> across prober parameter scales from 12B to 120B. Established that prober meaning recovery scales monotonically (52.54% → 60.64%), and native bidirectional blank-infilling pre-training (Zhipu AI GLM-5.2) yields an extraordinary inductive advantage over standard autoregressive causal probers (Δ = +51.16%, Cohen's d = 5.62, t = 13.91, p = 2.87e-15).
+                    </p>
+
+                    <div class="pub-metrics-grid">
+                        <div class="pub-metric-box">
+                            <div class="metric-val">+51.16%</div>
+                            <div class="metric-lbl">GLM-5.2 Net Separation Gap</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">d = 5.62</div>
+                            <div class="metric-lbl">Cohen's Effect Size (p &lt; 1e-14)</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">12B → 120B</div>
+                            <div class="metric-lbl">Prober Scaling Spectrum</div>
+                        </div>
+                        <div class="pub-metric-box">
+                            <div class="metric-val">60.77%</div>
+                            <div class="metric-lbl">GLM Propositional Recovery (M)</div>
+                        </div>
+                    </div>
+
+                    <div class="pub-keywords-row">
+                        <span>Cloze Scaling Laws</span>
+                        <span>GLM Architecture Dynamics</span>
+                        <span>Bidirectional Blank-Infilling</span>
+                        <span>Statistical Effect Size</span>
+                        <span>Model Provenance</span>
+                    </div>
+
+                    <div class="pub-actions-row">
+                        <a href="https://hq.ssrn.com/login/pubSelfDownload.cfm?abstract_id=7368141" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <span>Read Paper on SSRN (7368141)</span>
+                        </a>
+                        <a href="https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-brands fa-github"></i>
+                            <span>Scaling Datasets & Logs</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 7. EDUCATION & ACADEMIC BACKGROUND -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Academic Background</span>
+                    <h2 class="section-title">Education & Qualifications</h2>
+                    <p class="section-subtitle">Rigorous computer science foundation paired with specialized postgraduate degree in spatial computing and AI from IIT Jodhpur.</p>
+                </div>
+
+                <div class="education-grid">
+
+                    <!-- Master's Degree -->
+                    <div class="edu-card featured-edu" data-aos="fade-up" data-aos-delay="100">
+                        <div class="edu-header">
+                            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="edu-meta">
+                                <span class="edu-badge">Master's Degree (Completed)</span>
+                                <span class="edu-years">2022 – 2025</span>
+                            </div>
+                        </div>
+                        <h3 class="edu-degree">Master of Technology (M.Tech) in AR & VR</h3>
+                        <h4 class="edu-inst">Indian Institute of Technology Jodhpur (IIT Jodhpur)</h4>
+                        <p class="edu-dept"><i class="fa-solid fa-university"></i> School of Artificial Intelligence & Data Science (AIDE)</p>
+                        <p class="edu-summary">
+                            Postgraduate curriculum in Spatial Computing, 3D Point Cloud Scanning, Generative Adversarial Networks (GANs), and Human-Computer Interaction for immersive technologies.
+                        </p>
+                    </div>
+
+                    <!-- Bachelor's Degree -->
+                    <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="edu-header">
+                            <div class="edu-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="edu-meta">
+                                <span class="edu-badge">Undergraduate Degree</span>
+                                <span class="edu-years">2010 – 2014</span>
+                            </div>
+                        </div>
+                        <h3 class="edu-degree">Bachelor of Technology (B.Tech) in Computer Science</h3>
+                        <h4 class="edu-inst">Greater Noida Institute of Technology (GNIOT)</h4>
+                        <p class="edu-dept"><i class="fa-solid fa-university"></i> Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+                        <p class="edu-summary">
+                            Comprehensive grounding in Data Structures, Algorithms, Software Engineering, Object-Oriented Design, and Database Management Systems.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 8. CERTIFICATIONS & HONORS SECTION -->
+        <section id="certifications" class="section cert-section">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="section-tag">Credentials & Awards</span>
+                    <h2 class="section-title">Certifications & Honors</h2>
+                    <p class="section-subtitle">Validated credentials in application testing, programming, and corporate excellence awards.</p>
+                </div>
+
+                <div class="cert-awards-grid">
+
+                    <!-- Certifications Column -->
+                    <div class="cert-col" data-aos="fade-right">
+                        <h3 class="col-heading"><i class="fa-solid fa-certificate"></i> Professional Certifications</h3>
+
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="cert-details">
+                                <h4 class="cert-name">Accenture & MIT Certified Application Tester</h4>
+                                <p class="cert-issuer">Massachusetts Institute of Technology & Accenture</p>
+                                <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Verified Credential</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fa-brands fa-java"></i></div>
+                            <div class="cert-details">
+                                <h4 class="cert-name">IBM Certified Java Professional</h4>
+                                <p class="cert-issuer">IBM Professional Certification Program</p>
+                                <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Core Java & OOP</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                            <div class="cert-details">
+                                <h4 class="cert-name">Google Crash Course on Python</h4>
+                                <p class="cert-issuer">Google / Coursera</p>
+                                <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Advanced Automation</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="cert-details">
+                                <h4 class="cert-name">Postman API Testing Path (v12)</h4>
+                                <p class="cert-issuer">Postman API Network</p>
+                                <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Automated API Testing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Awards & Honors Column -->
+                    <div class="awards-col" data-aos="fade-left">
+                        <h3 class="col-heading"><i class="fa-solid fa-trophy"></i> Corporate Honors</h3>
+
+                        <div class="award-card featured-award" style="border-left: 4px solid #f59e0b;">
+                            <div class="award-badge-icon" style="color: #fbbf24;"><i class="fa-solid fa-trophy"></i></div>
+                            <div class="award-details">
+                                <h4 class="award-name">ACM ICAIF 2026 Accepted Paper</h4>
+                                <p class="award-issuer">ACM International Conference on AI in Finance (FinSec Workshop)</p>
+                                <p class="award-desc">
+                                    Paper accepted for presentation in Milan, Italy: <em>Zero-Logit Model Provenance Auditing in Mission-Critical Financial AI: Privacy-Preserving Black-Box Attribution via Prober-Generator Resonance Spectroscopy</em>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="award-card">
+                            <div class="award-badge-icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="award-details">
+                                <h4 class="award-name">Boeing Pride Award & Star Award (2019)</h4>
+                                <p class="award-issuer">The Boeing Company</p>
+                                <p class="award-desc">
+                                    Conferred for exceptional contributions to test automation framework development and engineering quality in safety-critical aerospace software.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="award-card">
+                            <div class="award-badge-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="award-details">
+                                <h4 class="award-name">Accenture Asset Creation Award</h4>
+                                <p class="award-issuer">Accenture LLP</p>
+                                <p class="award-desc">
+                                    Conferred for engineering the 'One Click Capture' test automation utility, eliminating third-party licensing overhead and accelerating defect evidence capture.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="footer-logo">Debdip<span>.dev</span></a>
+                <p class="footer-tagline">Quality Engineering Lead — SDET & AI/LLM Evaluation.</p>
+            </div>
+
+            <div class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Architecture</a>
+                <a href="#publications">Publications</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Credentials</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/debdiparvr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:debdip1992@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Debdip Bandyopadhyay. Built with semantic HTML5, modern CSS3 & JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Detail Interactive Modal -->
+    <div id="project-modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">&times;</button>
+            <div id="modal-content" class="modal-content">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main id="top">
+    <!-- Toast Notification Popup -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-    <!-- ==================== HEADER & PROFESSIONAL SUMMARY ==================== -->
-    <section id="summary" class="hero-header">
-      <div class="editorial-container">
-        <div class="hero-card">
-          <h1 class="hero-name">Debdip Bandyopadhyay</h1>
-
-          <div class="hero-role-line">
-            <span class="hero-role-primary">Lead SDET &amp; AI Quality Engineering Lead</span>
-          </div>
-
-          <div class="contact-strip">
-            <span>Kolkata, India</span>
-            <span>|</span>
-            <a href="tel:+918285578544">+91-8285578544</a>
-            <span>|</span>
-            <a href="mailto:debdip1992@outlook.com">debdip1992@outlook.com</a>
-            <span>|</span>
-            <a href="https://www.linkedin.com/in/debdiparvr" target="_blank" rel="noopener noreferrer">linkedin.com/in/debdiparvr</a>
-            <span>|</span>
-            <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer">github.com/debdipARVR</a>
-            <span>|</span>
-            <a href="https://huggingface.co/spaces/DebdipCS/forensics-hub" target="_blank" rel="noopener noreferrer">huggingface.co/spaces/DebdipCS/forensics-hub</a>
-          </div>
-
-          <div class="summary-label">Professional Summary</div>
-          <p class="summary-text">
-            Lead Software Development Engineer in Test (SDET) and AI Quality Engineer with 11+ years of experience architecting enterprise test frameworks, non-deterministic evaluation harnesses, and CI/CD quality gates across Generative AI platforms, Aerospace, and Enterprise Systems. Core quality lead in the GenAI Center of Excellence (CoE), validating production LLM/RAG pipelines using DeepEval, semantic similarity, and custom automated metrics. Holds an M.Tech from IIT Jodhpur (School of AI &amp; Data Science) with independent published research and CERN Zenodo DOIs in foundation model provenance traceback, black-box AI text forensics, and autoencoder latent invariants.
-          </p>
-
-          <div class="hero-actions">
-            <a href="../research/index.html" class="btn btn-primary" style="background-color: var(--text-primary);">
-              <i class="ph-bold ph-atom"></i>
-              <span>Research Portfolio ↗</span>
-            </a>
-            <a href="assets/resume/Debdip_Bandyopadhyay_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <i class="ph-bold ph-file-pdf"></i>
-              <span>Download Resume (PDF)</span>
-            </a>
-            <a href="https://www.linkedin.com/in/debdiparvr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <i class="ph-bold ph-linkedin-logo"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/debdipARVR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <i class="ph-bold ph-git-branch"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://huggingface.co/spaces/DebdipCS/forensics-hub" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <i class="ph-bold ph-cube"></i>
-              <span>Hugging Face Space</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== TECHNICAL SKILLS ==================== -->
-    <section id="skills" class="editorial-section">
-      <div class="editorial-container">
-        <div class="section-heading-row">
-          <h2 class="section-title">Technical Skills</h2>
-          <span class="section-index">01 / Skills</span>
-        </div>
-
-        <div class="bento-grid">
-          <!-- AI Quality & LLM Evaluation -->
-          <article class="col-span-6 bento-card">
-            <div class="skill-group-title">
-              <span>AI Quality &amp; LLM Evaluation</span>
-            </div>
-            <div class="tag-cloud">
-              <span class="inline-tag">LLM Testing</span>
-              <span class="inline-tag">RAG Triad Benchmarking (Faithfulness, Answer Relevancy, Context Recall)</span>
-              <span class="inline-tag">DeepEval</span>
-              <span class="inline-tag">Hallucination Scoring</span>
-              <span class="inline-tag">Semantic Similarity</span>
-              <span class="inline-tag">Prompt Injection Testing</span>
-              <span class="inline-tag">Non-Deterministic Output Validation</span>
-              <span class="inline-tag">PyTorch</span>
-            </div>
-          </article>
-
-          <!-- Automation Frameworks -->
-          <article class="col-span-6 bento-card">
-            <div class="skill-group-title">
-              <span>Automation Frameworks</span>
-            </div>
-            <div class="tag-cloud">
-              <span class="inline-tag">Python</span>
-              <span class="inline-tag">Playwright</span>
-              <span class="inline-tag">Pytest</span>
-              <span class="inline-tag">Pytest-BDD</span>
-              <span class="inline-tag">Cypress</span>
-              <span class="inline-tag">Page Object Model (POM)</span>
-              <span class="inline-tag">Parallel Execution (pytest-xdist)</span>
-              <span class="inline-tag">REST API Automation (Requests, Postman v12)</span>
-              <span class="inline-tag">Selenium WebDriver</span>
-            </div>
-          </article>
-
-          <!-- CI/CD & Cloud Infrastructure -->
-          <article class="col-span-6 bento-card">
-            <div class="skill-group-title">
-              <span>CI/CD &amp; Cloud Infrastructure</span>
-            </div>
-            <div class="tag-cloud">
-              <span class="inline-tag">Azure DevOps Pipelines</span>
-              <span class="inline-tag">Continuous AI Evaluation Gates</span>
-              <span class="inline-tag">Docker Containerization</span>
-              <span class="inline-tag">Poetry</span>
-              <span class="inline-tag">Git</span>
-              <span class="inline-tag">Linux / Shell Scripting</span>
-            </div>
-          </article>
-
-          <!-- Enterprise Systems & Verification -->
-          <article class="col-span-6 bento-card">
-            <div class="skill-group-title">
-              <span>Enterprise Systems &amp; Verification</span>
-            </div>
-            <div class="tag-cloud">
-              <span class="inline-tag">Oracle EBS (AP, AR, PO, CE, FA)</span>
-              <span class="inline-tag">Tricentis Tosca</span>
-              <span class="inline-tag">UFT</span>
-              <span class="inline-tag">Jira</span>
-              <span class="inline-tag">Agile/Scrum</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== PROFESSIONAL EXPERIENCE ==================== -->
-    <section id="experience" class="editorial-section">
-      <div class="editorial-container">
-        <div class="section-heading-row">
-          <h2 class="section-title">Professional Experience</h2>
-          <span class="section-index">02 / Experience</span>
-        </div>
-
-        <div class="experience-stack">
-
-          <!-- 1. Enterprise Technology Solutions -->
-          <article class="experience-card">
-            <div class="company-header">
-              <h3 class="company-name">Enterprise Technology Solutions</h3>
-              <span class="company-location">Kolkata, India</span>
-            </div>
-
-            <!-- Sub-role 1 -->
-            <div class="role-block">
-              <div class="role-header">
-                <span class="role-title">Lead AI Quality Engineer / Senior SDET – GenAI CoE</span>
-                <span class="badge badge-blue">Sep 2025 – Present</span>
-              </div>
-              <ul class="resume-bullets">
-                <li>Serve as technical quality lead across cross-domain squads (NLP researchers, full-stack engineers, cloud architects) establishing robust evaluation gates for production LLM and RAG conversational applications.</li>
-                <li>Architected automated CI/CD evaluation pipelines using DeepEval, validating non-deterministic outputs across faithfulness, correctness, context relevancy, and semantic similarity to prevent hallucination drift before release.</li>
-                <li>Designed and scaled an enterprise-grade Playwright + Python + Pytest-BDD automation framework utilizing modular Page Object Model (POM) patterns and custom API fixtures.</li>
-                <li>Reduced enterprise regression cycle times by ~40% through selective test sharding, headless browser optimization, and distributed multi-worker execution via pytest-xdist.</li>
-                <li>Embedded automated quality gates into Azure DevOps Pipelines, blocking pull requests when hallucination rates or context-drift deltas breach production thresholds.</li>
-                <li>Mentored 10+ automation engineers on Python test patterns and aligned enterprise quality benchmarks with Solution Architects and Data Scientists.</li>
-              </ul>
-            </div>
-
-            <!-- Sub-role 2 -->
-            <div class="role-block">
-              <div class="role-header">
-                <span class="role-title">Senior Test Automation Engineer – Enterprise Systems (Oracle QEA)</span>
-                <span class="badge badge-neutral">Apr 2021 – Aug 2025</span>
-              </div>
-              <ul class="resume-bullets">
-                <li>Architected modular automation frameworks using UFT and Tricentis Tosca supporting multi-module, multi-Operating Unit (OU) execution across Oracle EBS suites (AP, PO, FA, CE, AR).</li>
-                <li>Engineered custom framework utilities featuring runtime state persistence, resume-from-failure logic, automated credential handling, and intelligent synthetic test data generation.</li>
-                <li>Delivered client PoCs and technical demonstrations for Fortune 500 hospitality conglomerates and global financial services accounts across APAC, EMEA, and North America.</li>
-                <li>Automated high-volume regression suites across 500+ critical financial workflows during enterprise CPU patch release cycles.</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 2. Aerospace Engineering Group -->
-          <article class="experience-card">
-            <div class="company-header">
-              <h3 class="company-name">Aerospace Engineering Group</h3>
-              <span class="company-location">Bengaluru, India</span>
-            </div>
-
-            <div class="role-block">
-              <div class="role-header">
-                <span class="role-title">Software Engineer – Test Automation</span>
-                <span class="badge badge-neutral">Oct 2018 – Apr 2021</span>
-              </div>
-              <ul class="resume-bullets">
-                <li>Engineered test automation solutions for safety-critical aerospace software adhering to stringent aerospace engineering regulations and compliance standards.</li>
-                <li>Maintained and executed enterprise regression suites exceeding 2,000+ automated test cases across multi-phase release cycles.</li>
-                <li>Enforced automated test coding standards, CI integration checks, and technical code reviews across junior engineering teams.</li>
-                <li>Recipient of the Aerospace Pride Award (safety-critical flight platform validation) and Star Award (2019/2020) for outstanding sprint delivery and test optimization.</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 3. Global Technology Consulting -->
-          <article class="experience-card">
-            <div class="company-header">
-              <h3 class="company-name">Global Technology Consulting</h3>
-              <span class="company-location">Kolkata / Noida / Bengaluru, India</span>
-            </div>
-
-            <div class="role-block">
-              <div class="role-header">
-                <span class="role-title">Test Automation Engineer</span>
-                <span class="badge badge-neutral">Oct 2014 – Oct 2018</span>
-              </div>
-              <ul class="resume-bullets">
-                <li>Built reusable, data-driven automation frameworks across web, client-server desktop, SAP MM, and mobile environments for telecommunications and energy sector clients.</li>
-                <li>Automated end-to-end integration, system regression, smoke, and User Acceptance Testing (UAT) sign-off workflows.</li>
-                <li>Designed and deployed an automated enterprise test-capture utility that reduced third-party tooling licensing expenses by ~$8,000 annually.</li>
-              </ul>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== PUBLICATIONS & AI RESEARCH PREPRINTS ==================== -->
-    <section id="publications" class="editorial-section">
-      <div class="editorial-container">
-        <div class="section-heading-row">
-          <h2 class="section-title">Publications &amp; AI Research Preprints</h2>
-          <span class="section-index">03 / Publications</span>
-        </div>
-
-        <!-- Link to Dedicated Research Portfolio -->
-        <div style="background-color: var(--bg-surface); border: 1px solid var(--border-hairline); border-left: 3px solid var(--pastel-purple-fg); border-radius: 6px; padding: 14px 18px; margin-bottom: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 600; text-transform: uppercase; color: var(--pastel-purple-fg); display: block; margin-bottom: 2px;">
-              <i class="ph-bold ph-atom"></i> Dedicated Research Showcase
-            </span>
-            <span style="font-size: 0.92rem; color: var(--text-body); font-weight: 500;">
-              Explore the independent research journey, Cloze Congruence intuition, Zenodo DOIs, and MoE vs. Dense spectroscopy.
-            </span>
-          </div>
-          <a href="../research/index.html" class="btn btn-secondary" style="border-color: var(--pastel-purple-fg); color: var(--pastel-purple-fg); font-weight: 600;">
-            <span>Explore Research Portfolio</span>
-            <i class="ph-bold ph-arrow-right"></i>
-          </a>
-        </div>
-
-        <div class="preprint-list">
-
-          <!-- Preprint 1 -->
-          <article class="preprint-card">
-            <div class="preprint-top">
-              <h3 class="preprint-title">Genre-Routed Generative Resonance: Black-Box AI Text Detection via Dual-Horizon Probing and Structural Rhythm</h3>
-            </div>
-            <div class="preprint-meta">
-              <span class="preprint-type">SSRN (Sep 2026)</span>
-            </div>
-            <p class="preprint-desc">
-              Logit-free forensic framework solving the Reasoning Prober Paradox and ESL bias via genre routing. Evaluated on N = 1,000 documents across frontier models (GPT-4o, Claude 3.5, LLaMA-3.3); achieved 0.8283 AUROC with 0.00% ESL False Accusation Rate at disciplinary threshold (τ ≥ 0.38).
-            </p>
-          </article>
-
-          <!-- Preprint 2 -->
-          <article class="preprint-card">
-            <div class="preprint-top">
-              <h3 class="preprint-title">ClozeCongruence: Model Fingerprinting and Traceback Attribution in LLMs via Multi-Density Reverse Cloze Resonance</h3>
-            </div>
-            <div class="preprint-meta">
-              <span class="preprint-type">Independent Research Preprint</span>
-              <a href="https://doi.org/10.5281/zenodo.22158286" target="_blank" rel="noopener noreferrer" class="preprint-doi">
-                CERN Zenodo DOIs: 10.5281/zenodo.22158286, 10.5281/zenodo.22158483
-              </a>
-            </div>
-            <p class="preprint-desc">
-              Formulates 12D micro-stylometric analysis and reverse cloze probing to isolate latent model DNA in black-box environments; achieved high Top-1 attribution accuracy across frontier architectures.
-            </p>
-          </article>
-
-          <!-- Preprint 3 -->
-          <article class="preprint-card">
-            <div class="preprint-top">
-              <h3 class="preprint-title">Latent Resonance: Zero-Shot Autoencoder Inversion and Azimuthal Spectral Forensics for Diffusion Image Attribution</h3>
-            </div>
-            <div class="preprint-meta">
-              <span class="preprint-type">SSRN (Sep 2026)</span>
-            </div>
-            <p class="preprint-desc">
-              Isolates spatial manifold resonance and transposed-convolution harmonic spikes via deterministic autoencoder projection at σ = 0; achieved 72.00% AUROC with resilience under lossy JPEG compression and Gaussian blur.
-            </p>
-          </article>
-
-          <!-- Preprint 4 -->
-          <article class="preprint-card">
-            <div class="preprint-top">
-              <h3 class="preprint-title">The Cloze Scaling Laws: Prober Parameter Dynamics, Native Blank-Infilling Architecture, and Traceback</h3>
-            </div>
-            <div class="preprint-meta">
-              <span class="preprint-type">Independent Research Preprint</span>
-              <a href="https://ssrn.com/abstract=7368141" target="_blank" rel="noopener noreferrer" class="preprint-doi">
-                CERN Zenodo / SSRN 7368141 (2026)
-              </a>
-            </div>
-            <p class="preprint-desc">
-              Empirically maps how prober parameter scale (12B to 120B) and native masking architectures govern attribution recovery bounds in generated discourse.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== EDUCATION ==================== -->
-    <section id="education" class="editorial-section">
-      <div class="editorial-container">
-        <div class="section-heading-row">
-          <h2 class="section-title">Education</h2>
-          <span class="section-index">04 / Education</span>
-        </div>
-
-        <div class="bento-grid">
-          <!-- M.Tech IIT Jodhpur -->
-          <article class="col-span-6 bento-card">
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px;">
-                <span class="badge badge-blue">Jul 2022 – Dec 2025</span>
-                <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted);">Jodhpur, India</span>
-              </div>
-              <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">
-                Master of Technology (M.Tech) – Augmented Reality &amp; Virtual Reality
-              </h3>
-              <p style="font-size: 0.9rem; font-weight: 600; color: var(--text-body); margin-bottom: 2px;">
-                Indian Institute of Technology Jodhpur (IIT Jodhpur)
-              </p>
-              <p style="font-size: 0.85rem; font-style: italic; color: var(--text-muted); margin-bottom: 8px;">
-                Department: School of Artificial Intelligence &amp; Data Science (AIDE)
-              </p>
-              <p style="font-size: 0.88rem; color: var(--text-body);">
-                <strong>Focus:</strong> Deep Learning, Advanced Computer Vision, Generative Modeling, Latent Space Forensics, Spatial Systems.
-              </p>
-            </div>
-          </article>
-
-          <!-- B.Tech GNIOT -->
-          <article class="col-span-6 bento-card">
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px;">
-                <span class="badge badge-neutral">Apr 2010 – Jun 2014</span>
-                <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted);">Greater Noida, India</span>
-              </div>
-              <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">
-                Bachelor of Technology (B.Tech) – Computer Science &amp; Engineering
-              </h3>
-              <p style="font-size: 0.9rem; font-weight: 600; color: var(--text-body); margin-bottom: 8px;">
-                Greater Noida Institute of Technology (AKTU / UPTU)
-              </p>
-            </div>
-          </article>
-
-          <!-- Schooling -->
-          <article class="col-span-12 bento-card">
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px;">
-                <span class="badge badge-neutral">Completed: 2010</span>
-                <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted);">Kolkata, India</span>
-              </div>
-              <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">
-                Higher Secondary Certificate (CBSE Class XII) – PCMB
-              </h3>
-              <p style="font-size: 0.9rem; font-weight: 600; color: var(--text-body); margin-bottom: 4px;">
-                Kendriya Vidyalaya No. 1, Salt Lake
-              </p>
-              <p style="font-size: 0.88rem; color: var(--text-body);">
-                <strong>Honors:</strong> State Rank Top 100 – Science Olympiad (Class 11).
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== CERTIFICATIONS & HONORS ==================== -->
-    <section id="certifications" class="editorial-section" style="border-bottom: none;">
-      <div class="editorial-container">
-        <div class="section-heading-row">
-          <h2 class="section-title">Certifications &amp; Honors</h2>
-          <span class="section-index">05 / Credentials</span>
-        </div>
-
-        <div class="credentials-card">
-          <div style="margin-bottom: 16px;">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;">Certifications</div>
-            <ul class="credentials-list">
-              <li><strong>Postman API Testing Path (v12)</strong></li>
-              <li><strong>ASDA-MIT Application Tester</strong></li>
-              <li><strong>Google Crash Course on Python (Coursera)</strong></li>
-            </ul>
-          </div>
-
-          <div style="border-top: 1px solid var(--border-hairline); padding-top: 14px;">
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;">Corporate Accolades &amp; Honors</div>
-            <ul class="credentials-list">
-              <li><strong>Aerospace Pride Award</strong> — Safety-Critical Flight Platform Validation</li>
-              <li><strong>Aerospace Star Award</strong> — Outstanding Sprint Delivery &amp; Test Optimization</li>
-              <li><strong>Enterprise Technology Asset Creation Award</strong> — In-house automation utility design &amp; cost reduction</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Minimalist Footer -->
-  <footer class="editorial-footer">
-    <div class="editorial-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-      <div>
-        <strong style="color: var(--text-primary);">Debdip Bandyopadhyay</strong> — Lead SDET &amp; AI Quality Engineering Lead
-      </div>
-      <div style="font-family: var(--font-mono); font-size: 0.78rem;">
-        Kolkata, India &nbsp;|&nbsp; +91-8285578544 &nbsp;|&nbsp; <a href="mailto:debdip1992@outlook.com" style="text-decoration: underline;">debdip1992@outlook.com</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Main JavaScript Engine -->
+    <script src="script.js"></script>
 </body>
 </html>
