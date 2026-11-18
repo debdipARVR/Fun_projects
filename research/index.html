@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Debdip Bandyopadhyay — Independent AI Forensics & Multimodal Research</title>
-  <meta name="description" content="Independent research portfolio of Debdip Bandyopadhyay — Lead SDET by day, hobby researcher by night exploring AI text detection, image forensics, neural audio resonance, and MoE vs Dense model attribution.">
+  <meta name="description" content="Independent research portfolio of Debdip Bandyopadhyay — Author of ACM ICAIF 2026 accepted paper on Financial AI Security & Provenance, ClozeCongruence text forensics, Latent Resonance vision, and Neural Codec audio forensics.">
   <link rel="canonical" href="https://debdiparvr.github.io/Fun_projects/research/">
 
   <!-- Monogram Favicon -->
@@ -63,6 +63,9 @@
         <div class="hero-card">
           
           <div class="hero-meta-strip">
+            <span class="status-badge" style="background: var(--pastel-amber-bg); color: var(--pastel-amber-fg); border: 1px solid rgba(138, 93, 0, 0.25); font-weight: 600;">
+              <i class="ph-bold ph-trophy"></i> ACM ICAIF 2026 Accepted (FinSec Workshop)
+            </span>
             <span class="status-badge badge-research">
               <i class="ph-bold ph-moon-stars"></i> Night-Time Hobby Researcher
             </span>
@@ -87,6 +90,26 @@
           <p class="hero-bio-lead">
             &ldquo;I am a hobby researcher fascinated by the latest AI capabilities humanity has developed. Alongside my day job as an SDET, I explore generative media forensics late at night &mdash; purely for fun, curiosity, and to contribute what little I know to the scientific society.&rdquo;
           </p>
+
+          <!-- Workshop Selection Announcement Spotlight -->
+          <div style="margin: 18px 0; padding: 14px 18px; background: linear-gradient(135deg, rgba(252, 244, 223, 0.95) 0%, rgba(244, 239, 252, 0.85) 100%); border: 1px solid rgba(180, 83, 9, 0.35); border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #b45309; color: #ffffff; font-size: 1.1rem; flex-shrink: 0;">
+                <i class="ph-bold ph-trophy"></i>
+              </span>
+              <div>
+                <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; color: #8a5d00; font-family: var(--font-mono);">
+                  Workshop Selection &bull; ACM ICAIF 2026
+                </div>
+                <div style="font-size: 0.92rem; color: var(--text-primary); font-weight: 600; line-height: 1.4;">
+                  Paper Selected for Presentation: <em>&ldquo;Zero-Logit Model Provenance Auditing in Mission-Critical Financial AI&rdquo;</em> at the 1st Workshop on Financial AI Security, Privacy, and Safety (FinAISecuritySafetyPrivacy)!
+                </div>
+              </div>
+            </div>
+            <a href="#icaif-paper" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem; white-space: nowrap;">
+              <i class="ph-bold ph-arrow-down"></i> Spotlight Paper
+            </a>
+          </div>
 
           <div class="hero-quick-links">
             <a href="#papers" class="btn btn-primary">
@@ -401,13 +424,80 @@
 
         <!-- Category Filter Pills -->
         <div class="filter-row">
-          <button class="filter-btn active" data-filter="all">All Tracks (7)</button>
+          <button class="filter-btn active" data-filter="all">All Tracks (8)</button>
+          <button class="filter-btn" data-filter="financial">Financial AI &amp; Security</button>
           <button class="filter-btn" data-filter="text">Text Forensics &amp; MoE</button>
           <button class="filter-btn" data-filter="image">Image &amp; Video Forensics</button>
           <button class="filter-btn" data-filter="audio">Audio Forensics</button>
         </div>
 
         <div class="papers-list">
+
+          <!-- PAPER: ACM ICAIF 2026 (SELECTED & ACCEPTED WORKSHOP PAPER) -->
+          <article class="paper-card" id="icaif-paper" data-category="financial text" style="border-left: 4px solid #b45309; background: linear-gradient(180deg, #FFFFFF 0%, #FCFBF9 100%); box-shadow: 0 4px 16px rgba(180, 83, 9, 0.08);">
+            <div class="paper-card-header">
+              <div class="paper-badges-strip">
+                <span class="paper-badge" style="background: linear-gradient(135deg, #b45309 0%, #d97706 100%); color: #ffffff; font-weight: 700;">
+                  <i class="ph-bold ph-trophy"></i> ACCEPTED FOR PRESENTATION &bull; ACM ICAIF 2026
+                </span>
+                <span class="paper-badge" style="background: var(--pastel-amber-bg); color: var(--pastel-amber-fg); font-weight: 600;">
+                  <i class="ph-bold ph-bank"></i> FinSec Workshop (1st Workshop on Financial AI Security, Privacy, and Safety)
+                </span>
+                <span class="paper-badge" style="background: var(--pastel-green-bg); color: var(--pastel-green-fg); font-weight: 600;">
+                  <i class="ph-bold ph-shield-check"></i> Zero-Logit Privacy Preserving
+                </span>
+                <span class="paper-badge" style="background: var(--bg-subtle); color: var(--text-muted);">
+                  OpenReview #8 &bull; N=600 Benchmark
+                </span>
+              </div>
+            </div>
+
+            <h3 class="paper-title" style="font-size: 1.32rem;">
+              Zero-Logit Model Provenance Auditing in Mission-Critical Financial AI: Privacy-Preserving Black-Box Attribution via Prober-Generator Resonance Spectroscopy
+            </h3>
+
+            <p class="paper-authors">
+              <strong>Debdip Bandyopadhyay</strong> &bull; <em>Independent Researcher</em> &bull; 7th ACM International Conference on AI in Finance (ICAIF &rsquo;26)
+            </p>
+
+            <p class="paper-synopsis">
+              Addresses the critical tension between <strong>inference privacy</strong> and <strong>forensic auditability</strong> across banking APIs, AML report synthesis, and automated loan underwriting. When financial institutions withhold token log-probabilities (logits) to defend against model extraction and training-data membership inference attacks, standard white-box detectors collapse. We formulate <strong>Prober-Generator Resonance Spectroscopy</strong>, a zero-logit audit framework operating purely through text-only multi-sentence cloze infilling ($k \in \{2, 3, 4\}$) and permutation-invariant Kuhn-Munkres bipartite matching on permutation groups. Resolves domain calibration drift in specialized financial and regulatory prose while enforcing air-gapped on-premises VPC audit compliance.
+            </p>
+
+            <div class="paper-metrics-strip">
+              <div class="metric-item">
+                <span class="metric-val">93.21%</span>
+                <span class="metric-lbl">Combined N=600 AUPRC</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">75.69%</span>
+                <span class="metric-lbl">Top-4 Cross-Family AUROC</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">80.68%</span>
+                <span class="metric-lbl">DeepSeek/Qwen vs Human AUROC</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">Zero-Logit</span>
+                <span class="metric-lbl">Air-Gapped Banking VPC Standard</span>
+              </div>
+            </div>
+
+            <div class="paper-actions-bar">
+              <a href="../portfolio/assets/papers/Debdip_ICAIF_2026_FinAI_Security.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="ph-bold ph-file-pdf"></i>
+                <span>Accepted Paper (PDF)</span>
+              </a>
+              <a href="https://github.com/debdipARVR/cloze_congruence_reproducibility_benchmark_kit" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="ph-bold ph-git-branch"></i>
+                <span>N=600 Benchmark Suite</span>
+              </a>
+              <a href="https://scribemark.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="ph-bold ph-browsers"></i>
+                <span>Live ScribeMark App</span>
+              </a>
+            </div>
+          </article>
 
           <!-- PAPER 1: TMLR PURE CLOZE & MOE RESONANCE -->
           <article class="paper-card" data-category="text">
@@ -885,8 +975,8 @@
           const filter = btn.getAttribute('data-filter');
 
           paperCards.forEach(card => {
-            const category = card.getAttribute('data-category');
-            if (filter === 'all' || category === filter) {
+            const category = card.getAttribute('data-category') || '';
+            if (filter === 'all' || category.split(' ').includes(filter)) {
               card.style.display = 'block';
             } else {
               card.style.display = 'none';
