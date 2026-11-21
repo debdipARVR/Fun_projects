@@ -338,23 +338,28 @@
                             <div class="exp-unit">GenAI Center of Excellence (CoE)</div>
                             <ul class="exp-bullets">
                                 <li>
-                                    <strong>GenAI Quality Architecture:</strong> Technical quality lead for conversational LLM and RAG applications, defining evaluation criteria and automated test suites.
+                                    <strong>Dual GenAI Architecture:</strong> Quality lead across 2 agile squads (1:6 tester-to-dev ratio); architected end-to-end evaluation for an Enterprise BI analytics engine and a Document Retrieval (RAG) conversational chatbot across 15+ flows.
                                 </li>
                                 <li>
-                                    <strong>Continuous LLM Evaluation:</strong> Architected automated CI/CD evaluation in Azure DevOps using DeepEval, scoring completions on faithfulness, relevancy, and hallucination to prevent drift.
+                                    <strong>CI/CD Non-Deterministic Evaluation:</strong> Architected automated Azure DevOps evaluation gates with DeepEval, translating non-deterministic linguistic distributions into statistical thresholds (faithfulness &ge; 0.85, context relevancy) to block PR builds on hallucination drift.
                                 </li>
                                 <li>
-                                    <strong>Playwright Automation:</strong> Designed and scaled Python + Playwright + Pytest-BDD automation framework; reduced regression cycle time by <strong>~40%</strong> via pytest-xdist parallelization.
+                                    <strong>Playwright Automation:</strong> Designed and scaled enterprise Python + Playwright + Pytest-BDD framework (POM, API fixtures); slashed regression cycle times by <strong>~40%</strong> via pytest-xdist multi-worker sharding.
                                 </li>
                                 <li>
-                                    <strong>Quality Gates:</strong> Integrated automated PR evaluation gates in Azure DevOps, blocking builds when quality scores drop below thresholds.
+                                    <strong>In-House Test Telemetry & Token Optimization:</strong> Engineered an in-house telemetry tool parsing execution traces and DOM metadata into LLM prompts for automated Jira bug generation (cutting triage overhead by <strong>~60%</strong>); embedded deterministic hooks (schema enforcement, caching) around cost-effective models, reducing token spend by <strong>~50%</strong>.
+                                </li>
+                                <li>
+                                    <strong>HITL Quality Governance:</strong> Enforced Human-in-the-Loop (HITL) triage and verification checkpoints over brittle autonomous loops, safeguarding release readiness and production reliability.
                                 </li>
                             </ul>
                             <div class="exp-tags-row">
                                 <span class="tech-chip">DeepEval</span>
                                 <span class="tech-chip">Playwright</span>
-                                <span class="tech-chip">Python</span>
                                 <span class="tech-chip">Pytest-BDD</span>
+                                <span class="tech-chip">RAG & BI Testing</span>
+                                <span class="tech-chip">Token Optimization</span>
+                                <span class="tech-chip">HITL Quality Gates</span>
                                 <span class="tech-chip">Azure DevOps</span>
                                 <span class="tech-chip">pytest-xdist</span>
                             </div>
