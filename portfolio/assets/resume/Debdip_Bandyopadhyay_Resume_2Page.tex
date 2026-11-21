@@ -1,0 +1,149 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.42in, top=0.38in, bottom=0.38in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{primary}{RGB}{15, 23, 42}
+\definecolor{linkblue}{RGB}{37, 99, 235}
+\definecolor{accent}{RGB}{30, 58, 138}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+}
+
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}{\normalsize\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\Large \textbf{Debdip Bandyopadhyay}}\\[2pt]
+    {\small \textbf{\color{accent}Lead SDET \textbar\ AI Quality \& LLM Evaluation \textbar\ AI Research (Multimodal AI Artifact Detection)}}\\[2pt]
+    \footnotesize Kolkata 700159, India \enspace\textbar\enspace +91-8285578544 \enspace\textbar\enspace \href{mailto:debdip1992@outlook.com}{debdip1992@outlook.com} \enspace\textbar\enspace \href{https://linkedin.com/in/debdiparvr}{linkedin.com/in/debdiparvr} \enspace\textbar\enspace \href{https://github.com/debdipARVR}{github.com/debdipARVR} \enspace\textbar\enspace \href{https://orcid.org/0009-0007-7496-0767}{ORCID 0009-0007-7496-0767}
+\end{center}
+
+\vspace{-4pt}
+
+% --- SUMMARY ---
+\section{SUMMARY}
+\footnotesize
+Lead SDET and AI Quality Engineering Lead bringing 11+ years of enterprise test automation (Cognizant, The Boeing Company, Accenture) into the Generative AI era. Proven architect of automated CI/CD evaluation pipelines for enterprise Business Intelligence (BI) and Document Retrieval (RAG) conversational applications, combining DeepEval LLM-as-a-judge, Python/Playwright automation, and deterministic token-optimization hooks with Human-in-the-Loop (HITL) quality governance. M.Tech in AR/VR from IIT Jodhpur; author of accepted peer-reviewed paper at ACM ICAIF 2026 (FinSec Workshop).
+
+% --- KEY HIGHLIGHTS ---
+\section{KEY HIGHLIGHTS}
+\footnotesize
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+    \item QA lead for 2 agile teams in parallel (1:6 tester-to-dev ratio); established risk-based test strategy, non-deterministic CI/CD evaluation gates, and release sign-off.
+    \item Architected end-to-end evaluation for 2 production GenAI applications (Enterprise BI analytics platform and Document Retrieval RAG chatbot) using DeepEval and Playwright.
+    \item Engineered in-house test telemetry tool extracting execution traces and DOM metadata into LLM prompts for automated bug reporting; cut token costs by $\sim$50\% via deterministic hooks.
+    \item Peer-reviewed paper accepted at ACM ICAIF 2026 workshop (poster); 4 preprints on multimodal AI forensics (SSRN/Zenodo); full portfolio on ORCID.
+    \item Led regression quality for safety-critical aerospace software at The Boeing Company (Boeing Pride \& Star Awards); built cost-saving automation utilities at Accenture.
+\end{itemize}
+
+% --- SKILLS ---
+\section{SKILLS}
+\footnotesize
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+    \item \textbf{AI / LLM Testing \& Evaluation:} DeepEval, LLM-as-a-judge, G-Eval, RAG evaluation (faithfulness, answer relevancy, contextual precision/recall, hallucination), BI/NL-to-SQL testing, document retrieval validation, non-deterministic linguistic tests, deterministic assertion hooks, token economics \& optimization, Human-in-the-Loop (HITL) triage, zero-logit provenance auditing, NLI entailment, FAISS, Sentence Transformers, PyTorch.
+    \item \textbf{Test Automation \& SDET:} Python, Playwright, Playwright MCP, Pytest, Pytest-BDD, Cypress, Page Object Model (POM), parallel execution (pytest-xdist), in-house telemetry extraction utilities, data-driven frameworks.
+    \item \textbf{API Testing:} REST API automation, Python Requests, Postman (v12 Certified), API service fixtures.
+    \item \textbf{CI/CD \& Tools:} Azure DevOps Pipelines (automated PR evaluation gates), Git, Docker containerized runners, Linux/shell, Poetry, Jira (governance dashboards, JQL), Allure.
+    \item \textbf{Enterprise Testing:} Oracle EBS (AP, AR, PO, CE, FA), SAP MM, Tricentis Tosca, HP UFT, runtime state persistence, resume-from-failure logic, synthetic test data generation.
+    \item \textbf{Test Management:} Test strategy, test estimation, risk-based testing, shift-left testing, test summary reporting, requirement analysis, defect lifecycle and triage, release readiness and sign-off, stakeholder management, Agile/Scrum.
+\end{itemize}
+
+% --- PROFESSIONAL EXPERIENCE ---
+\section{PROFESSIONAL EXPERIENCE}
+\footnotesize
+\noindent
+\textbf{Cognizant Technology Solutions} \hfill \textbf{Kolkata, India}\\
+\textit{Official HR Designation: Associate (Emp ID: 932565)} \hfill \textbf{Apr 2021 -- Present}\\[1pt]
+\textbf{Role: AI Quality Engineer / SDET --- GenAI Centre of Excellence} \hfill \textbf{Sep 2025 -- Present}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+    \item Serve as QA lead for 2 agile teams in parallel (1:6 tester-to-developer ratio): own end-to-end quality strategy, test estimation, shift-left testing, and production release sign-off.
+    \item Architected end-to-end quality validation for 2 enterprise GenAI applications: an Enterprise Business Intelligence (BI) application (natural language-to-SQL and analytics) and a Document Retrieval + LLM conversational chatbot (RAG), establishing evaluation contracts with data scientists across 15+ conversational flows.
+    \item Delivered automated DeepEval LLM evaluation gates within Azure DevOps CI/CD pipelines, translating non-deterministic linguistic distributions into statistical thresholds (faithfulness $\ge 0.85$, context relevancy) to continuously block PR builds on hallucination drift.
+    \item Engineered enterprise-grade Playwright + Python + Pytest-BDD automation framework incorporating modular Page Object Model (POM) and API fixtures; slashed regression execution cycle times by \textbf{$\sim$40\%} through pytest-xdist multi-worker sharding.
+    \item Architected an in-house test telemetry \& metadata extraction engine that parses Playwright execution traces, network payloads, and DOM mutations into structured LLM prompts for automated Jira bug generation and test case synthesis, cutting triage overhead by \textbf{$\sim$60\%}.
+    \item Orchestrated end-to-end testing with deterministic hooks (Pydantic schema validation, regex assertion guards, semantic response caching) around cost-effective smaller LLMs, cutting evaluation token expenditure by \textbf{$\sim$50\%} while guaranteeing deterministic outputs.
+    \item Implemented Human-in-the-Loop (HITL) quality control, enforcing deterministic validation over brittle autonomous pipelines to safeguard production release integrity.
+\end{itemize}
+
+\vspace{1pt}
+\noindent
+\textbf{Role: Senior QEA (Quality Engineering \& Assurance) --- Oracle EBS Testing} \hfill \textbf{Apr 2021 -- Aug 2025}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+    \item Module owner and subject matter expert for Oracle EBS AP, AR, PO, CE, and FA for the world's largest vacation-ownership and hospitality company (Wyndham Destinations) and American Express, supporting finance operations across 4 global regions.
+    \item Maintained 1,000+ test cases for recurring Oracle CPU patch cycles; executed 591 regression scripts in NTST/NUAT environments; migrated 250 AP/PO test suites.
+    \item Designed a multi-module, multi-OU Tosca and UFT automation framework with persistent runtime state, resume-from-failure logic, and nightly unattended runs; delivered a successful Tosca POC for an American banking and payments client.
+    \item Mentored and onboarded junior testers on framework architecture, debugging KT, and automated scripting.
+\end{itemize}
+
+\vspace{1pt}
+\noindent
+\textbf{The Boeing Company} \hfill \textbf{Bengaluru, India}\\
+\textit{Software Engineer --- Test Automation} \hfill \textbf{Oct 2018 -- Apr 2021}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+    \item Owned regression test coverage for safety-critical commercial aerospace software across multi-phase release cycles adhering to strict engineering regulatory standards.
+    \item Maintained enterprise regression suites exceeding 2,000+ automated test cases; translated requirements from aircraft inspectors (end users) into test coverage across onshore and offshore teams.
+    \item Awarded \textbf{Boeing Pride Award} (737 MAX return-to-service validation) and \textbf{Star Award} (2019/2020) for rapid sprint delivery and test optimization on critical enterprise workflows.
+    \item Enforced automated test coding standards, CI integration checks, and technical code reviews across junior engineering teams.
+    \item Briefly led a team of 3 testers; supported recruitment and technical interviewing of junior SDETs.
+\end{itemize}
+
+\newpage
+
+\noindent
+\textbf{Accenture} \hfill \textbf{Kolkata / Noida / Bengaluru, India}\\
+\textit{Test Automation Engineer --- Global Delivery Network} \hfill \textbf{Oct 2014 -- Oct 2018}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1.5pt]
+    \item Delivered mobile application testing across multiple releases for Switzerland's largest telecommunications provider and an American banking client.
+    \item Core team member for Accenture's India recruitment platform (CIO HR), managing enterprise and agile application testing.
+    \item Built reusable, data-driven automation frameworks across web, client-server desktop, SAP MM, and mobile platforms for telecom and energy clients.
+    \item Architected and deployed ``One Click Capture'', an in-house automated test evidence documentation utility that reduced third-party tooling licensing costs by \textbf{$\sim$\$8,000 annually} (featured in CIO India capability success story).
+    \item Executed end-to-end integration, system regression, smoke, and User Acceptance Testing (UAT) sign-off workflows.
+\end{itemize}
+
+% --- EDUCATION ---
+\section{EDUCATION}
+\small
+\noindent
+\textbf{Indian Institute of Technology Jodhpur} \hfill \textbf{Jul 2022 -- Dec 2025}\\
+\textit{Master of Technology (M.Tech), Augmented Reality \& Virtual Reality (AR/VR)} \hfill \textit{Jodhpur, India}\\
+School of Artificial Intelligence and Data Science (AIDE); coursework includes Advanced Deep Learning.\\[3pt]
+\textbf{Greater Noida Institute of Technology (GNIOT / AKTU / UPTU)} \hfill \textbf{Apr 2010 -- Jun 2014}\\
+\textit{Bachelor of Technology (B.Tech), Computer Science \& Engineering} \hfill \textit{Greater Noida, India}
+
+% --- CERTIFICATIONS & AWARDS ---
+\section{CERTIFICATIONS \& AWARDS}
+\small
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1.5pt]
+    \item \textbf{Certifications:} Postman API Testing (v12 Certified); ASDA-MIT Application Tester; Google Crash Course on Python (Coursera).
+    \item \textbf{Honors \& Awards:} Boeing Pride Award (737 MAX RTS validation); Boeing Star Award (2019/2020); Accenture Asset Creation Award.
+\end{itemize}
+
+% --- AI RESEARCH ---
+\section{AI RESEARCH (INDEPENDENT RESEARCHER)}
+\small
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+    \item \textbf{Peer-Reviewed Workshop Paper (Poster):} D. Bandyopadhyay, ``Zero-Logit Model Provenance Auditing in Mission-Critical Financial AI: Privacy-Preserving Black-Box Attribution via Prober-Generator Resonance Spectroscopy,'' \textit{7th ACM International Conference on AI in Finance (ICAIF '26), Workshop on Financial AI Security, Privacy, and Safety (FinAISecuritySafetyPrivacy)}, Milan, Italy, Nov 2026. OpenReview.
+    \item Evaluated black-box attribution without logit access: achieves \textbf{80.68\% AUROC} on DeepSeek/Qwen and \textbf{77.00\% AUROC} on LLaMA-3.3.
+    \item \textbf{Preprints \& Open Research (SSRN, CERN Zenodo):} Author of 4 open research preprints investigating multimodal AI artifact detection (text, image, audio) and foundation model provenance traceback:
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+        \item \textit{Multi-Scale 4-Pass Sentence Cloze Infilling with Pass-Adaptive Dynamic Gating for Robust AI Text Detection} (SSRN: 7374319, Zenodo DOI: \href{https://doi.org/10.5281/zenodo.22177214}{10.5281/zenodo.22177214}).
+        \item \textit{ClozeCongruence: Model Fingerprinting and Traceback Attribution in LLMs via Reverse Cloze Resonance} (SSRN: 7374338, Zenodo DOI: \href{https://doi.org/10.5281/zenodo.22113940}{10.5281/zenodo.22113940}).
+        \item \textit{The Cloze Scaling Laws: Prober Parameter Dynamics, Native Blank-Infilling Architecture, and Traceback} (SSRN: 7374378, Zenodo DOI: \href{https://doi.org/10.5281/zenodo.22158286}{10.5281/zenodo.22158286}).
+    \end{itemize}
+    \item Full research publication record, preprints, and open benchmark toolkits indexed on \textbf{ORCID:} \href{https://orcid.org/0009-0007-7496-0767}{0009-0007-7496-0767}.
+\end{itemize}
+
+\end{document}
