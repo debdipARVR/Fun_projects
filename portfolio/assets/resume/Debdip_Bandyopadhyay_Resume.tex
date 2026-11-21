@@ -1,116 +1,120 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.45in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage[margin=0.4in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand\familydefault{\sfdefault}
+\usepackage{microtype}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
 
-\definecolor{primary}{RGB}{30, 58, 138}
-\definecolor{linkblue}{RGB}{37, 99, 235}
-\definecolor{darktext}{RGB}{15, 23, 42}
-\definecolor{subtext}{RGB}{71, 85, 105}
+% --- SWISS / METRO RESTRAINED PALETTE ---
+\definecolor{ink}{RGB}{15, 23, 42}          % High-contrast body text (#0F172A)
+\definecolor{metroblue}{RGB}{0, 103, 184}    % Metro Azure (#0067B8)
+\definecolor{slate}{RGB}{71, 85, 105}        % Muted metadata (#475569)
+\definecolor{hairline}{RGB}{203, 213, 225}   % 0.5pt divider line (#CBD5E1)
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=linkblue,
-    urlcolor=linkblue,
+    linkcolor=metroblue,
+    urlcolor=metroblue,
 }
 
 \pagestyle{empty}
 
-% Section formatting
-\titleformat{\section}{\large\bfseries\color{darktext}}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{4pt}{2pt}
+% Section formatting: Swiss Minimalist
+\titleformat{\section}
+  {\fontsize{9pt}{11pt}\selectfont\bfseries\color{metroblue}}
+  {}{0em}
+  {}[\vspace{1pt}{\color{hairline}\hrule height 0.5pt}]
+
+\titlespacing*{\section}{0pt}{5pt}{2pt}
 
 \begin{document}
+\color{ink}
 
-% --- HEADER ---
-\begin{center}
-    {\LARGE \textbf{Debdip Bandyopadhyay}}\\[2pt]
-    {\large \textbf{\color{primary}Quality Engineering Lead \textbar\ SDET \textbar\ AI/LLM Evaluation}}\\[3pt]
-    \small Kolkata, India \enspace\textbar\enspace +91-8285578544 \enspace\textbar\enspace \href{mailto:debdip1992@outlook.com}{debdip1992@outlook.com}\\
-    \small \href{https://linkedin.com/in/debdiparvr}{linkedin.com/in/debdiparvr} \enspace\textbar\enspace \href{https://github.com/debdipARVR}{github.com/debdipARVR} \enspace\textbar\enspace \href{https://orcid.org/0009-0007-7496-0767}{ORCID 0009-0007-7496-0767}
-\end{center}
+% --- MASTHEAD ---
+\noindent
+{\fontsize{20pt}{22pt}\selectfont \textbf{Debdip Bandyopadhyay}}\\[2pt]
+{\fontsize{9.5pt}{12pt}\selectfont \textcolor{metroblue}{\textbf{Lead SDET \textbar\ AI Quality \& LLM Evaluation \textbar\ Independent AI Researcher}}}\\[2pt]
+{\fontsize{8.2pt}{10pt}\selectfont \textcolor{slate}{
+Kolkata 700159, India \enspace\textbar\enspace +91-8285578544 \enspace\textbar\enspace \href{mailto:debdip1992@outlook.com}{debdip1992@outlook.com} \enspace\textbar\enspace \href{https://linkedin.com/in/debdiparvr}{linkedin.com/in/debdiparvr} \enspace\textbar\enspace \href{https://github.com/debdipARVR}{github.com/debdipARVR} \enspace\textbar\enspace \href{https://orcid.org/0009-0007-7496-0767}{ORCID: 0009-0007-7496-0767}
+}}
+\vspace{-2pt}
 
 % --- SUMMARY ---
-\section{SUMMARY}
+\section*{01 \textbar\ PROFESSIONAL SUMMARY}
 \small
-SDET and quality engineer with 11+ years at Cognizant, The Boeing Company and Accenture, owning quality end to end from requirement analysis and test strategy to automation and release sign-off. Builds Playwright/Pytest automation and DeepEval LLM/RAG evaluation in Azure DevOps at Cognizant's GenAI CoE; M.Tech, IIT Jodhpur.
+Quality Engineering Lead \& SDET with 11+ years across Cognizant, The Boeing Company, and Accenture. Specializes in LLM/RAG evaluation (DeepEval, faithfulness, relevancy, hallucination auditing) and Python/Playwright test automation. Author of accepted peer-reviewed paper at \textbf{ACM ICAIF 2026} (FinSec Workshop); M.Tech in AR/VR from \textbf{IIT Jodhpur}.
 
-% --- TECHNICAL SKILLS ---
-\section{TECHNICAL SKILLS}
+% --- SKILLS ---
+\section*{02 \textbar\ TECHNICAL SKILLS}
 \small
 \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-    \item \textbf{Languages:} Python.
-    \item \textbf{Test Automation:} Playwright, Playwright MCP, Pytest, Pytest-BDD, Cypress, Page Object Model, REST API testing (Requests, Postman), UFT, Tricentis Tosca; test tooling (evidence capture, resume-from-failure, synthetic data).
-    \item \textbf{AI/LLM Quality:} LLM-as-a-judge with OpenAI GPT-6 Luna as low-latency decision model; DeepEval (G-Eval, faithfulness, answer relevancy, contextual precision/recall, hallucination); NLI entailment checks; FAISS RAG with Sentence Transformers dense embeddings and cosine similarity; PyTorch.
-    \item \textbf{CI/CD \& Tooling:} Azure DevOps Pipelines, Docker, Git, Linux/shell, Poetry.
-    \item \textbf{Quality Practice:} Test strategy, requirement analysis, test case design, functional/regression/UAT testing, defect triage and lifecycle, release sign-off, Jira governance (dashboards, JQL), Agile/Scrum; Oracle EBS (AP, AR, PO, CE, FA).
+    \item \textbf{AI / LLM Evaluation:} DeepEval, LLM-as-a-judge, G-Eval, RAG evaluation (faithfulness, answer relevancy, contextual precision/recall, hallucination), chatbot validation, zero-logit provenance auditing, NLI entailment, FAISS, Sentence Transformers, PyTorch.
+    \item \textbf{Test Automation:} Python, Playwright, Playwright MCP, Pytest, Pytest-BDD, Page Object Model (POM), pytest-xdist parallel execution, Cypress, REST API testing (Requests, Postman v12 Certified), Tricentis Tosca, HP UFT.
+    \item \textbf{CI/CD \& Platforms:} Azure DevOps Pipelines (automated PR evaluation gates), Docker, Git, Linux/shell, Poetry, Jira (JQL dashboards), Allure.
+    \item \textbf{Enterprise Systems \& QA Practice:} Oracle EBS (AP, AR, PO, CE, FA), SAP MM, multi-OU execution, runtime state persistence, resume-from-failure logic, synthetic test data generation, risk-based test strategy, release sign-off ownership, Agile/Scrum.
 \end{itemize}
 
-% --- PROFESSIONAL EXPERIENCE ---
-\section{PROFESSIONAL EXPERIENCE}
+% --- EXPERIENCE ---
+\section*{03 \textbar\ PROFESSIONAL EXPERIENCE}
 \small
 \noindent
 \textbf{Cognizant Technology Solutions} \hfill \textbf{Kolkata, India}\\
-\textit{Official designation: Associate} \hfill \textbf{Apr 2021 -- Present}\\
-\textbf{AI Quality Engineer / SDET -- GenAI CoE (assignment)} \hfill \textbf{Sep 2025 -- Present}
+\textit{Official HR Designation: Associate (Emp ID: 932565)} \hfill \textbf{Apr 2021 -- Present}\\[1pt]
+\textbf{Role: Senior SDET / AI Quality Lead --- GenAI Center of Excellence (CoE)} \hfill \textbf{Sep 2025 -- Present}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-    \item Own end-to-end quality for enterprise web and conversational GenAI apps: test strategy, automation, release validation.
-    \item Built LLM/RAG and chatbot evaluation using DeepEval LLM-as-a-judge (G-Eval, faithfulness, answer relevancy, contextual precision/recall, hallucination) with GPT-6 Luna as the low-latency decision model, plus NLI entailment checks.
-    \item Built retrieval checks on FAISS with Sentence Transformers embeddings and cosine similarity; integrated the evaluation suite into Azure DevOps post-deploy pipelines.
-    \item Built Python Playwright/Pytest-BDD frameworks (Page Object Model, API fixtures) for cross-browser UI/backend tests.
-    \item Defined test scope and quality criteria with development, QA and data science; drove defect triage and hotfix verification.
+    \item QA lead for 2 agile squads: define risk-based test strategy, estimation, shift-left testing, and production release sign-off.
+    \item Delivered automated DeepEval LLM/RAG evaluation in Azure DevOps pipelines, scoring responses across faithfulness, context relevancy, correctness, and semantic similarity to prevent hallucination drift before deployment.
+    \item Built enterprise Playwright + Python + Pytest-BDD framework (POM, API fixtures); slashed regression runtime by \textbf{$\sim$40\%} via pytest-xdist multi-worker sharding.
+    \item Integrated automated evaluation gates into Azure DevOps, blocking PR builds when evaluation metrics drop below defined thresholds.
 \end{itemize}
 
 \vspace{2pt}
 \noindent
-\textbf{Senior QEA -- Oracle QEA / Enterprise Systems (assignment)} \hfill \textbf{Apr 2021 -- Aug 2025}
+\textbf{Role: Senior QEA (Quality Engineering \& Assurance) --- Oracle Enterprise Systems} \hfill \textbf{Apr 2021 -- Aug 2025}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-    \item Owned about half of Wyndham Destinations' Oracle EBS test scope as module owner/functional SME for AP, AR, PO, CE, FA; deliveries across APAC, EMEA, LATAM, North America.
-    \item Owned and maintained 1000+ test cases across recurring Oracle CPU patch cycles through requirement analysis and test design; executed 591 regression scripts (AP, CE, FA, PO, AR) in NTST/NUAT; migrated 250 AP/PO test cases.
-    \item Designed a multi-module, multi-OU UFT and Tricentis Tosca framework with persistent runtime data, resume-from-failure and nightly unassisted runs; built an American Express Tosca POC (PO/PR) and ran client demos.
-    \item Drove defects to resolution with stakeholders and managed client communication and verification points; defined Jira dashboard rules, labelling standards and JQL queries for coverage and defect tracking.
-    \item Delivered recorded cross knowledge-transfers on owned modules, framework usage and debugging; supported teammates.
+    \item Module owner and SME for Oracle EBS AP, AR, PO, CE, and FA for Wyndham Destinations and American Express across 4 global regions.
+    \item Maintained 1,000+ test cases across Oracle CPU patch cycles; executed 591 regression scripts in NTST/NUAT; migrated 250 AP/PO test cases.
+    \item Designed multi-module Tosca and UFT automation with runtime state persistence, resume-from-failure logic, and unattended execution.
 \end{itemize}
 
 \vspace{2pt}
 \noindent
 \textbf{The Boeing Company} \hfill \textbf{Bengaluru, India}\\
-\textit{Software Engineer -- Test Automation} \hfill \textbf{Oct 2018 -- Apr 2021}
+\textit{Software Engineer --- Test Automation} \hfill \textbf{Oct 2018 -- Apr 2021}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-    \item Owned the quality cycle for safety-critical aerospace software through regression across releases; mapped requirements with Boeing inspectors (end users) and onshore/offshore teams.
-    \item Built test automation; supported coding standards, CI checks and reviews for junior engineers.
+    \item Owned regression test suites exceeding 2,000+ test cases for safety-critical aerospace software adhering to regulatory standards.
+    \item Awarded \textbf{Boeing Pride Award} (737 MAX return-to-service validation) and \textbf{Star Award} (2019/2020) for rapid delivery and test optimization.
+    \item Mapped requirements from aircraft inspectors into automated tests; conducted CI integration checks and code reviews.
 \end{itemize}
 
 \vspace{2pt}
 \noindent
-\textbf{Accenture LLP} \hfill \textbf{Kolkata / Noida / Bengaluru, India}\\
+\textbf{Accenture} \hfill \textbf{Kolkata / Noida / Bengaluru, India}\\
 \textit{Test Automation Engineer} \hfill \textbf{Oct 2014 -- Oct 2018}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-    \item Mobile testing team member for an American banking client; delivered a large number of releases.
-    \item Built data-driven automation for web, client-server, SAP MM and mobile (telecom and energy clients) across integration, regression, smoke and UAT; built a test-capture utility cutting third-party tool cost.
+    \item Delivered mobile, web, and client-server automation across SAP MM and telecom platforms across integration, regression, and UAT.
+    \item Architected ``One Click Capture'' test evidence utility, reducing third-party tooling licensing costs by \textbf{$\sim$\$8,000 annually} (conferred the \textbf{Accenture Asset Creation Award}; featured in CIO India story).
 \end{itemize}
 
 % --- RESEARCH ---
-\section{RESEARCH (INDEPENDENT RESEARCHER)}
+\section*{04 \textbar\ AI RESEARCH (INDEPENDENT RESEARCHER)}
 \small
 \begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
-    \item \textbf{Accepted peer-reviewed workshop paper (poster):} D. Bandyopadhyay, ``Zero-Logit Model Provenance Auditing in Mission-Critical Financial AI: Privacy-Preserving Black-Box Attribution via Prober-Generator Resonance Spectroscopy,'' \textit{ACM ICAIF 2026 Workshop on Financial AI Security, Privacy, and Safety}, Milan, Italy, Nov 2026. OpenReview.
-    \item Methods to detect AI-generated text and images and identify which AI model produced them; 4 open research preprints (SSRN, Zenodo, 2026), listed on ORCID.
+    \item \textbf{Accepted Paper (Poster):} D. Bandyopadhyay, ``Zero-Logit Model Provenance Auditing in Mission-Critical Financial AI: Privacy-Preserving Black-Box Attribution via Prober-Generator Resonance Spectroscopy,'' \textit{7th ACM International Conference on AI in Finance (ICAIF '26), Workshop on Financial Security, Safety, and Privacy (FinAISecuritySafetyPrivacy)}, Milan, Italy, Oct 2026. OpenReview.
+    \item Evaluated black-box attribution without logit access: achieves \textbf{80.68\% AUROC} on DeepSeek/Qwen and \textbf{77.00\% AUROC} on LLaMA-3.3.
+    \item 4 preprints on AI artifact detection (text, image, audio); CERN Zenodo DOI: \href{https://doi.org/10.5281/zenodo.22158286}{10.5281/zenodo.22158286}; live demo at \href{https://scribemark.streamlit.app/}{scribemark.streamlit.app}.
 \end{itemize}
 
-% --- EDUCATION ---
-\section{EDUCATION}
+% --- EDUCATION & CERTIFICATIONS ---
+\section*{05 \textbar\ EDUCATION, CERTIFICATIONS \& HONORS}
 \small
 \noindent
-\textbf{IIT Jodhpur} -- M.Tech, Augmented Reality \& Virtual Reality (AIDE) \hfill \textbf{Jul 2022 -- Dec 2025}\\[1pt]
-\textbf{GNIOT (AKTU / UPTU)} -- B.Tech, Computer Science \& Engineering \hfill \textbf{Apr 2010 -- Jun 2014}
-
-% --- CERTIFICATIONS & HONORS ---
-\section{CERTIFICATIONS \& HONORS}
-\small
-Postman API Testing (v12); ASDA-MIT Application Tester; Google Python (Coursera); Boeing Pride \& Star Awards; Accenture Asset Creation Award.
+\textbf{IIT Jodhpur} -- M.Tech, Augmented Reality \& Virtual Reality [School of AIDE] \hfill \textbf{2022 -- 2025}\\[1pt]
+\textbf{GNIOT (AKTU / UPTU)} -- B.Tech, Computer Science \& Engineering \hfill \textbf{Apr 2010 -- Jun 2014}\\[1pt]
+\textbf{Certifications \& Awards:} Boeing Pride Award; Boeing Star Award; Accenture Asset Creation Award; Postman API Testing (v12 Certified); ASDA-MIT Application Tester; Google Python (Coursera).
 
 \end{document}
